@@ -28,12 +28,34 @@
 }
 
 .btn-primary:hover,
-.btn-primary:focus{
+.btn-primary:focus {
     outline: none;
     background-color: #FFD987;
     color: #002855;
     box-shadow: none;
     border: 2px solid #FFD16C;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    background-color: #FFD987;
+    border-color: #FFD16C;
 }
 
 .white-shadow {
@@ -43,4 +65,3 @@
 .grey-shadow {
     box-shadow: 5px 5px 0px 0px #ECECEC;
 }
-
