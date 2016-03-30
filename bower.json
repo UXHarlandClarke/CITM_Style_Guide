@@ -1,0 +1,23 @@
+{
+  "name": "CITM Style Guide",
+  "homepage": "https://github.com/UXHarlandClarke/CITM_Style_Guide",
+  "author": {
+    "name": "Justin Dietert",
+    "email": "Justin.Dietert@harlandclarke.com"
+  },
+  "description": "Setup FE for CITM_Style_Guide.",
+  "main": [],
+  "license": "UNLICENSED",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "css",
+    "node_modules",
+    "bower_components",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6"
+  }
+}

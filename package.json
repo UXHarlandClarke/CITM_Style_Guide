@@ -1,0 +1,24 @@
+{
+  "_doc": "CITM Style Guide",
+  "name": "CITM_Style_Guide",
+  "description": "CITM Style Guide",
+  "version": "0.0.1",
+  "author": {
+    "name": "Justin Dietert",
+    "email": "Justin.Dietert@harlandclarke.com"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "homepage": "https://github.com/UXHarlandClarke/CITM_Style_Guide",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UXHarlandClarke/CITM_Style_Guide"
+  },
+  "scripts": {
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-sass": "^2.0.4",
+    "run-sequence": "^1.1.2"
+  }
+}
