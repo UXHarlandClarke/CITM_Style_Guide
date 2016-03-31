@@ -1,5 +1,4 @@
-# CITM_Style_Guide
-
+# CITM Style Guide
 
 ## Setup
 * OPTIONAL: [brew](http://brew.sh/) (for Mac, an installer)
@@ -15,7 +14,6 @@
   bower install
   ```
 
-
 ## Performing Development
 
   ```zsh
@@ -29,4 +27,4 @@
 
   ```
 
-## All resources will be compiled to \css
+## All resources will be compiled to /css
