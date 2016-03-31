@@ -5,14 +5,14 @@
 * [Node](http://nodejs.org) for build tools (or for Mac: `sudo brew install node`)
 * [bower](http://bower.io/) for build tools (install via: `sudo npm install -g bower`)
 * [gulp](http://gulpjs.org) for build tools (install via: `sudo npm install -g gulp`)
+  
+```zsh
+# Do this once upon initial install and again when package.json updates.
+npm install
 
-  ```zsh
-  # Do this once upon initial install and again when package.json updates.
-  npm install
-
-  # Do this once upon initial install and again when bower.json updates.
-  bower install
-  ```
+# Do this once upon initial install and again when bower.json updates.
+bower install
+```
 
 ## Performing Development
 
