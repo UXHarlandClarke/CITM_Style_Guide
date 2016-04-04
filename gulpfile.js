@@ -17,6 +17,12 @@ var APP_NAME = require('./package.json').filename;
 
 gulp.task('default', ['build-dev', 'app'], function(){});
 
+gulp.task('deploybuild', function(done) {
+    gp_runsequence(
+        'build-dev',
+        done);
+});
+
 
 /* build sass/js */
 gulp.task('build-dev', function(done) {
@@ -28,6 +34,11 @@ gulp.task('build-dev', function(done) {
         done);
 });
 
+/* run tests */
+gulp.task('build-test', function(done) {
+    gp_runsequence(
+        done);
+});
 
 gulp.task('app', ['sass'], function() {
     gp_browserSync.init({
