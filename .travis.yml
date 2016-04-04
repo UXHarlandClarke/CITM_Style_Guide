@@ -3,6 +3,8 @@ node_js:
   - "5"
 
 before_script:
+  - npm install -g bower
+  - bower install
   - npm install -g gulp
 script: gulp
 
