@@ -1,3 +1,63 @@
+//
+// Typography
+// --------------------------------------------------
+
+// Headings
+// -------------------------
+
+// Body text
+// -------------------------
+
+
+//
+// Jumbotron
+// --------------------------------------------------
+
+.jumbotron {
+
+    .hero-text {
+        font-family: $font-family-serif;
+    }
+
+    .container &,
+    .container-fluid & {
+        border-radius: 0;
+    }
+
+}
+
+
+//
+// Labels
+// --------------------------------------------------
+
 .label {
     font-weight: 500;
+}
+
+
+//
+// Wells
+// --------------------------------------------------
+
+// Base class
+.well {
+    border-radius: 0;
+}
+
+// Sizes
+.well-lg {
+    border-radius: 0;
+}
+.well-sm {
+    border-radius: 0;
+}
+
+
+//
+// Modals
+// --------------------------------------------------
+
+.modal-content {
+    border-radius: 0;
 }

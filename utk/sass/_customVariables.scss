@@ -18,15 +18,15 @@ $gray-light:            lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:          $color-envelope !default;
 
 // $brand-primary:      darken(#428bca, 6.5%) !default; // #337ab7
-$brand-primary:         $color-zodiac !default;
+$brand-primary:         $color-trans-dark !default;
 // $brand-success:      #5cb85c !default;
-$brand-success:         $color-mint !default;
+$brand-success:         $color-mint-dark !default;
 // $brand-info:         #5bc0de !default;
 $brand-info:            $color-transport !default;
 // $brand-warning:      #f0ad4e !default;
-$brand-warning:         $color-coral !default;
+$brand-warning:         $color-coral-dark !default;
 // $brand-danger:       #d9534f !default;
-$brand-danger:          $color-red !default;
+$brand-danger:          $color-red-dark !default;
 
 
 //== Scaffolding
@@ -34,8 +34,7 @@ $brand-danger:          $color-red !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-// $body-bg:            #fff !default;
-$body-bg:               $gray-lighter !default;
+$body-bg:            #fff !default;
 
 //** Global text color on `<body>`.
 // $text-color:         $gray-dark !default;
@@ -63,36 +62,37 @@ $font-family-serif:       "Playfair Display", Georgia, "Times New Roman", Times,
 $font-family-monospace:   "Fira Mono", Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
-// $font-size-base:       14px !default;
-$font-size-base:          16px !default;
-// $font-size-large:      ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-large:         ceil(($font-size-base * 1.4375)) !default; // ~23px
-// $font-size-small:      ceil(($font-size-base * 0.85)) !default; // ~12px
-$font-size-small:         ceil(($font-size-base * 0.8125)) !default; // ~13px
+$font-size-base:       14px !default;
+// $font-size-base:          16px !default;
+$font-size-large:      ceil(($font-size-base * 1.25)) !default; // ~18px
+// $font-size-large:         ceil(($font-size-base * 1.4375)) !default; // ~23px
+$font-size-small:      ceil(($font-size-base * 0.85)) !default; // ~12px
+// $font-size-small:         ceil(($font-size-base * 0.8125)) !default; // ~13px
 
-// $font-size-h1:         floor(($font-size-base * 2.6)) !default; // ~36px
-$font-size-h1:            floor(($font-size-base * 2.5)) !default; // ~40px
-// $font-size-h2:         floor(($font-size-base * 2.15)) !default; // ~30px
-$font-size-h2:            floor(($font-size-base * 2.0625)) !default; // ~33px
-// $font-size-h3:         ceil(($font-size-base * 1.7)) !default; // ~24px
-$font-size-h3:            ceil(($font-size-base * 1.75)) !default; // ~28px
-// $font-size-h4:         ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-h4:            ceil(($font-size-base * 1.4375)) !default; // ~23px
-// $font-size-h5:         $font-size-base !default;
-$font-size-h5:            ceil(($font-size-base * 1.1875)) !default; // ~19px
-// $font-size-h6:         ceil(($font-size-base * 0.85)) !default; // ~12px
-$font-size-h6:            $font-size-base !default; // 16px
+$font-size-h1:         floor(($font-size-base * 2.6)) !default; // ~36px
+// $font-size-h1:            floor(($font-size-base * 2.5)) !default; // ~40px
+$font-size-h2:         floor(($font-size-base * 2.15)) !default; // ~30px
+// $font-size-h2:            floor(($font-size-base * 2.0625)) !default; // ~33px
+$font-size-h3:         ceil(($font-size-base * 1.7)) !default; // ~24px
+// $font-size-h3:            ceil(($font-size-base * 1.75)) !default; // ~28px
+$font-size-h4:         ceil(($font-size-base * 1.25)) !default; // ~18px
+// $font-size-h4:            ceil(($font-size-base * 1.4375)) !default; // ~23px
+$font-size-h5:         $font-size-base !default;
+// $font-size-h5:            ceil(($font-size-base * 1.1875)) !default; // ~19px
+$font-size-h6:         ceil(($font-size-base * 0.85)) !default; // ~12px
+// $font-size-h6:            $font-size-base !default; // 16px
 
 //** Unit-less `line-height` for use in components like buttons.
-// $line-height-base:     1.428571429 !default; // 20/14
-$line-height-base:        1.5 !default; // 24/16
+$line-height-base:     1.428571429 !default; // 20/14
+// $line-height-base:        1.5 !default; // 24/16
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-// $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
-$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~24px
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+// $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~24px
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    inherit !default;
-$headings-font-weight:    500 !default;
+// $headings-font-weight: 500 !default;
+$headings-font-weight:    700 !default;
 $headings-line-height:    1.1 !default;
 // $headings-color:       inherit !default;
 $headings-color:          $color-zodiac !default;
@@ -133,12 +133,12 @@ $padding-xs-horizontal:     5px !default;
 $line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
 $line-height-small:         1.5 !default;
 
-// $border-radius-base:     4px !default;
-$border-radius-base:        0 !default;
-// $border-radius-large:    6px !default;
-$border-radius-large:       0 !default;
-// $border-radius-small:    3px !default;
-$border-radius-small:       0 !default;
+$border-radius-base:     4px !default;
+// $border-radius-base:        0 !default;
+$border-radius-large:    6px !default;
+// $border-radius-large:       0 !default;
+$border-radius-small:    3px !default;
+// $border-radius-small:       0 !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
@@ -234,7 +234,8 @@ $input-border-radius-large:      $border-radius-large !default;
 $input-border-radius-small:      $border-radius-small !default;
 
 //** Border color for inputs on focus
-$input-border-focus:             #66afe9 !default;
+// $input-border-focus:             #66afe9 !default;
+$input-border-focus:             $color-transport !default;
 
 //** Placeholder text color
 $input-color-placeholder:        #999 !default;
@@ -393,7 +394,8 @@ $container-lg:                 $container-large-desktop !default;
 // Basics of a navbar
 $navbar-height:                    50px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
-$navbar-border-radius:             $border-radius-base !default;
+// $navbar-border-radius:             $border-radius-base !default;
+$navbar-border-radius:             0 !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
@@ -707,7 +709,8 @@ $list-group-bg:                 #fff !default;
 //** `.list-group-item` border color
 $list-group-border:             #ddd !default;
 //** List group border radius
-$list-group-border-radius:      $border-radius-base !default;
+// $list-group-border-radius:      $border-radius-base !default;
+$list-group-border-radius:      0 !default;
 
 //** Background color of single list items on hover
 $list-group-hover-bg:           #f5f5f5 !default;
@@ -740,7 +743,8 @@ $panel-bg:                    #fff !default;
 $panel-body-padding:          15px !default;
 $panel-heading-padding:       10px 15px !default;
 $panel-footer-padding:        $panel-heading-padding !default;
-$panel-border-radius:         $border-radius-base !default;
+// $panel-border-radius:      $border-radius-base !default;
+$panel-border-radius:         0 !default;
 
 //** Border color for elements within panels
 $panel-inner-border:          #ddd !default;
