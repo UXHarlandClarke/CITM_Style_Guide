@@ -1,16 +1,18 @@
-$color-clouds: rgb(197,207,218); // Billowing Clouds
-$color-daisy: rgb(255,209,108); // Golden Daisy CTA
-$color-dove: rgb(86,86,86); // Dove Gray
-$color-envelope: rgb(241,241,241); // Envelope
-$color-zodiac: rgb(0,40,85); // Blue Zodiac
-$color-box: rgb(164,147,130); // Cardboard Box
-$color-coral: rgb(244,99,58); // Coral
-$color-coral-dark: rgb(169,67,30); // Coral Dark
-$color-ink: rgb(67,38,58); // Deep Ink
-$color-mint: rgb(0,150,108); // Mint
-$color-mint-dark: rgb(0,123,75); // Mint Dark
-$color-red: rgb(179,39,45); // Carriage Red
-$color-red-dark: rgb(124,37,41); // Carriage Red Dark
-$color-tin: rgb(91,103,112); // Antique Tin
-$color-trans-dark: rgb(0,112,150); // Transport Dark
-$color-transport: rgb(69,167,197); // Transport
+$color-clouds:      rgb(197,207,218); // Billowing Clouds
+$color-daisy:       rgb(255,209,108); // Golden Daisy CTA
+$color-dove:        rgb(86,86,86); // Dove Gray
+$color-envelope:    rgb(241,241,241); // Envelope
+$color-zodiac:      rgb(0,40,85); // Blue Zodiac
+$color-box:         rgb(164,147,130); // Cardboard Box
+$color-coral:       rgb(244,99,58); // Coral
+$color-coral-dark:  rgb(169,67,30); // Coral Dark
+$color-ink:         rgb(67,38,58); // Deep Ink
+$color-mint:        rgb(0,150,108); // Mint
+$color-mint-dark:   rgb(0,123,75); // Mint Dark
+$color-red:         rgb(179,39,45); // Carriage Red
+$color-red-dark:    rgb(124,37,41); // Carriage Red Dark
+$color-tin:         rgb(91,103,112); // Antique Tin
+$color-trans-dark:  rgb(0,112,150); // Transport Dark
+$color-transport:   rgb(0,156,189); // Transport
+
+$btn-cta-border:    darken($color-daisy, 5%);
