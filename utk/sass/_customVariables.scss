@@ -18,15 +18,16 @@ $gray-light:            lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:          $color-envelope !default;
 
 // $brand-primary:      darken(#428bca, 6.5%) !default; // #337ab7
-$brand-primary:         $color-trans-dark !default;
+$brand-primary:         $color-transport !default;
 // $brand-success:      #5cb85c !default;
-$brand-success:         $color-mint-dark !default;
+$brand-success:         $color-mint !default;
 // $brand-info:         #5bc0de !default;
-$brand-info:            $color-transport !default;
+// $brand-info:            darken($color-clouds, 30%) !default;
+$brand-info:            lighten($color-ink, 20%) !default;
 // $brand-warning:      #f0ad4e !default;
-$brand-warning:         $color-coral-dark !default;
+$brand-warning:         $color-coral !default;
 // $brand-danger:       #d9534f !default;
-$brand-danger:          $color-red-dark !default;
+$brand-danger:          $color-red !default;
 
 
 //== Scaffolding
@@ -532,12 +533,16 @@ $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             #3c763d !default;
-$state-success-bg:               #dff0d8 !default;
+// $state-success-text:             #3c763d !default;
+$state-success-text:             $color-mint-dark !default;
+// $state-success-bg:               #dff0d8 !default;
+$state-success-bg:               tint($color-mint, 85%) !default;
 $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
-$state-info-text:                #31708f !default;
-$state-info-bg:                  #d9edf7 !default;
+// $state-info-text:                #31708f !default;
+$state-info-text:                $brand-info !default;
+// $state-info-bg:                  #d9edf7 !default;
+$state-info-bg:                  tint($color-ink, 85%) !default;
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 
 $state-warning-text:             #8a6d3b !default;

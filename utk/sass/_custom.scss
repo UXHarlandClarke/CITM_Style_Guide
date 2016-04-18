@@ -5,6 +5,10 @@
 // Headings
 // -------------------------
 
+h1, .h1 {
+    font-weight: 500;
+}
+
 // Body text
 // -------------------------
 
@@ -60,4 +64,16 @@
 
 .modal-content {
     border-radius: 0;
+}
+
+
+//
+// Buttons
+// --------------------------------------------------
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-cta {
+    @include button-variant($color-zodiac, $color-daisy, $btn-cta-border);
 }
