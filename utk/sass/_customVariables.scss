@@ -542,15 +542,19 @@ $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) 
 // $state-info-text:                #31708f !default;
 $state-info-text:                $brand-info !default;
 // $state-info-bg:                  #d9edf7 !default;
-$state-info-bg:                  tint($color-ink, 85%) !default;
+$state-info-bg:                  tint($brand-info, 85%) !default;
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 
-$state-warning-text:             #8a6d3b !default;
-$state-warning-bg:               #fcf8e3 !default;
+// $state-warning-text:             #8a6d3b !default;
+$state-warning-text:             $color-coral-dark !default;
+// $state-warning-bg:               #fcf8e3 !default;
+$state-warning-bg:               tint($color-coral, 85%) !default;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
-$state-danger-text:              #a94442 !default;
-$state-danger-bg:                #f2dede !default;
+// $state-danger-text:              #a94442 !default;
+$state-danger-text:              $color-red-dark !default;
+// $state-danger-bg:                #f2dede !default;
+$state-danger-bg:                tint($color-red, 85%) !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
 
@@ -563,7 +567,8 @@ $tooltip-max-width:           200px !default;
 //** Tooltip text color
 $tooltip-color:               #fff !default;
 //** Tooltip background color
-$tooltip-bg:                  #000 !default;
+// $tooltip-bg:                  #000 !default;
+$tooltip-bg:                  $color-zodiac !default;
 $tooltip-opacity:             .9 !default;
 
 //** Tooltip arrow width

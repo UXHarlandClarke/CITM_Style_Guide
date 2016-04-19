@@ -9,8 +9,13 @@ h1, .h1 {
     font-weight: 500;
 }
 
-// Body text
+// Emphasis & misc
 // -------------------------
+
+// Contextual colors
+
+@include text-emphasis-variant('.text-zodiac', $color-zodiac);
+@include text-emphasis-variant('.text-gray', $gray);
 
 
 //
@@ -76,4 +81,20 @@ h1, .h1 {
 
 .btn-cta {
     @include button-variant($color-zodiac, $color-daisy, $btn-cta-border);
+}
+
+
+//
+// Forms
+// --------------------------------------------------
+
+// Feedback states
+.has-success {
+  @include form-control-validation($brand-success, $brand-success, $state-success-bg);
+}
+.has-warning {
+  @include form-control-validation($brand-warning, $brand-warning, $state-warning-bg);
+}
+.has-error {
+  @include form-control-validation($brand-danger, $brand-danger, $state-danger-bg);
 }
