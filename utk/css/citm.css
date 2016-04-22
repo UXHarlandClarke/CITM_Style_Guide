@@ -5769,12 +5769,6 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.citm-primary-logo {
-  width: 160px;
-  height: 108px;
-  line-height: 0;
-  display: block; }
-
 h1, .h1 {
   font-weight: 500; }
 
@@ -5932,11 +5926,18 @@ a.text-gray:focus {
 .has-error .form-control-feedback {
   color: #b3272d; }
 
+.citm-primary-logo {
+  width: 130px;
+  height: 88px;
+  line-height: 0;
+  display: block; }
+
 .navbar-citm {
   background-color: #f1f1f1;
   border: none;
   border-bottom: 1px solid #e0e0e0; }
   .navbar-citm .navbar-brand {
+    height: auto;
     color: #777; }
     .navbar-citm .navbar-brand:hover, .navbar-citm .navbar-brand:focus {
       color: #5e5e5e;

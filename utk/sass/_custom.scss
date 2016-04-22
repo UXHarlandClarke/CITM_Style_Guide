@@ -1,16 +1,4 @@
 //
-// CITM Main Logo
-// --------------------------------------------------
-
-.citm-primary-logo {
-  width: 160px;
-  height: 108px;
-  line-height: 0;
-  display: block;
-}
-
-
-//
 // Typography
 // --------------------------------------------------
 
@@ -113,6 +101,20 @@ h1, .h1 {
 
 
 //
+// CITM Main Logo
+// --------------------------------------------------
+
+.citm-primary-logo {
+  // width: 160px;
+  // height: 108px;
+  width: 130px;
+  height: 88px;
+  line-height: 0;
+  display: block;
+}
+
+
+//
 // Navbars
 // --------------------------------------------------
 
@@ -122,11 +124,12 @@ h1, .h1 {
 // CITM navbar
 .navbar-citm {
   background-color: $color-envelope;
-  // border-color: $navbar-default-border;
+  // border-color:  $navbar-default-border;
   border: none;
-  border-bottom: 1px solid $navbar-citm-border;
+  border-bottom:    1px solid $navbar-citm-border;
 
   .navbar-brand {
+    height: auto;
     color: $navbar-default-brand-color;
     &:hover,
     &:focus {
