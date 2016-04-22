@@ -5769,6 +5769,12 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.citm-primary-logo {
+  width: 160px;
+  height: 108px;
+  line-height: 0;
+  display: block; }
+
 h1, .h1 {
   font-weight: 500; }
 
