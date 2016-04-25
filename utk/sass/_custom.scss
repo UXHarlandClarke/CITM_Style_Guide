@@ -126,15 +126,34 @@ h1, .h1 {
   background-color: $color-envelope;
   // border-color:  $navbar-default-border;
   border: none;
-  border-bottom:    1px solid $navbar-citm-border;
+  // border-bottom:    1px solid $navbar-citm-border;
+
+  @media (min-width: $grid-float-breakpoint) {
+    .cart {
+      padding-right: 0;
+    }
+    .navbar-header {
+      position: relative;
+    }
+  }
 
   .navbar-brand {
     height: auto;
     color: $navbar-default-brand-color;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
     &:hover,
     &:focus {
       color: $navbar-default-brand-hover-color;
       background-color: $navbar-default-brand-hover-bg;
+    }
+    
+    @media (min-width: $grid-float-breakpoint) {
+      padding-bottom: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 
@@ -143,6 +162,13 @@ h1, .h1 {
   }
 
   .navbar-nav {
+    // Give margin left same width as logo so links don't overlap logo    
+    &.main-citm-nav {
+      @media (min-width: $grid-float-breakpoint) {
+        margin-left: 130px;
+      }
+    }
+    
     > li > a {
       color: $navbar-default-link-color;
 
@@ -184,6 +210,12 @@ h1, .h1 {
   .navbar-collapse,
   .navbar-form {
     border-color: $navbar-default-border;
+    
+    // .nav-search-text-input {
+    //   @media (min-width: $grid-float-breakpoint) {
+    //     width: 125px;
+    //   }
+    // }
   }
 
   // Dropdown menu items
