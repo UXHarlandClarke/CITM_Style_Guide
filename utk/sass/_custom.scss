@@ -80,7 +80,11 @@ h1, .h1 {
 // --------------------------------------------------
 
 .btn-cta {
-    @include button-variant($color-zodiac, $color-daisy, $btn-cta-border);
+  @include button-variant($color-zodiac, $color-daisy, $btn-cta-border);
+}
+
+.btn-default-emph {
+  @include button-variant($btn-default-color, tint($brand-primary, 93%), $btn-default-border)
 }
 
 
@@ -107,8 +111,10 @@ h1, .h1 {
 .citm-primary-logo {
   // width: 160px;
   // height: 108px;
-  width: 130px;
-  height: 88px;
+  // width: 130px;
+  // height: 88px;
+  width: 122px;
+  height: 83px;
   line-height: 0;
   display: block;
 }
@@ -129,9 +135,19 @@ h1, .h1 {
   // border-bottom:    1px solid $navbar-citm-border;
 
   @media (min-width: $grid-float-breakpoint) {
+    margin-top: 32px;
+    margin-bottom: 34px;
+    
+    .input-group-sm {
+      margin-top: 2px;
+    }
+    
     .cart {
       padding-right: 0;
+      border-left: 1px solid rgb(231, 231, 231);
+      margin-left: 2px;
     }
+
     .navbar-header {
       position: relative;
     }
@@ -150,9 +166,10 @@ h1, .h1 {
     }
     
     @media (min-width: $grid-float-breakpoint) {
-      padding-bottom: 20px;
+      padding-top: 0;
+      padding-bottom: 0;
       position: absolute;
-      top: 0;
+      top: -17px;
       left: 0;
     }
   }
@@ -165,7 +182,7 @@ h1, .h1 {
     // Give margin left same width as logo so links don't overlap logo    
     &.main-citm-nav {
       @media (min-width: $grid-float-breakpoint) {
-        margin-left: 130px;
+        margin-left: 122px;
       }
     }
     
@@ -195,6 +212,27 @@ h1, .h1 {
       }
     }
   }
+  
+  .citm-service-links {
+    @media (min-width: $grid-float-breakpoint) {
+      position: absolute;
+      right: 0;
+      top: -26px;
+      
+      > li > a {
+        font-size: $font-size-small;
+        color: #999;
+        padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        
+        &:hover,
+        &:focus {
+          color: #777;
+        }
+      }
+    }
+  }
 
   .navbar-toggle {
     border-color: $navbar-default-toggle-border-color;
@@ -211,11 +249,11 @@ h1, .h1 {
   .navbar-form {
     border-color: $navbar-default-border;
     
-    // .nav-search-text-input {
-    //   @media (min-width: $grid-float-breakpoint) {
-    //     width: 125px;
-    //   }
-    // }
+    .nav-search-text-input {
+      @media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
+        width: 100px;
+      }
+    }
   }
 
   // Dropdown menu items
@@ -287,4 +325,15 @@ h1, .h1 {
       }
     }
   }
+}
+
+
+//
+// Badges
+// --------------------------------------------------
+
+// Alternative Badges
+.badge-active {
+  @extend .badge;
+  background-color: $brand-primary;
 }
