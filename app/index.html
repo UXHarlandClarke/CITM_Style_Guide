@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CITM Style Guide</title>
-    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,700italic|Fira+Sans:300,400,400italic,500,700|Fira+Mono:700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,700italic|Fira+Sans:300,400,400italic,500,700|Fira+Mono:700" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="dist/css/citm.css" rel="stylesheet">
     <link href="css/layout.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -18,11 +19,12 @@
 </head>
 
 <body>
-    <div class="bs-component">
+    <!-- bs-component -->
+    <div>
         <div class="container-fluid">
             <div class="row">
                 <nav class="navbar navbar-citm">
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                                 <span class="sr-only">Toggle navigation</span>
@@ -54,29 +56,49 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Accessories <span class="caret"></span></a>
                                 </li>
-                                <li>
-                                    <a href="#">Quick Reorder &rarr;</a>
+                                <li class="hidden-sm hidden-md">
+                                    <a href="#">Quick Reorder <i class="fa fa-arrow-right text-primary" aria-hidden="true"></i></a>
                                 </li>
                             </ul>
-                            <form class="navbar-form navbar-left" role="search">
+                            <ul class="nav navbar-nav citm-service-links">
+                                <li>
+                                    <a href="#"><i class="fa fa-truck" aria-hidden="true"></i> Order Status</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i> Help</a>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="#" class="cart">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="hidden-sm">Cart </span><span class="badge badge-active">3</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <form class="navbar-form navbar-right" role="search">
                                 <div class="form-group">
                                     <div class="input-group input-group-sm">
                                         <input type="text" class="form-control nav-search-text-input" placeholder="Search&hellip;">
                                         <span class="input-group-btn"> 
-                                            <button type="submit" class="btn btn-default">Go!</button>
+                                            <button type="submit" class="btn btn-default-emph">Go!</button>
                                         </span>
                                     </div>
                                 </div>
                             </form>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#" class="cart">Cart</a></li>
-                            </ul>
                         </div>
                     </div>
                 </nav>
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="jumbotron text-zodiac">
+            <h1 class="hero-text">Jumbotron</h1>
+            <p class="text-gray">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <p><a class="btn btn-cta btn-lg">Learn more</a></p>
+        </div>
+    </div>
+
     <div class="container"> 
         <!-- Navbar
       ================================================== -->
@@ -205,6 +227,7 @@
                     <p class="bs-component">
                         <a href="" class="btn btn-cta">Call to Action</a>
                         <a href="#" class="btn btn-default">Default</a>
+                        <a href="#" class="btn btn-default-emph">Default Emph</a>
                         <a href="#" class="btn btn-primary">Primary</a>
                         <a href="#" class="btn btn-success">Success</a>
                         <a href="#" class="btn btn-info">Info</a>
@@ -215,6 +238,7 @@
                     <p class="bs-component">
                         <a href="" class="btn btn-cta disabled">Call to Action</a>
                         <a href="#" class="btn btn-default disabled">Default</a>
+                        <a href="#" class="btn btn-default-emph disabled">Default Emph</a>
                         <a href="#" class="btn btn-primary disabled">Primary</a>
                         <a href="#" class="btn btn-success disabled">Success</a>
                         <a href="#" class="btn btn-info disabled">Info</a>
@@ -238,6 +262,17 @@
                             <div class="btn-group">
                                 <a href="#" class="btn btn-default">Default</a>
                                 <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-default-emph">Default Emph</a>
+                                <a href="#" class="btn btn-default-emph dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Action</a></li>
                                     <li><a href="#">Another action</a></li>
