@@ -14,6 +14,23 @@ var gp_runsequence = require('run-sequence');
 
 var APP_NAME = require('./package.json').filename;
 
+var options = {};
+options.sass = {
+  errLogToConsole: true,
+  sourceMap: 'sass',
+  sourceComments: 'map',
+  precision: 10,
+  imagePath: 'assets/img',
+  includePaths: [
+    'bower_components/bootstrap-sass/assets/stylesheets'
+  ]
+};
+options.autoprefixer = {
+  map: true,
+  from: 'asset',
+  to: 'asrp.min.css'
+};
+
 
 gulp.task('default', ['build-dev', 'app'], function(){});
 
@@ -31,6 +48,7 @@ gulp.task('build-dev', function(done) {
         'dist-css',
         'js',
         'dist-js',
+        'dist-fonts',
         done);
 });
 
@@ -60,7 +78,7 @@ gulp.task('app', ['sass'], function() {
 
 gulp.task('sass', function () {
   return gulp.src('./utk/sass/' + APP_NAME + '.scss')
-    .pipe(gp_sass().on('error', gp_sass.logError))
+    .pipe(gp_sass(options.sass).on('error', gp_sass.logError))
     .pipe(gp_autoprefixer())
     .pipe(gulp.dest('./utk/css'));
 });
@@ -95,7 +113,10 @@ gulp.task('dist-js', function(){
     .pipe(gp_browserSync.stream());
 }); 
 
-
+gulp.task('dist-fonts', function(){
+    gulp.src(['bower_components/bootstrap-sass/assets/fonts/**/*'])
+    .pipe(gulp.dest('./dist/fonts/'));
+}); 
 
 /* phase out */
 
