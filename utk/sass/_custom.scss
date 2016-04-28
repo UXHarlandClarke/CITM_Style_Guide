@@ -121,6 +121,55 @@ h1, .h1 {
 
 
 //
+// Dropdown menus
+// --------------------------------------------------
+
+// Alternate dropdowns
+// --------------------------------------------------
+
+// Two-column dropdown menu (ul)
+.two-column.dropdown-menu {
+  min-width: 380px;
+  > li > ul.col-sm-6 {
+    padding: 0;
+  }
+  // Links within the dropdown menu
+  > li > ul > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: $line-height-base;
+    color: $dropdown-link-color;
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    text-decoration: none;
+  }
+}
+
+// Two-column Hover/Focus state
+.two-column.dropdown-menu > li > ul > li > a {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $dropdown-link-hover-color;
+    background-color: $dropdown-link-hover-bg;
+  }
+}
+
+// Two-column Active state
+.two-column.dropdown-menu > li > ul > .active > a {
+  &,
+  &:hover,
+  &:focus {
+    color: $dropdown-link-active-color;
+    text-decoration: none;
+    outline: 0;
+    background-color: $dropdown-link-active-bg;
+  }
+}
+
+
+//
 // Navbars
 // --------------------------------------------------
 
