@@ -157,7 +157,7 @@ h1, .h1 {
     height: auto;
     color: $navbar-default-brand-color;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 16px;
 
     &:hover,
     &:focus {
@@ -243,6 +243,7 @@ h1, .h1 {
     .icon-bar {
       background-color: $navbar-default-toggle-icon-bar-bg;
     }
+    @include citm-mobile-navbar-vertical-align(34px);
   }
 
   .navbar-collapse,
@@ -250,7 +251,10 @@ h1, .h1 {
     border-color: $navbar-default-border;
     
     .nav-search-text-input {
-      @media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
+      @media (min-width: $screen-xs-max) and (max-width: 920px) {
+        width: 120px;
+      }
+      @media (min-width: $screen-xs-max) and (max-width: 870px) {
         width: 100px;
       }
     }
