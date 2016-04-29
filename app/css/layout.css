@@ -84,3 +84,7 @@
     word-wrap: break-word;
     font-size: 1.65em;
 }
+
+.hide-component {
+    display: none;
+}
