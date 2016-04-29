@@ -176,7 +176,35 @@ h1, .h1 {
 // Alternate navbars
 // --------------------------------------------------
 
-// CITM navbar
+// CITM Navbar
+
+// Mobile nav adjustments to 2-column nav structure
+.navbar-nav {
+  @media (max-width: $grid-float-breakpoint-max) {
+    // Dropdowns get custom display when collapsed
+    .open .dropdown-menu.two-column {
+      position: static;
+      float: none;
+      width: auto;
+      margin-top: 0;
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+      li > ul > li > a,
+      .dropdown-header {
+        padding: 5px 15px 5px 25px;
+      }
+      li > ul > li > a {
+        line-height: $line-height-computed;
+        &:hover,
+        &:focus {
+          background-image: none;
+        }
+      }
+    }
+  }
+}
+
 .navbar-citm {
   background-color: $color-envelope;
   // border-color:  $navbar-default-border;
@@ -348,6 +376,35 @@ h1, .h1 {
             background-color: $navbar-default-link-disabled-bg;
           }
         }
+
+        // Two-Column dropdown adjustments
+        &.two-column {
+          > li > ul > li > a {
+            color: $navbar-default-link-color;
+            &:hover,
+            &:focus {
+              color: $navbar-default-link-hover-color;
+              background-color: $navbar-default-link-hover-bg;
+            }
+          }
+          > li > ul > .active > a {
+            &,
+            &:hover,
+            &:focus {
+              color: $navbar-default-link-active-color;
+              background-color: $navbar-default-link-active-bg;
+            }
+          }
+          > li > ul > .disabled > a {
+            &,
+            &:hover,
+            &:focus {
+              color: $navbar-default-link-disabled-color;
+              background-color: $navbar-default-link-disabled-bg;
+            }
+          }
+        }
+        
       }
     }
   }
