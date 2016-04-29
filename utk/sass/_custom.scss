@@ -1,4 +1,37 @@
 //
+// Helpers
+// --------------------------------------------------
+
+// Background colors
+.bg-zodiac {
+  background-color: $color-zodiac;
+}
+
+.bg-clouds {
+  background-color: $color-clouds;
+}
+
+// Text colors
+.text-envelope {
+  color: $color-envelope;
+}
+
+// Font weights
+.font-light {
+  font-weight: 300;
+}
+
+// Margins
+.margin-top-30 {
+  margin-top: 30px;
+}
+
+.margin-top-60 {
+  margin-top: 60px;
+}
+
+
+//
 // Typography
 // --------------------------------------------------
 
@@ -115,6 +148,26 @@ h1, .h1 {
   // height: 88px;
   width: 122px;
   height: 83px;
+  line-height: 0;
+  display: block;
+}
+
+
+//
+// CITM Footer Logo
+// --------------------------------------------------
+
+.footer-brand {
+  display: block;
+  height: auto;
+  opacity: 0.6;
+}
+
+.citm-footer-logo {
+  // width: 150px;
+  // height: 19px;
+  width: 225px;
+  height: 30px;
   line-height: 0;
   display: block;
 }
@@ -446,4 +499,14 @@ h1, .h1 {
 .badge-active {
   @extend .badge;
   background-color: $brand-primary;
+}
+
+
+//
+// Footer
+// --------------------------------------------------
+
+.footer-inner {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
