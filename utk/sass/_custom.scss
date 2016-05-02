@@ -42,8 +42,9 @@
 // Headings
 // -------------------------
 
-h1, .h1 {
-    font-weight: 500;
+h1, .h1,
+.accordion h4, .accordion .h4 {
+  font-weight: 500;
 }
 
 // Emphasis & misc
@@ -516,6 +517,23 @@ h1, .h1 {
 .badge-active {
   @extend .badge;
   background-color: $brand-primary;
+}
+
+
+//
+// Accordion
+// --------------------------------------------------
+
+.accordion {
+    .panel-title > a {
+      color: $navbar-default-link-color;
+      
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $navbar-default-link-hover-color;
+      }
+    }  
 }
 
 
