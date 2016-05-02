@@ -12,7 +12,7 @@
 }
 
 .bg-clouds-light {
-  background-color: tint($color-clouds, 25%);
+  background-color: $color-clouds-light;
 }
 
 // Text colors
@@ -26,12 +26,41 @@
 }
 
 // Margins
+.margin-top-3 {
+  margin-top: 3px;
+}
+
+.margin-top-4 {
+  margin-top: 4px;
+}
+
+.margin-top-5 {
+  margin-top: 5px;
+}
+
+.margin-top-10 {
+  margin-top: 10px;
+}
+
 .margin-top-30 {
   margin-top: 30px;
 }
 
 .margin-top-60 {
   margin-top: 60px;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
+
+.margin-bottom-2 {
+  margin-bottom: 2px;
+}
+
+// Horizontal Rules
+.footer-hr {
+  border-top-color: shade($color-clouds, 5%);
 }
 
 
@@ -42,8 +71,9 @@
 // Headings
 // -------------------------
 
-h1, .h1 {
-    font-weight: 500;
+h1, .h1,
+.accordion h4, .accordion .h4 {
+  font-weight: 500;
 }
 
 // Emphasis & misc
@@ -520,6 +550,23 @@ h1, .h1 {
 
 
 //
+// Accordion
+// --------------------------------------------------
+
+.accordion {
+    .panel-title > a {
+      color: $navbar-default-link-color;
+      
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $navbar-default-link-hover-color;
+      }
+    }  
+}
+
+
+//
 // Footer
 // --------------------------------------------------
 
@@ -552,16 +599,49 @@ h1, .h1 {
   
   @media (max-width: $grid-float-breakpoint-max) {
     margin: 0 auto;
-    width: 180px;
+    width: 164px;
   }
   
 }
 
 .footer-badges-copyright-inner {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   
   @media (max-width: $grid-float-breakpoint-max) {
     text-align: center;
+  }
+  
+  .copyright-address {
+    padding-top: 10px;
+  }
+}
+
+.security-badge-list {
+  padding-top: 14px;
+  
+  @media (min-width: $grid-float-breakpoint) {
+    padding-top: 0;
+    margin-bottom: 2px;
+  } 
+}
+
+.security-badge {
+  padding-top: 10px;
+  
+  .badge-container {
+    width: 120px;
+    height: 120px;
+    background-color: $color-clouds-light;
+    border-radius: $border-radius-small;
+    position: relative;
+    
+    img {
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }

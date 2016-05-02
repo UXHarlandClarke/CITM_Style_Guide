@@ -27,3 +27,14 @@ $citm-mobile-navbar-height: 114px;
     margin-top: ((($citm-mobile-navbar-height - $element-height) / 2) - 1); // subtract 1px for optical centering
     margin-bottom: ((($citm-mobile-navbar-height - $element-height) / 2) + 1); // add 1px for optical centering
 }
+
+
+// Generic Vertical Align
+// 
+// Vertically center elements in their containers
+// Example: an element has a height of 30px, and its container has a height of 90px, so write out `.vertical-align(90px, 30px);` to calculate the appropriate top and bottom margins.
+
+@mixin vertical-align ($container-height, $element-height) {
+    margin-top: ((($container-height - $element-height) / 2) - 1); // subtract 1px for optical centering
+    margin-bottom: ((($container-height - $element-height) / 2) + 1); // add 1px for optical centering
+}
