@@ -645,3 +645,25 @@ h1, .h1,
     }
   }
 }
+
+
+//
+// Carousel
+// --------------------------------------------------
+
+.carousel-control {
+  // Remove gradients for backgrounds by setting opacity to "0"
+  &.left {
+    @include gradient-horizontal($start-color: rgba(0,0,0,0), $end-color: rgba(0,0,0,0));
+  }
+  &.right {
+    left: auto;
+    right: 0;
+    @include gradient-horizontal($start-color: rgba(0,0,0,0), $end-color: rgba(0,0,0,0));
+  }
+}
+
+// Carousel Text Overlay
+.carousel-text-overlay {
+  
+}
