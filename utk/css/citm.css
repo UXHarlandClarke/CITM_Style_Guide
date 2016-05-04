@@ -1375,7 +1375,7 @@ html {
 
 /* line 27, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding.scss */
 body {
-  font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "fira-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #565656;
@@ -1858,7 +1858,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: "Fira Mono", Menlo, Monaco, Consolas, "Courier New", monospace; }
+  font-family: "fira-mono", Menlo, Monaco, Consolas, "Courier New", monospace; }
 
 /* line 15, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_code.scss */
 code {
@@ -6472,7 +6472,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "fira-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6601,7 +6601,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "fira-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -7306,7 +7306,7 @@ a.text-gray:focus {
 
 /* line 94, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .jumbotron .hero-text {
-  font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif; }
+  font-family: "essonnes-text", Georgia, "Times New Roman", Times, serif; }
 
 /* line 98, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .container .jumbotron,
