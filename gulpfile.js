@@ -67,13 +67,13 @@ gulp.task('build-dev', function(done) {
 /* build static app */
 gulp.task('build-static-utk', function(done) {
     gulp.src('./app/**/*')
-        .pipe(gulp.dest('./dist/app/'));
+        .pipe(gulp.dest('./app_pub/'));
     gulp.src('./dist/css/**/*')
-        .pipe(gulp.dest('./dist/app/css/'));
+        .pipe(gulp.dest('./app_pub/css/'));
     gulp.src('./dist/js/**/*')
-        .pipe(gulp.dest('./dist/app/js/'));
+        .pipe(gulp.dest('./app_pub/js/'));
     gulp.src('./dist/fonts/**/*')
-        .pipe(gulp.dest('./dist/app/fonts/'));      
+        .pipe(gulp.dest('./app_pub/fonts/'));      
 });
 
 gulp.task('build-static-index', function(done) {
@@ -89,7 +89,7 @@ gulp.task('build-static-index', function(done) {
               }
 
         }))
-        .pipe(gulp.dest('./dist/app/'));
+        .pipe(gulp.dest('./app_pub/'));
 });
 
 
