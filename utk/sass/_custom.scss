@@ -1,12 +1,79 @@
 //
+// Helpers
+// --------------------------------------------------
+
+// Background colors
+.bg-zodiac {
+  background-color: $color-zodiac;
+}
+
+.bg-clouds {
+  background-color: $color-clouds;
+}
+
+.bg-clouds-light {
+  background-color: $color-clouds-light;
+}
+
+// Text colors
+.text-envelope {
+  color: $color-envelope;
+}
+
+// Font weights
+.font-light {
+  font-weight: 300;
+}
+
+// Margins
+.margin-top-3 {
+  margin-top: 3px;
+}
+
+.margin-top-4 {
+  margin-top: 4px;
+}
+
+.margin-top-5 {
+  margin-top: 5px;
+}
+
+.margin-top-10 {
+  margin-top: 10px;
+}
+
+.margin-top-30 {
+  margin-top: 30px;
+}
+
+.margin-top-60 {
+  margin-top: 60px;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
+
+.margin-bottom-2 {
+  margin-bottom: 2px;
+}
+
+// Horizontal Rules
+.footer-hr {
+  border-top-color: shade($color-clouds, 5%);
+}
+
+
+//
 // Typography
 // --------------------------------------------------
 
 // Headings
 // -------------------------
 
-h1, .h1 {
-    font-weight: 500;
+h1, .h1,
+.accordion h4, .accordion .h4 {
+  font-weight: 500;
 }
 
 // Emphasis & misc
@@ -26,6 +93,7 @@ h1, .h1 {
 
     .hero-text {
         font-family: $font-family-serif;
+        font-weight: 600;
     }
 
     .container &,
@@ -119,6 +187,99 @@ h1, .h1 {
   display: block;
 }
 
+.citm-secondary-logo {
+  // width: 150px;
+  // height: 19px;
+  width: 180px;
+  height: 23px;
+  // width: 225px;
+  // height: 30px;
+  line-height: 0;
+  display: block; 
+}
+
+
+//
+// CITM Footer Logo
+// --------------------------------------------------
+
+.footer-brand {
+  display: block;
+  height: auto;
+  opacity: 0.85;
+  // padding-top: 1px;
+    
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.citm-footer-logo {
+  // width: 150px;
+  // height: 19px;
+  width: 180px;
+  height: 23px;
+  // width: 225px;
+  // height: 30px;
+  line-height: 0;
+  display: block;
+  margin-bottom: ($line-height-computed / 2);
+  
+  // @media (min-width: $grid-float-breakpoint) {
+    margin-left: -17px;
+  // }
+}
+
+
+//
+// Dropdown menus
+// --------------------------------------------------
+
+// Alternate dropdowns
+// --------------------------------------------------
+
+// Two-column dropdown menu (ul)
+.two-column.dropdown-menu {
+  min-width: 380px;
+  > li > ul.col-sm-6 {
+    padding: 0;
+  }
+  // Links within the dropdown menu
+  > li > ul > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: $line-height-base;
+    color: $dropdown-link-color;
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    text-decoration: none;
+  }
+}
+
+// Two-column Hover/Focus state
+.two-column.dropdown-menu > li > ul > li > a {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $dropdown-link-hover-color;
+    background-color: $dropdown-link-hover-bg;
+  }
+}
+
+// Two-column Active state
+.two-column.dropdown-menu > li > ul > .active > a {
+  &,
+  &:hover,
+  &:focus {
+    color: $dropdown-link-active-color;
+    text-decoration: none;
+    outline: 0;
+    background-color: $dropdown-link-active-bg;
+  }
+}
+
 
 //
 // Navbars
@@ -127,7 +288,35 @@ h1, .h1 {
 // Alternate navbars
 // --------------------------------------------------
 
-// CITM navbar
+// CITM Navbar
+
+// Mobile nav adjustments to 2-column nav structure
+.navbar-nav {
+  @media (max-width: $grid-float-breakpoint-max) {
+    // Dropdowns get custom display when collapsed
+    .open .dropdown-menu.two-column {
+      position: static;
+      float: none;
+      width: auto;
+      margin-top: 0;
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+      li > ul > li > a,
+      .dropdown-header {
+        padding: 5px 15px 5px 25px;
+      }
+      li > ul > li > a {
+        line-height: $line-height-computed;
+        &:hover,
+        &:focus {
+          background-image: none;
+        }
+      }
+    }
+  }
+}
+
 .navbar-citm {
   background-color: $color-envelope;
   // border-color:  $navbar-default-border;
@@ -157,7 +346,7 @@ h1, .h1 {
     height: auto;
     color: $navbar-default-brand-color;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 16px;
 
     &:hover,
     &:focus {
@@ -243,6 +432,7 @@ h1, .h1 {
     .icon-bar {
       background-color: $navbar-default-toggle-icon-bar-bg;
     }
+    @include citm-mobile-navbar-vertical-align(34px);
   }
 
   .navbar-collapse,
@@ -250,7 +440,10 @@ h1, .h1 {
     border-color: $navbar-default-border;
     
     .nav-search-text-input {
-      @media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
+      @media (min-width: $screen-xs-max) and (max-width: 920px) {
+        width: 120px;
+      }
+      @media (min-width: $screen-xs-max) and (max-width: 870px) {
         width: 100px;
       }
     }
@@ -295,6 +488,35 @@ h1, .h1 {
             background-color: $navbar-default-link-disabled-bg;
           }
         }
+
+        // Two-Column dropdown adjustments
+        &.two-column {
+          > li > ul > li > a {
+            color: $navbar-default-link-color;
+            &:hover,
+            &:focus {
+              color: $navbar-default-link-hover-color;
+              background-color: $navbar-default-link-hover-bg;
+            }
+          }
+          > li > ul > .active > a {
+            &,
+            &:hover,
+            &:focus {
+              color: $navbar-default-link-active-color;
+              background-color: $navbar-default-link-active-bg;
+            }
+          }
+          > li > ul > .disabled > a {
+            &,
+            &:hover,
+            &:focus {
+              color: $navbar-default-link-disabled-color;
+              background-color: $navbar-default-link-disabled-bg;
+            }
+          }
+        }
+        
       }
     }
   }
@@ -336,4 +558,124 @@ h1, .h1 {
 .badge-active {
   @extend .badge;
   background-color: $brand-primary;
+}
+
+
+//
+// Accordion
+// --------------------------------------------------
+
+.accordion {
+    .panel-title > a {
+      color: $navbar-default-link-color;
+      
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $navbar-default-link-hover-color;
+      }
+    }  
+}
+
+
+//
+// Footer
+// --------------------------------------------------
+
+.footer-nav-inner {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  
+  h5 {
+    font-weight: 500;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+    
+    // > li {
+    //   margin-bottom: ($line-height-computed / 5);
+    // }
+    
+    > li > a {
+      color: $navbar-default-link-color;
+      
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $navbar-default-link-hover-color;
+      }
+    }
+  }
+  
+  @media (max-width: $grid-float-breakpoint-max) {
+    margin: 0 auto;
+    width: 164px;
+  }
+  
+}
+
+.footer-badges-copyright-inner {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+  @media (max-width: $grid-float-breakpoint-max) {
+    text-align: center;
+  }
+  
+  .copyright-address {
+    padding-top: 10px;
+  }
+}
+
+.security-badge-list {
+  padding-top: 14px;
+  
+  @media (min-width: $grid-float-breakpoint) {
+    padding-top: 0;
+    margin-bottom: 2px;
+  } 
+}
+
+.security-badge {
+  padding-top: 10px;
+  
+  .badge-container {
+    width: 120px;
+    height: 120px;
+    background-color: $color-clouds-light;
+    border-radius: $border-radius-small;
+    position: relative;
+    
+    img {
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+
+//
+// Carousel
+// --------------------------------------------------
+
+.carousel-control {
+  // Remove gradients for backgrounds by setting opacity to "0"
+  &.left {
+    @include gradient-horizontal($start-color: rgba(0,0,0,0), $end-color: rgba(0,0,0,0));
+  }
+  &.right {
+    left: auto;
+    right: 0;
+    @include gradient-horizontal($start-color: rgba(0,0,0,0), $end-color: rgba(0,0,0,0));
+  }
+}
+
+// Carousel Text Overlay
+.carousel-text-overlay {
+  
 }
