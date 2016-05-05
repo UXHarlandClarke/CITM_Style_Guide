@@ -6,7 +6,11 @@ before_script:
   - npm install -g bower
   - bower install
   - npm install -g gulp
-script: gulp deploybuild
+
+script:
+  - gulp deploybuild
+  - gulp build-static-utk
+  - gulp build-static-index
 
 notifications:
   slack:
