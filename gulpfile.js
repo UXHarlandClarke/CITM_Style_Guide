@@ -8,6 +8,7 @@ var gp_cleancss = require('gulp-clean-css');
 var gp_autoprefixer = require('gulp-autoprefixer');
 var gp_include = require("gulp-include");
 var gp_rename = require("gulp-rename");
+var gp_html_replace = require("gulp-html-replace");
 var gp_stripdebug = require("gulp-strip-debug");
 var gp_browserSync = require('browser-sync').create();
 var gp_runsequence = require('run-sequence');
@@ -41,6 +42,14 @@ gulp.task('deploybuild', function(done) {
 });
 
 
+gulp.task('buildstatic', function(done) {
+    gp_runsequence(
+        'build-static-utk',
+        'build-static-index',
+        done);
+});
+
+
 /* build sass/js */
 gulp.task('build-dev', function(done) {
     gp_runsequence(
@@ -51,6 +60,40 @@ gulp.task('build-dev', function(done) {
         'dist-fonts',
         done);
 });
+
+
+
+
+/* build static app */
+gulp.task('build-static-utk', function(done) {
+    gulp.src('./app/**/*')
+        .pipe(gulp.dest('./dist/app/'));
+    gulp.src('./dist/css/**/*')
+        .pipe(gulp.dest('./dist/app/css/'));
+    gulp.src('./dist/js/**/*')
+        .pipe(gulp.dest('./dist/app/js/'));
+    gulp.src('./dist/fonts/**/*')
+        .pipe(gulp.dest('./dist/app/fonts/'));      
+});
+
+gulp.task('build-static-index', function(done) {
+    gulp.src('./app/index.html')
+        .pipe(gp_html_replace({
+              css: {
+                src: [['css/citm.css']],
+                tpl: '<link rel="stylesheet" href="%s">'
+              },
+              js: {
+                src: [['js/citm.min.js']],
+                tpl: '<script src="%s"></script>'
+              }
+
+        }))
+        .pipe(gulp.dest('./dist/app/'));
+});
+
+
+
 
 /* run tests */
 gulp.task('build-test', function(done) {
