@@ -9,8 +9,6 @@ before_script:
 
 script:
   - gulp deploybuild
-  - gulp build-static-utk
-  - gulp build-static-index
 
 notifications:
   slack:
