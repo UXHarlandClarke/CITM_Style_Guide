@@ -5,6 +5,16 @@
 // Background colors
 .bg-zodiac {
   background-color: $color-zodiac;
+  
+  .jumbotron-link {
+    color: tint($link-color, 15%);
+    
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $link-color;
+    }
+  }
 }
 
 .bg-clouds {
@@ -20,9 +30,21 @@
   color: $color-envelope;
 }
 
+.text-clouds {
+  color: $color-clouds;
+}
+
+.text-clouds-dark {
+  color: $color-clouds-dark;
+}
+
 // Font weights
 .font-light {
   font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 // Margins
@@ -91,15 +113,19 @@ h1, .h1,
 
 .jumbotron {
 
-    .hero-text {
-        font-family: $font-family-serif;
-        font-weight: 600;
-    }
+  .hero-text {
+      font-family: $font-family-serif;
+      font-weight: 600;
+  }
 
-    .container &,
-    .container-fluid & {
-        border-radius: 0;
-    }
+  .container &,
+  .container-fluid & {
+      border-radius: 0;
+  }
+  
+  p {
+    font-weight: 300;
+  }
 
 }
 
