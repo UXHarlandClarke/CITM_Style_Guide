@@ -48,4 +48,7 @@
         return lines;
     }
 
+    // Scrollspy
+    $('body').scrollspy({ target: '#citm-utk-nav' })
+
 })();
