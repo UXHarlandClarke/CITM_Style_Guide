@@ -10,10 +10,10 @@
         $("#source-modal").modal();
     });
 
-    $('.bs-component [data-toggle="popover"]').popover();
-    $('.bs-component [data-toggle="tooltip"]').tooltip();
+    $('.citm-component [data-toggle="popover"]').popover();
+    $('.citm-component [data-toggle="tooltip"]').tooltip();
 
-    $(".bs-component").hover(function() {
+    $(".citm-component").hover(function() {
         $(this).append($button);
         $button.show();
     }, function() {

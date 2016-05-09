@@ -6,11 +6,11 @@ body {
     top: 20px;
 }
 
-.bs-component {
+.citm-component {
     position: relative;
 }
 
-.bs-component .modal {
+.citm-component .modal {
     position: relative;
     top: auto;
     right: auto;
@@ -20,11 +20,11 @@ body {
     display: block;
 }
 
-.bs-component .modal-dialog {
+.citm-component .modal-dialog {
     width: 90%;
 }
 
-.bs-component .popover {
+.citm-component .popover {
     position: relative;
     display: inline-block;
     width: 220px;
