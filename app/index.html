@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <div class="citm-utk-header jumbotron text-envelope bg-zodiac">
+    <div id="top" class="citm-utk-header jumbotron text-envelope bg-zodiac">
         <div class="container">
             <h1 class="hero-text">
                 Checks In The Mail UI&nbsp;Toolkit
@@ -62,17 +62,21 @@
                 </div>
             </div>
             <div class="col-md-3" role="complimentary">
-                <nav id="citm-utk-nav" class="citm-utk-sidebar hidden-print hidden-xs hidden-sm affix">
-                    <ul class="nav citm-utk-sidenav">
-                        <li>
-                            <a href="#atoms">Atoms</a>
-                            <ul class="nav">
-                                <li>
-                                    <a href="#atoms-buttons">Buttons</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                <nav id="citm-utk-nav" class="citm-utk-sidebar hidden-print hidden-xs hidden-sm">
+                    <a id="toggle-sidenav" class="toggle-sidenav" role="button" data-toggle="collapse" href="#sidenav" aria-controls="sidenav">Hide nav</a>
+                    <div id="sidenav" aria-expanded="true" class="collapse in">
+                        <ul class="nav citm-utk-sidenav">
+                            <li>
+                                <a href="#atoms">Atoms</a>
+                                <ul class="nav">
+                                    <li>
+                                        <a href="#atoms-buttons">Buttons</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <a href="#top" class="back-to-top">Back to top</a>
+                    </div>
                 </nav>
             </div>
         </div>

@@ -48,7 +48,22 @@
         return lines;
     }
 
-    // Scrollspy
+    // Scrollspy.js
     $('body').scrollspy({ target: '#citm-utk-nav' })
-
+    
+    // Affix.js
+    $('#citm-utk-nav').affix({
+        offset: {
+            top: 300,
+            bottom: function () {
+                return (this.bottom = $('.footer').outerHeight(true))
+            }
+        }
+    })
+    
+    $("#toggle-sidenav").click(function() {
+        var txt = $("#sidenav").is(':visible') ? 'Show nav' : 'Hide nav';
+        $("#toggle-sidenav").text(txt);
+    });
+    
 })();
