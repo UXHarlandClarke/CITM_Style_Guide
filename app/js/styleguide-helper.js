@@ -62,7 +62,7 @@
     })
     
     $("#toggle-sidenav").click(function() {
-        var txt = $("#sidenav").is(':visible') ? 'Show nav' : 'Hide nav';
+        var txt = $("#sidenav").is(':visible') ? 'Show' : 'Hide';
         $("#toggle-sidenav").text(txt);
     });
     

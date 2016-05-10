@@ -80,6 +80,11 @@
   margin-bottom: 2px;
 }
 
+// Borders 
+.border-none {
+  border: none;
+}
+
 // Horizontal Rules
 .footer-hr {
   border-top-color: shade($color-clouds, 5%);
@@ -310,6 +315,29 @@ h1, .h1,
 //
 // Navbars
 // --------------------------------------------------
+
+// General Navbar overrides
+// --------------------------------------------------
+
+.navbar {
+  border: none;
+}
+
+// Default Navbar overrides
+// --------------------------------------------------
+
+.navbar-default {
+  border-bottom: 1px solid $navbar-default-border;
+}
+
+
+// Inverse Navbar overrides
+// --------------------------------------------------
+
+.navbar-inverse {
+  border-bottom: 1px solid $navbar-inverse-border;
+}
+
 
 // Alternate navbars
 // --------------------------------------------------
