@@ -10,10 +10,10 @@
         $("#source-modal").modal();
     });
 
-    $('.bs-component [data-toggle="popover"]').popover();
-    $('.bs-component [data-toggle="tooltip"]').tooltip();
+    $('.citm-component [data-toggle="popover"]').popover();
+    $('.citm-component [data-toggle="tooltip"]').tooltip();
 
-    $(".bs-component").hover(function() {
+    $(".citm-component").hover(function() {
         $(this).append($button);
         $button.show();
     }, function() {
@@ -48,4 +48,22 @@
         return lines;
     }
 
+    // Scrollspy.js
+    $('body').scrollspy({ target: '#citm-utk-nav' })
+    
+    // Affix.js
+    $('#citm-utk-nav').affix({
+        offset: {
+            top: 300,
+            bottom: function () {
+                return (this.bottom = $('.footer').outerHeight(true))
+            }
+        }
+    })
+    
+    $("#toggle-sidenav").click(function() {
+        var txt = $("#sidenav").is(':visible') ? 'Show nav' : 'Hide nav';
+        $("#toggle-sidenav").text(txt);
+    });
+    
 })();

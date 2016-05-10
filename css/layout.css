@@ -1,9 +1,12 @@
-
-.bs-component {
+body {
     position: relative;
 }
 
-.bs-component .modal {
+.citm-component {
+    position: relative;
+}
+
+.citm-component .modal {
     position: relative;
     top: auto;
     right: auto;
@@ -13,11 +16,11 @@
     display: block;
 }
 
-.bs-component .modal-dialog {
+.citm-component .modal-dialog {
     width: 90%;
 }
 
-.bs-component .popover {
+.citm-component .popover {
     position: relative;
     display: inline-block;
     width: 220px;
@@ -87,4 +90,164 @@
 
 .hide-component {
     display: none;
+}
+
+
+/** Scrollspy Navigation Styles
+************************************/
+
+.citm-utk-sidebar {
+    z-index: 100;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid transparent;
+}
+
+.citm-utk-sidebar.affix {
+    position: static;
+    background: rgba(255,255,255,0.95);
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 18px rgba(0,0,0,.10);
+}
+
+@media (min-width:768px) {
+    .citm-utk-sidebar {
+        padding-left: 20px;
+    }
+}
+
+.citm-utk-sidenav {
+    margin-top: 20px;
+}
+
+.citm-utk-sidebar .nav>li>a {
+    display: block;
+    padding: 4px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #767676;
+}
+
+.citm-utk-sidebar .nav>li>a:focus,
+.citm-utk-sidebar .nav>li>a:hover {
+    padding-left: 19px;
+    color: #009CBD;
+    text-decoration: none;
+    background-color: transparent;
+    border-left: 1px solid #009CBD;
+}
+
+.citm-utk-sidebar .nav>.active:focus>a,
+.citm-utk-sidebar .nav>.active:hover>a,
+.citm-utk-sidebar .nav>.active>a {
+    padding-left: 18px;
+    font-weight: 700;
+    color: #009CBD;
+    background-color: transparent;
+    border-left: 2px solid #009CBD;
+}
+
+.citm-utk-sidebar .nav .nav {
+    display: none;
+    padding-bottom: 10px;
+}
+
+.citm-utk-sidebar .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.citm-utk-sidebar .nav .nav>li>a:focus,
+.citm-utk-sidebar .nav .nav>li>a:hover {
+    padding-left: 29px;
+}
+
+.citm-utk-sidebar .nav .nav>.active:focus>a,
+.citm-utk-sidebar .nav .nav>.active:hover>a,
+.citm-utk-sidebar .nav .nav>.active>a {
+    padding-left: 28px;
+    font-weight: 500;
+}
+
+@media (min-width:992px) {
+    .citm-utk-sidebar .nav>.active>ul {
+        display: block;
+    }
+    .citm-utk-sidebar.affix,
+    .citm-utk-sidebar.affix-bottom {
+        width: 213px;
+    }
+    .citm-utk-sidebar.affix {
+        position: fixed;
+        top: 20px;
+    }
+    .citm-utk-sidebar.affix-bottom {
+        position: absolute;
+    }
+    .citm-utk-sidebar.affix .citm-utk-sidenav,
+    .citm-utk-sidebar.affix-bottom .citm-utk-sidenav {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width:1200px) {
+    .citm-utk-sidebar.affix,
+    .citm-utk-sidebar.affix-bottom {
+        width: 263px;
+    }
+}
+
+.citm-utk-section {
+    margin-bottom: 60px;
+}
+
+.citm-utk-section:last-child {
+    margin-bottom: 0;
+}
+
+.back-to-top, 
+.toggle-sidenav {
+    color: #999;   
+}
+
+.toggle-sidenav {
+    display: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    z-index: 100;
+}
+
+.citm-utk-sidebar.affix .toggle-sidenav{
+    display: block;
+    position: absolute;
+    right: 6px;
+    top: 4px;
+}
+
+.back-to-top {
+    display: none;
+    padding: 4px 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.back-to-top:hover,
+.toggle-sidenav:hover,
+.toggle-sidenav:focus {
+    color: #009CBD;
+    text-decoration: none;
+}
+
+@media (min-width:768px) {
+    .back-to-top {
+        display: block;
+    }
 }
