@@ -2,10 +2,6 @@ body {
     position: relative;
 }
 
-.citm-utk-sidebar.affix {
-    top: 20px;
-}
-
 .citm-component {
     position: relative;
 }
@@ -94,4 +90,112 @@ body {
 
 .hide-component {
     display: none;
+}
+
+
+/** Scrollspy Navigation Styles
+************************************/
+
+.citm-utk-sidebar.affix {
+    position: static;
+}
+
+@media (min-width:768px) {
+    .citm-utk-sidebar {
+        padding-left: 20px;
+    }
+}
+
+.citm-utk-sidenav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.citm-utk-sidebar .nav>li>a {
+    display: block;
+    padding: 4px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #767676;
+}
+
+.citm-utk-sidebar .nav>li>a:focus,
+.citm-utk-sidebar .nav>li>a:hover {
+    padding-left: 19px;
+    color: #007096;
+    text-decoration: none;
+    background-color: transparent;
+    border-left: 1px solid #007096;
+}
+
+.citm-utk-sidebar .nav>.active:focus>a,
+.citm-utk-sidebar .nav>.active:hover>a,
+.citm-utk-sidebar .nav>.active>a {
+    padding-left: 18px;
+    font-weight: 700;
+    color: #007096;
+    background-color: transparent;
+    border-left: 2px solid #007096;
+}
+
+.citm-utk-sidebar .nav .nav {
+    display: none;
+    padding-bottom: 10px;
+}
+
+.citm-utk-sidebar .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.citm-utk-sidebar .nav .nav>li>a:focus,
+.citm-utk-sidebar .nav .nav>li>a:hover {
+    padding-left: 29px;
+}
+
+.citm-utk-sidebar .nav .nav>.active:focus>a,
+.citm-utk-sidebar .nav .nav>.active:hover>a,
+.citm-utk-sidebar .nav .nav>.active>a {
+    padding-left: 28px;
+    font-weight: 500;
+}
+
+@media (min-width:992px) {
+    .citm-utk-sidebar .nav>.active>ul {
+        display: block;
+    }
+    .citm-utk-sidebar.affix,
+    .citm-utk-sidebar.affix-bottom {
+        width: 213px;
+    }
+    .citm-utk-sidebar.affix {
+        position: fixed;
+        top: 20px;
+    }
+    .citm-utk-sidebar.affix-bottom {
+        position: absolute;
+    }
+    .citm-utk-sidebar.affix .citm-utk-sidenav,
+    .citm-utk-sidebar.affix-bottom .citm-utk-sidenav {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width:1200px) {
+    .citm-utk-sidebar.affix,
+    .citm-utk-sidebar.affix-bottom {
+        width: 263px;
+    }
+}
+
+.citm-utk-section {
+    margin-bottom: 60px;
+}
+
+.citm-utk-section:last-child {
+    margin-bottom: 0;
 }
