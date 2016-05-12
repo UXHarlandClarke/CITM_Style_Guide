@@ -1,7 +1,17 @@
 body {
     position: relative;
-    padding-top: 50px;
+    /*padding-top: 50px;*/
 }
+
+/*body.modal-open .navbar-fixed-top {
+     give right padding equivalent to gutter to compensate for modal shifting navbar 
+    padding-right: 15px;
+}*/
+
+/*#top {
+    position: absolute;
+    top: -50px;
+}*/
 
 .citm-component {
     position: relative;
@@ -35,6 +45,11 @@ body {
     z-index: 100;
     font-weight: 700;
     box-shadow: 0 3px 9px rgba(0,0,0,.25);
+}
+
+#source-modal pre {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    font-weight: normal;
 }
 
 .nav-tabs {
@@ -106,7 +121,7 @@ body {
 ************************************/
 
 .citm-utk-sidebar {
-    z-index: 100;
+    z-index: 1031;
     padding-top: 15px;
     padding-bottom: 15px;
     border: 1px solid transparent;
@@ -118,6 +133,7 @@ body {
     border-radius: 3px;
     border: 1px solid #ddd;
     box-shadow: 0 5px 18px rgba(0,0,0,.10);
+    transition: all 0.25s linear;
 }
 
 @media (min-width:768px) {
@@ -192,7 +208,7 @@ body {
     }
     .citm-utk-sidebar.affix {
         position: fixed;
-        top: 70px;
+        top: 20px;
     }
     .citm-utk-sidebar.affix-bottom {
         position: absolute;
@@ -265,4 +281,17 @@ body {
     .back-to-top {
         display: block;
     }
+}
+
+/** Example Wells
+************************************/
+
+.well.citm-example {
+    box-shadow: none;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.well.citm-example.well-light-gray {
+    background-color: #f7f7f7;
 }
