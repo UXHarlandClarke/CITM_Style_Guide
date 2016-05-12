@@ -282,3 +282,16 @@ body {
         display: block;
     }
 }
+
+/** Example Wells
+************************************/
+
+.well.citm-example {
+    box-shadow: none;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.well.citm-example.well-light-gray {
+    background-color: #f7f7f7;
+}
