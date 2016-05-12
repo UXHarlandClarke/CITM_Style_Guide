@@ -54,15 +54,16 @@
     // Affix.js
     $('#citm-utk-nav').affix({
         offset: {
-            top: 300,
+            top: 350,
             bottom: function () {
-                return (this.bottom = $('.footer').outerHeight(true))
+                return (this.bottom = $('#footer').outerHeight(true))
             }
         }
     })
-    
+  
+    // Toggle Sidenav Text
     $("#toggle-sidenav").click(function() {
-        var txt = $("#sidenav").is(':visible') ? 'Show' : 'Hide';
+        var txt = $("#sidenav").is(':visible') ? 'Show Menu' : 'Hide';
         $("#toggle-sidenav").text(txt);
     });
     
