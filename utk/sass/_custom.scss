@@ -211,6 +211,11 @@ h1, .h1,
   @include form-control-validation($brand-danger, $brand-danger, $state-danger-bg);
 }
 
+// Demo focus state for UI Toolkit 
+#focusedInput {
+  @include form-control-focus-demo;
+}
+
 
 //
 // CITM Main Logo
