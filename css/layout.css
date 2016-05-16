@@ -286,12 +286,32 @@ body {
 /** Example Wells
 ************************************/
 
-.well.citm-example {
+.citm-example {
     box-shadow: none;
     background-color: #fff;
     border-radius: 3px;
+    padding: 0;
+    border: 1px solid #e3e3e3;
+    min-height: 20px;
+    margin-bottom: 20px;
 }
 
-.well.citm-example.well-light-gray {
+.citm-example .citm-component {
+    margin: 19px;
+}
+
+.citm-example .citm-example-name {
+    background-color: #f5f5f5;
+    padding: 9px 19px;
+    border-bottom: 1px solid #e3e3e3;
+    margin-top: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #959595;
+}
+
+.citm-example.well-light-gray {
     background-color: #f7f7f7;
 }
