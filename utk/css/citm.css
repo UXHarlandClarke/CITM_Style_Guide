@@ -7363,7 +7363,7 @@ a.text-gray:focus {
 
 /* line 178, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .modal-content {
-  border-radius: 0; }
+  border-radius: 1px; }
 
 /* line 190, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .btn-cta {

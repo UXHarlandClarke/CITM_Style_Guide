@@ -27,10 +27,6 @@ body {
     display: block;
 }
 
-.citm-component .modal-dialog {
-    width: 90%;
-}
-
 .citm-component .popover {
     position: relative;
     display: inline-block;
