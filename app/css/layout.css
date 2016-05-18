@@ -1,12 +1,12 @@
 body {
     position: relative;
-    /*padding-top: 50px;*/
+    padding-top: 50px;
 }
 
-/*body.modal-open .navbar-fixed-top {
-     give right padding equivalent to gutter to compensate for modal shifting navbar 
+body.modal-open .navbar-fixed-top {
+     /* give right padding equivalent to gutter to compensate for modal shifting navbar */
     padding-right: 15px;
-}*/
+}
 
 /*#top {
     position: absolute;
@@ -227,9 +227,9 @@ body {
     margin-bottom: 60px;
 }
 
-.citm-utk-section:last-child {
+/*.citm-utk-section:last-child {
     margin-bottom: 0;
-}
+}*/
 
 .back-to-top, 
 .toggle-sidenav {
@@ -310,4 +310,19 @@ body {
 
 .citm-example.well-light-gray {
     background-color: #f7f7f7;
+}
+
+.citm-example.example-full {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+
+.citm-example.example-full .citm-component {
+    margin: 0;
+    padding: 22px 0;
+}
+
+.citm-example.example-full .citm-example-name {
+    margin: 0;
 }
