@@ -8,10 +8,10 @@ body.modal-open .navbar-fixed-top {
     /*padding-right: 15px;*/
 }
 
-/*#top {
+.top-of-page {
     position: absolute;
     top: -50px;
-}*/
+}
 
 .citm-component {
     position: relative;
@@ -39,8 +39,16 @@ body.modal-open .navbar-fixed-top {
     top: 0;
     right: 0;
     z-index: 100;
+}
+
+#source-button, 
+.source-btn-example {
     font-weight: 700;
     box-shadow: 0 3px 9px rgba(0,0,0,.25);
+}
+
+.component-full #source-button {
+    right: 15px;
 }
 
 #source-modal pre {
@@ -344,3 +352,15 @@ body.modal-open .navbar-fixed-top {
     height: 70px;
     margin-top: -70px;
 };
+
+/* Show the grid */
+.show-grid {
+    margin-bottom: 15px;
+}
+
+.show-grid [class^=col-] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 40, 85, .10);
+    border: 1px solid rgba(0, 40, 85, .15);
+}
