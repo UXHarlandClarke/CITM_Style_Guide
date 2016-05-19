@@ -5,7 +5,7 @@ body {
 
 body.modal-open .navbar-fixed-top {
      /* give right padding equivalent to gutter to compensate for modal shifting navbar */
-    padding-right: 15px;
+    /*padding-right: 15px;*/
 }
 
 /*#top {
@@ -308,8 +308,16 @@ body.modal-open .navbar-fixed-top {
     color: #959595;
 }
 
+.citm-example .citm-example-name .btn {
+    letter-spacing: 0;
+}
+
 .citm-example.well-light-gray {
     background-color: #f7f7f7;
+}
+
+.citm-example.well-lighter-gray {
+    background-color: #FEFEFE;
 }
 
 .citm-example.example-full {
@@ -326,3 +334,13 @@ body.modal-open .navbar-fixed-top {
 .citm-example.example-full .citm-example-name {
     margin: 0;
 }
+
+/* Fix page links so they are not covered by fixed nav */
+.page-anchor:before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 0;
+    height: 70px;
+    margin-top: -70px;
+};
