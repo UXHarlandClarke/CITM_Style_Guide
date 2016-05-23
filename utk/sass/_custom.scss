@@ -48,6 +48,10 @@
 }
 
 // Margins
+.margin-top-0 {
+  margin-top: 0;
+}
+
 .margin-top-3 {
   margin-top: 3px;
 }
@@ -62,6 +66,10 @@
 
 .margin-top-10 {
   margin-top: 10px;
+}
+
+.margin-top-19 {
+  margin-top: 19px;
 }
 
 .margin-top-30 {
@@ -195,6 +203,33 @@ h1, .h1,
   @include button-variant($btn-default-color, tint($brand-primary, 93%), $btn-default-border)
 }
 
+// Alternate button groups
+// --------------------------------------------------
+
+// Vertical Justified button group
+.btn-group-vertical.btn-group-justified {
+  display: block;
+  width: 100%;
+  // table-layout: initial;
+  border-collapse: separate;
+  > .btn,
+  > .btn-group {
+    float: none;
+    display: block;
+    width: 100%;
+  }
+  > .btn-group .btn {
+    width: 100%;
+  }
+
+  > .btn-group .dropdown-menu {
+    left: auto;
+  }
+  &.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+      border-top-right-radius: $border-radius-base;
+  }
+}
+
 
 //
 // Forms
@@ -215,6 +250,39 @@ h1, .h1,
 #focusedInput {
   @include form-control-focus-demo;
 }
+
+// Custom Radio Button "Checked" State
+.custom-radio-select {
+  .btn {
+    @include clearfix();
+  }
+  .option-group {
+    color: $gray;
+  }
+  .option-group:before {
+    font-family: $font-family-monospace;
+    font-size: 24px;
+    content: "\25CB";
+    opacity: 0.35;
+    margin-right: 0.125em;
+    transition: 0.5s ease all;
+  }
+  .active .option-group {
+    color: $gray-dark;
+  }
+  .active .option-group:before {
+    content: "\25C9";
+    color: $gray-dark;
+    opacity: 1;
+  }
+  .option-group-left {
+    float: left;
+  }
+  .option-group-right {
+    float: right;
+  }
+}
+
 
 
 //
