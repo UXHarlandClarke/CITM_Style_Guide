@@ -4,8 +4,8 @@ body {
 }
 
 body.modal-open .navbar-fixed-top {
-     /* give right padding equivalent to gutter to compensate for modal shifting navbar */
-    /*padding-right: 15px;*/
+    /* give right padding equivalent to gutter to compensate for modal shifting navbar */
+    padding-right: 15px;
 }
 
 .top-of-page {
