@@ -128,6 +128,31 @@ h1, .h1,
 @include text-emphasis-variant('.text-zodiac', $color-zodiac);
 @include text-emphasis-variant('.text-gray', $gray);
 
+// Prices
+.price {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.price--sm {
+  font-size: $font-size-h4;
+}
+
+.price--md {
+  font-size: $font-size-h2;
+}
+
+.price--lg {
+  font-size: $font-size-h2;
+}
+
+.price__sup,
+.price__currency {
+  font-weight: 700;
+  font-size: 0.57em;
+  letter-spacing: 0.04em;
+}
+
 
 //
 // Jumbotron
@@ -155,6 +180,13 @@ h1, .h1,
 //
 // Labels
 // --------------------------------------------------
+
+.label-info-ghost {
+  background-color: transparent;
+  color: $brand-info;
+  border: 1px solid transparent;
+  box-shadow: inset 0 0 0 1px $brand-info;
+}
 
 .label {
     font-weight: 500;
@@ -250,41 +282,53 @@ h1, .h1,
   @include form-control-focus-demo;
 }
 
-// Custom Radio Button "Checked" State
+// Custom Radio Button Select
 .custom-radio-select {
   .btn {
     @include clearfix();
+    position: relative;
   }
   .option-group {
     color: $gray;
     position: relative;
     margin-left: 24px;
   }
+  .option_price {
+    color: lighten($gray-base, 65%);
+    position: absolute;
+    right: $padding-large-horizontal;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+  }
+  .save-over {
+    font-weight: 400;
+    margin-right: ($padding-large-horizontal)*5;
+    margin-top: ($padding-large-vertical) + 1;
+    @media (max-width: $grid-float-breakpoint) {
+      margin-right: ($padding-large-horizontal)*4.5;
+    }
+  }
   .option-group:before {
     font-family: $font-family-monospace;
     font-size: 24px;
     content: "\25CB";
     opacity: 0.35;
-    // margin-right: 0.125em;
     transition: 0.5s ease all;
     position: absolute;
     left: -24px;
     top: 50%;
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
-  .active .option-group {
+  .active .option-group,
+  .active .option_price {
     color: $gray-dark;
   }
   .active .option-group:before {
     content: "\25C9";
     color: $gray-dark;
     opacity: 1;
-  }
-  .option-group-left {
-    float: left;
-  }
-  .option-group-right {
-    float: right;
   }
   .option-description {
     display: inline-block;
@@ -323,7 +367,6 @@ h1, .h1,
     }
   }
 }
-
 
 
 //
