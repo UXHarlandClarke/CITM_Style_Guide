@@ -257,14 +257,20 @@ h1, .h1,
   }
   .option-group {
     color: $gray;
+    position: relative;
+    margin-left: 24px;
   }
   .option-group:before {
     font-family: $font-family-monospace;
     font-size: 24px;
     content: "\25CB";
     opacity: 0.35;
-    margin-right: 0.125em;
+    // margin-right: 0.125em;
     transition: 0.5s ease all;
+    position: absolute;
+    left: -24px;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .active .option-group {
     color: $gray-dark;
@@ -279,6 +285,15 @@ h1, .h1,
   }
   .option-group-right {
     float: right;
+  }
+  .option-description {
+    display: inline-block;
+    text-align: left;
+  }
+  .option-quantity {
+    font-size: 13px;
+    display: block;
+    color: $gray-light;
   }
   
   &:not(.btn-group-vertical) {
