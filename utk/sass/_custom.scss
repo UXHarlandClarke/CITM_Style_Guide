@@ -210,7 +210,6 @@ h1, .h1,
 .btn-group-vertical.btn-group-justified {
   display: block;
   width: 100%;
-  // table-layout: initial;
   border-collapse: separate;
   > .btn,
   > .btn-group {
@@ -258,14 +257,20 @@ h1, .h1,
   }
   .option-group {
     color: $gray;
+    position: relative;
+    margin-left: 24px;
   }
   .option-group:before {
     font-family: $font-family-monospace;
     font-size: 24px;
     content: "\25CB";
     opacity: 0.35;
-    margin-right: 0.125em;
+    // margin-right: 0.125em;
     transition: 0.5s ease all;
+    position: absolute;
+    left: -24px;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .active .option-group {
     color: $gray-dark;
@@ -280,6 +285,42 @@ h1, .h1,
   }
   .option-group-right {
     float: right;
+  }
+  .option-description {
+    display: inline-block;
+    text-align: left;
+  }
+  .option-quantity {
+    font-size: 13px;
+    display: block;
+    color: $gray-light;
+  }
+  
+  &:not(.btn-group-vertical) {
+    @media (max-width: $grid-float-breakpoint) {
+      > .btn {
+        float: none;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        &:not(:first-child):not(:last-child) {
+          border-radius: 0;
+        }
+        &:first-child:not(:last-child) {
+          @include border-top-radius($btn-border-radius-base);
+          @include border-bottom-radius(0);
+        }
+        &:last-child:not(:first-child) {
+          @include border-top-radius(0);
+          @include border-bottom-radius($btn-border-radius-base);
+        }
+      }
+      // prevent double-borders when buttons are touching
+      > .btn + .btn {
+        margin-top: -1px;
+        margin-left: 0;
+      }
+    }
   }
 }
 
