@@ -6346,6 +6346,7 @@ button.close {
   /* line 32, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss */
   .modal.fade .modal-dialog {
     -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
     transform: translate(0, -25%);
     -webkit-transition: -webkit-transform 0.3s ease-out;
     transition: -webkit-transform 0.3s ease-out;
@@ -6354,6 +6355,7 @@ button.close {
   /* line 36, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss */
   .modal.in .modal-dialog {
     -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
     transform: translate(0, 0); }
 
 /* line 38, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss */
@@ -7644,6 +7646,7 @@ a.text-gray:focus {
   right: 16px;
   top: 50%;
   -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   text-align: right;
   -webkit-transition: 0.25s ease all;
@@ -7671,6 +7674,7 @@ a.text-gray:focus {
   left: -24px;
   top: 50%;
   -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
 
 /* line 328, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
@@ -8072,6 +8076,7 @@ a.text-gray:focus {
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%); }
 
 /* line 914, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
