@@ -76,7 +76,7 @@
                                     <li class="divider"></li>
                                     <li><a href="#organisms-header">Header</a></li>
                                     <li><a href="#organisms-footer">Footer</a></li>
-                                    <li><a href="#organisms-productoptionswell">Product Options Well</a></li>
+                                    <li><a href="#organisms-productoptionspanel">Product Options Panel</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -2334,77 +2334,87 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h2 id="organisms-productoptionswell" class="page-anchor">Product Options Well</h2>
+                        <h2 id="organisms-productoptionspanel" class="page-anchor">Product Options Panel</h2>
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="well">
-                                    <h4 class="margin-top-0">Select style</h4>
-                                    <div class="btn-group btn-group-justified custom-radio-select" data-toggle="buttons">
-                                        <label class="btn btn-default btn-lg active">
-                                            <span class="option_description">
-                                                <input type="radio" name="rdProductOpts" id="rdDuplicates" autocomplete="off" checked>Duplicate Checks
-                                            </span>
-                                        </label>
-                                        <label class="btn btn-default btn-lg">
-                                            <span class="option_description">
-                                                <input type="radio" name="rdProductOpts" id="rdSingles" autocomplete="off">Single Checks
-                                            </span>
-                                        </label>
+                                <div class="panel panel-default panel-pdp">
+                                    <div class="panel-body">
+                                        <h4 class="pdp--section-head">Select style</h4>
+                                        <div class="btn-group btn-group-justified custom-radio-select" data-toggle="buttons">
+                                            <label class="btn btn-default btn-lg active">
+                                                <span class="option_description">
+                                                    <input type="radio" name="rdProductOpts" id="rdDuplicates" autocomplete="off" checked>Duplicate Checks
+                                                </span>
+                                            </label>
+                                            <label class="btn btn-default btn-lg">
+                                                <span class="option_description">
+                                                    <input type="radio" name="rdProductOpts" id="rdSingles" autocomplete="off">Single Checks
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <h4 class="pdp--section-head">Select quantity</h4>
+                                        <div class="btn-group btn-group-vertical btn-group-justified custom-radio-select" data-toggle="buttons">
+                                            <label class="btn btn-default btn-lg active">
+                                                <span class="option_description">
+                                                    <input type="radio" name="rdDuplicatesProductOpts" id="quantity1" autocomplete="off" checked><span class="option-description">1 Box <small class="option-quantity">150 Checks</small></span>
+                                                </span>
+                                                <span class="option_price">
+                                                    <span class="price price--md">
+                                                        <span class="save-over badge badge-info-ghost hidden">
+                                                            
+                                                        </span>
+                                                        <sup class="price__currency">$</sup>8<sup class="price__sup">46</sup>
+                                                    </span>
+                                                </span>
+                                            </label>
+                                            <label class="btn btn-default btn-lg">
+                                                <span class="option_description">
+                                                    <input type="radio" name="rdDuplicatesProductOpts" id="quantity2" autocomplete="off"><span class="option-description">2 Boxes <small class="option-quantity">300 Checks</small></span>
+                                                </span>
+                                                <span class="option_price">
+                                                    <span class="price price--md">
+                                                        <span class="save-over badge badge-info-ghost">
+                                                            Save Over 11%
+                                                        </span>
+                                                        <sup class="price__currency">$</sup>16<sup class="price__sup">92</sup>
+                                                    </span>
+                                                </span>
+                                            </label>
+                                            <label class="btn btn-default btn-lg">
+                                                <span class="option_description">
+                                                    <input type="radio" name="rdDuplicatesProductOpts" id="quantity3" autocomplete="off"><span class="option-description">3 Boxes <small class="option-quantity">450 Checks</small></span>
+                                                </span> 
+                                                <span class="option_price">
+                                                    <span class="price price--md">
+                                                        <span class="save-over badge badge-info-ghost">
+                                                            Save Over 11%
+                                                        </span>
+                                                        <sup class="price__currency">$</sup>25<sup class="price__sup">38</sup>
+                                                    </span>
+                                                </span>
+                                            </label>
+                                            <label class="btn btn-default btn-lg">
+                                                <span class="option_description">
+                                                    <input type="radio" name="rdDuplicatesProductOpts" id="quantity4" autocomplete="off"><span class="option-description">4 Boxes <small class="option-quantity">600 Checks</small></span>
+                                                </span>
+                                                <span class="option_price">
+                                                    <span class="price price--md">
+                                                        <span class="save-over badge badge-info-ghost">
+                                                            Save Over 11%
+                                                        </span>
+                                                        <sup class="price__currency">$</sup>33<sup class="price__sup">84</sup>
+                                                    </span>
+                                                </span>
+                                            </label>
+                                        </div>
                                     </div>
-                                    <h4 class="margin-top-19">Select quantity</h4>
-                                    <div class="btn-group btn-group-vertical btn-group-justified custom-radio-select" data-toggle="buttons">
-                                        <label class="btn btn-default btn-lg active">
-                                            <span class="option_description">
-                                                <input type="radio" name="rdDuplicatesProductOpts" id="quantity1" autocomplete="off" checked><span class="option-description">1 Box <small class="option-quantity">150 Checks</small></span>
-                                            </span>
-                                            <span class="option_price">
-                                                <span class="price price--md">
-                                                    <span class="save-over badge badge-info-ghost hidden">
-                                                        
-                                                    </span>
-                                                    <sup class="price__currency">$</sup>8<sup class="price__sup">46</sup>
-                                                </span>
-                                            </span>
-                                        </label>
-                                        <label class="btn btn-default btn-lg">
-                                            <span class="option_description">
-                                                <input type="radio" name="rdDuplicatesProductOpts" id="quantity2" autocomplete="off"><span class="option-description">2 Boxes <small class="option-quantity">300 Checks</small></span>
-                                            </span>
-                                            <span class="option_price">
-                                                <span class="price price--md">
-                                                    <span class="save-over badge badge-info-ghost">
-                                                        Save Over 11%
-                                                    </span>
-                                                    <sup class="price__currency">$</sup>16<sup class="price__sup">92</sup>
-                                                </span>
-                                            </span>
-                                        </label>
-                                        <label class="btn btn-default btn-lg">
-                                            <span class="option_description">
-                                                <input type="radio" name="rdDuplicatesProductOpts" id="quantity3" autocomplete="off"><span class="option-description">3 Boxes <small class="option-quantity">450 Checks</small></span>
-                                            </span> 
-                                            <span class="option_price">
-                                                <span class="price price--md">
-                                                    <span class="save-over badge badge-info-ghost">
-                                                        Save Over 11%
-                                                    </span>
-                                                    <sup class="price__currency">$</sup>25<sup class="price__sup">38</sup>
-                                                </span>
-                                            </span>
-                                        </label>
-                                        <label class="btn btn-default btn-lg">
-                                            <span class="option_description">
-                                                <input type="radio" name="rdDuplicatesProductOpts" id="quantity4" autocomplete="off"><span class="option-description">4 Boxes <small class="option-quantity">600 Checks</small></span>
-                                            </span>
-                                            <span class="option_price">
-                                                <span class="price price--md">
-                                                    <span class="save-over badge badge-info-ghost">
-                                                        Save Over 11%
-                                                    </span>
-                                                    <sup class="price__currency">$</sup>33<sup class="price__sup">84</sup>
-                                                </span>
-                                            </span>
-                                        </label>
+                                    <div class="fraud-armor">
+                                        <div class="panel-intermezzo">
+                                            <h4 class="pdp--section-head">Fraud Service <span class="badge badge-normal badge-ghost">recommended</span></h4>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <a href="#" class="btn btn-cta">Personalize</a>
                                     </div>
                                 </div>
                             </div>
