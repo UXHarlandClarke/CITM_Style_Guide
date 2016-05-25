@@ -212,11 +212,34 @@ h1, .h1,
 
 
 //
+// Panels
+// --------------------------------------------------
+
+.panel-intermezzo {
+  @extend .panel-footer;
+  border: none;
+}
+
+.panel-pdp {
+  .panel-body,
+  .panel-intermezzo {
+    padding-top: 5px;
+    &:not(:first-child) {
+      padding-top: $panel-body-padding;
+    }
+    .pdp--section-head:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+}
+
+
+//
 // Modals
 // --------------------------------------------------
 
 .modal-content {
-    border-radius: 1px;
+  border-radius: 1px;
 }
 
 
@@ -793,10 +816,26 @@ h1, .h1,
 // Badges
 // --------------------------------------------------
 
+.badge-normal {
+  font-weight: 400;
+}
+
 // Alternative Badges
 .badge-active {
   @extend .badge;
   background-color: $brand-primary;
+}
+
+.badge-info {
+  @extend .badge;
+  background-color: $brand-info;
+}
+
+.badge-ghost {
+  @extend .badge;
+  background-color: transparent;
+  border: 1px solid $badge-bg;
+  color: $badge-bg;
 }
 
 .btn-default .badge-info-ghost {
