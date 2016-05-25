@@ -288,12 +288,14 @@ h1, .h1,
     @include clearfix();
     position: relative;
   }
-  .option-group {
+  .option_description {
+    @extend .pull-left;
     color: $gray;
     position: relative;
     margin-left: 24px;
   }
   .option_price {
+    @extend .pull-right;
     color: lighten($gray-base, 65%);
     position: absolute;
     right: $padding-large-horizontal;
@@ -312,7 +314,7 @@ h1, .h1,
       }
     }
   }
-  .option-group:before {
+  .option_description:before {
     font-family: $font-family-monospace;
     font-size: 24px;
     content: "\25CB";
@@ -323,7 +325,7 @@ h1, .h1,
     top: 50%;
     transform: translateY(-50%);
   }
-  .active .option-group,
+  .active .option_description,
   .active .option_price {
     color: $gray-dark;
     transition: 0.25s ease all;
@@ -332,7 +334,7 @@ h1, .h1,
     color: $gray;
     transition: 0.25s ease all;
   }
-  .active .option-group:before {
+  .active .option_description:before {
     content: "\25C9";
     color: $gray-dark;
     opacity: 1;
