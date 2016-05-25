@@ -300,6 +300,7 @@ h1, .h1,
     top: 50%;
     transform: translateY(-50%);
     text-align: right;
+    transition: 0.25s ease all;
   }
   .price {
     .save-over {
@@ -316,7 +317,7 @@ h1, .h1,
     font-size: 24px;
     content: "\25CB";
     opacity: 0.35;
-    transition: 0.5s ease all;
+    transition: 0.25s ease all;
     position: absolute;
     left: -24px;
     top: 50%;
@@ -325,9 +326,11 @@ h1, .h1,
   .active .option-group,
   .active .option_price {
     color: $gray-dark;
+    transition: 0.25s ease all;
   }
   .active .option-quantity {
     color: $gray;
+    transition: 0.25s ease all;
   }
   .active .option-group:before {
     content: "\25C9";
@@ -337,6 +340,7 @@ h1, .h1,
   .active.btn-default .badge-info-ghost {
     color: darken($brand-info, 10%);
     border: 1px solid darken($brand-info, 10%);
+    transition: 0.25s ease all;
   }
   .active.btn-default:hover,
   .active.btn-default:focus {
