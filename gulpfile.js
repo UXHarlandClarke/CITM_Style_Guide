@@ -27,12 +27,15 @@ options.sass = {
     'bower_components/bootstrap-sass/assets/stylesheets'
   ]
 };
-options.autoprefixer = {
+options.oldprefixer = {
   map: true,
   from: 'asset',
   to: 'asrp.min.css'
 };
-
+options.autoprefixer = {
+  browsers: ['> 1%', 'IE 9', 'IE 10'], 
+  cascade: true 
+};
 
 gulp.task('default', ['build-dev', 'app'], function(){});
 
@@ -122,7 +125,7 @@ gulp.task('app', ['sass'], function() {
 gulp.task('sass', function () {
   return gulp.src('./utk/sass/' + APP_NAME + '.scss')
     .pipe(gp_sass(options.sass).on('error', gp_sass.logError))
-    .pipe(gp_autoprefixer())
+    .pipe(gp_autoprefixer(options.autoprefixer))
     .pipe(gulp.dest('./utk/css'));
 });
  
