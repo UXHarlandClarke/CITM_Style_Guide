@@ -288,46 +288,66 @@ h1, .h1,
     @include clearfix();
     position: relative;
   }
-  .option-group {
+  .option_description {
+    @extend .pull-left;
     color: $gray;
     position: relative;
     margin-left: 24px;
   }
   .option_price {
+    @extend .pull-right;
     color: lighten($gray-base, 65%);
     position: absolute;
     right: $padding-large-horizontal;
     top: 50%;
     transform: translateY(-50%);
     text-align: right;
+    transition: 0.25s ease all;
   }
-  .save-over {
-    font-weight: 400;
-    margin-right: ($padding-large-horizontal)*5;
-    margin-top: ($padding-large-vertical) + 1;
-    @media (max-width: $grid-float-breakpoint) {
-      margin-right: ($padding-large-horizontal)*4.5;
+  .price {
+    .save-over {
+      font-weight: 400;
+      margin-bottom: 5px;
+      letter-spacing: normal;
+      @media (max-width: 360px) {
+        display: none;
+      }
     }
   }
-  .option-group:before {
+  .option_description:before {
     font-family: $font-family-monospace;
     font-size: 24px;
     content: "\25CB";
     opacity: 0.35;
-    transition: 0.5s ease all;
+    transition: 0.25s ease all;
     position: absolute;
     left: -24px;
     top: 50%;
     transform: translateY(-50%);
   }
-  .active .option-group,
+  .active .option_description,
   .active .option_price {
     color: $gray-dark;
+    transition: 0.25s ease all;
   }
-  .active .option-group:before {
+  .active .option-quantity {
+    color: $gray;
+    transition: 0.25s ease all;
+  }
+  .active .option_description:before {
     content: "\25C9";
     color: $gray-dark;
     opacity: 1;
+  }
+  .active.btn-default .badge-info-ghost {
+    color: darken($brand-info, 10%);
+    border: 1px solid darken($brand-info, 10%);
+    transition: 0.25s ease all;
+  }
+  .active.btn-default:hover,
+  .active.btn-default:focus {
+    background-color: #e6e6e6;
+    border-color: #adadad;
   }
   .option-description {
     display: inline-block;
@@ -777,6 +797,13 @@ h1, .h1,
 .badge-active {
   @extend .badge;
   background-color: $brand-primary;
+}
+
+.btn-default .badge-info-ghost {
+  background-color: transparent;
+  color: $brand-info;
+  border: 1px solid $brand-info;
+  // box-shadow: inset 0 0 0 1px $brand-info;
 }
 
 
