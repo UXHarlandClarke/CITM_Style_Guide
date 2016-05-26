@@ -1825,7 +1825,7 @@ blockquote {
 /* line 274, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 .blockquote-reverse,
 blockquote.pull-right,
-.custom-radio-select blockquote.option_price {
+.custom-select blockquote.option_price {
   padding-right: 15px;
   padding-left: 0;
   border-right: 5px solid #f1f1f1;
@@ -1835,17 +1835,17 @@ blockquote.pull-right,
   .blockquote-reverse footer:before,
   .blockquote-reverse small:before,
   .blockquote-reverse .small:before,
-  blockquote.pull-right footer:before, .custom-radio-select blockquote.option_price footer:before,
-  blockquote.pull-right small:before, .custom-radio-select blockquote.option_price small:before,
-  blockquote.pull-right .small:before, .custom-radio-select blockquote.option_price .small:before {
+  blockquote.pull-right footer:before, .custom-select blockquote.option_price footer:before,
+  blockquote.pull-right small:before, .custom-select blockquote.option_price small:before,
+  blockquote.pull-right .small:before, .custom-select blockquote.option_price .small:before {
     content: ''; }
   /* line 287, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
   .blockquote-reverse footer:after,
   .blockquote-reverse small:after,
   .blockquote-reverse .small:after,
-  blockquote.pull-right footer:after, .custom-radio-select blockquote.option_price footer:after,
-  blockquote.pull-right small:after, .custom-radio-select blockquote.option_price small:after,
-  blockquote.pull-right .small:after, .custom-radio-select blockquote.option_price .small:after {
+  blockquote.pull-right footer:after, .custom-select blockquote.option_price footer:after,
+  blockquote.pull-right small:after, .custom-select blockquote.option_price small:after,
+  blockquote.pull-right .small:after, .custom-select blockquote.option_price .small:after {
     content: '\00A0 \2014'; }
 
 /* line 294, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
@@ -3992,7 +3992,7 @@ tbody.collapse.in {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box; }
   /* line 54, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_dropdowns.scss */
-  .dropdown-menu.pull-right, .custom-radio-select .dropdown-menu.option_price {
+  .dropdown-menu.pull-right, .custom-select .dropdown-menu.option_price {
     right: 0;
     left: auto; }
   /* line 60, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_dropdowns.scss */
@@ -4073,7 +4073,7 @@ tbody.collapse.in {
   z-index: 990; }
 
 /* line 173, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_dropdowns.scss */
-.pull-right > .dropdown-menu, .custom-radio-select .option_price > .dropdown-menu {
+.pull-right > .dropdown-menu, .custom-select .option_price > .dropdown-menu {
   right: 0;
   left: auto; }
 
@@ -5648,13 +5648,13 @@ a.thumbnail.active {
 
 /* line 29, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_media.scss */
 .media-right,
-.media > .pull-right, .custom-radio-select
+.media > .pull-right, .custom-select
 .media > .option_price {
   padding-left: 10px; }
 
 /* line 34, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_media.scss */
 .media-left,
-.media > .pull-left, .custom-radio-select
+.media > .pull-left, .custom-select
 .media > .option_description {
   padding-right: 10px; }
 
@@ -6977,11 +6977,11 @@ button.close {
   margin-right: auto; }
 
 /* line 15, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_utilities.scss */
-.pull-right, .custom-radio-select .option_price {
+.pull-right, .custom-select .option_price {
   float: right !important; }
 
 /* line 18, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_utilities.scss */
-.pull-left, .custom-radio-select .option_description {
+.pull-left, .custom-select .option_description {
   float: left !important; }
 
 /* line 27, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_utilities.scss */
@@ -7261,93 +7261,110 @@ button.close {
 .bg-clouds-lighter {
   background-color: #eef1f4; }
 
-/* line 38, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 37, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.bg-envelope {
+  background-color: #f1f1f1; }
+
+/* line 41, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.bg-transparent {
+  background-color: transparent; }
+
+/* line 46, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .text-envelope {
   color: #f1f1f1; }
 
-/* line 42, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 50, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .text-clouds {
   color: #c5cfda; }
 
-/* line 46, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 54, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .text-clouds-dark {
   color: #96a8bc; }
 
-/* line 51, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 58, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.text-gray-dark {
+  color: #333333; }
+
+/* line 63, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .font-light {
   font-weight: 300; }
 
-/* line 55, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 67, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .font-normal {
   font-weight: 400; }
 
-/* line 60, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 72, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .margin-top-0 {
   margin-top: 0; }
 
-/* line 64, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 76, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .margin-top-3 {
   margin-top: 3px; }
 
-/* line 68, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 80, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .margin-top-4 {
   margin-top: 4px; }
 
-/* line 72, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 84, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .margin-top-5 {
   margin-top: 5px; }
 
-/* line 76, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 88, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .margin-top-10 {
   margin-top: 10px; }
 
-/* line 80, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 92, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .margin-top-19 {
   margin-top: 19px; }
 
-/* line 84, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 96, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .margin-top-30 {
   margin-top: 30px; }
 
-/* line 88, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 100, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .margin-top-60 {
   margin-top: 60px; }
 
-/* line 92, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 104, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .margin-bottom-0 {
   margin-bottom: 0; }
 
-/* line 96, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 108, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .margin-bottom-2 {
   margin-bottom: 2px; }
 
-/* line 101, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 113, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .padding-left-0 {
   padding-left: 0; }
 
-/* line 105, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-.padding-left-30 {
-  padding-left: 30px; }
+/* line 117, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.padding-top-bottom-5 {
+  padding-top: 5px !important;
+  padding-bottom: 5px; }
 
-/* line 110, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 123, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .border-none {
   border: none; }
 
-/* line 115, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 128, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .footer-hr {
   border-top-color: #bbc5cf; }
 
-/* line 123, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 136, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .space-after:after {
   font-family: inherit;
   content: "\00A0"; }
 
-/* line 136, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 141, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.wrap-white-space {
+  white-space: normal; }
+
+/* line 153, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 h1, .h1,
 .accordion h4, .accordion .h4 {
   font-weight: 500; }
 
-/* line 145, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 162, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .lead strong {
   font-weight: 500; }
 
@@ -7369,89 +7386,94 @@ a.text-gray:hover,
 a.text-gray:focus {
   color: #3d3d3d; }
 
-/* line 159, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 176, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .price {
   font-weight: 500;
   letter-spacing: 0.02em; }
 
-/* line 164, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 181, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .price--sm {
   font-size: 18px; }
 
-/* line 168, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 185, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .price--md {
   font-size: 30px; }
 
-/* line 172, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 189, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .price--lg {
-  font-size: 30px; }
+  font-size: 36px; }
 
-/* line 176, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 193, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .price__sup,
 .price__currency {
   font-weight: 700;
   font-size: 0.57em;
   letter-spacing: 0.04em; }
 
-/* line 190, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 207, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .jumbotron .hero-text {
   font-family: "abril-titling-semicondensed", "Times New Roman", Times, serif;
   font-weight: 600; }
 
-/* line 195, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 212, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .container .jumbotron,
 .container-fluid .jumbotron {
   border-radius: 0; }
 
-/* line 200, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 217, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .jumbotron p {
   font-weight: 300; }
 
-/* line 211, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 228, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .label-info-ghost {
   background-color: transparent;
   color: #844b72;
   border: 1px solid transparent;
   box-shadow: inset 0 0 0 1px #844b72; }
 
-/* line 218, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 235, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .label {
   font-weight: 500; }
 
-/* line 228, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 245, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .well {
   border-radius: 0; }
 
-/* line 233, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 250, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .well-lg {
   border-radius: 0; }
 
-/* line 236, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 253, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .well-sm {
   border-radius: 0; }
 
-/* line 245, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 262, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .panel-intermezzo {
   border: none; }
 
-/* line 251, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 268, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .panel-pdp .panel-body,
 .panel-pdp .panel-intermezzo {
   padding-top: 5px; }
-  /* line 254, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 271, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .panel-pdp .panel-body:not(:first-child),
   .panel-pdp .panel-intermezzo:not(:first-child) {
     padding-top: 15px; }
-  /* line 257, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 274, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .panel-pdp .panel-body .pdp--section-head:not(:first-child),
   .panel-pdp .panel-intermezzo .pdp--section-head:not(:first-child) {
     margin-top: 15px; }
+  /* line 277, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  .panel-pdp .panel-body.panel-price-area,
+  .panel-pdp .panel-intermezzo.panel-price-area {
+    padding-top: 0;
+    padding-bottom: 5px; }
 
-/* line 268, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 289, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .modal-content {
   border-radius: 1px; }
 
-/* line 280, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 301, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .btn-cta {
   color: #002855;
   background-color: #ffd16c;
@@ -7496,7 +7518,7 @@ a.text-gray:focus {
     color: #ffd16c;
     background-color: #002855; }
 
-/* line 284, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 305, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .btn-default-emph {
   color: #333;
   background-color: #edf8fa;
@@ -7541,24 +7563,24 @@ a.text-gray:focus {
     color: #edf8fa;
     background-color: #333; }
 
-/* line 292, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 313, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .btn-group-vertical.btn-group-justified {
   display: block;
   width: 100%;
   border-collapse: separate; }
-  /* line 296, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 317, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .btn-group-vertical.btn-group-justified > .btn,
   .btn-group-vertical.btn-group-justified > .btn-group {
     float: none;
     display: block;
     width: 100%; }
-  /* line 302, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 323, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .btn-group-vertical.btn-group-justified > .btn-group .btn {
     width: 100%; }
-  /* line 306, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 327, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .btn-group-vertical.btn-group-justified > .btn-group .dropdown-menu {
     left: auto; }
-  /* line 309, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 330, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .btn-group-vertical.btn-group-justified.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
     border-top-right-radius: 4px; }
 
@@ -7658,31 +7680,32 @@ a.text-gray:focus {
 .has-error .form-control-feedback {
   color: #b3272d; }
 
-/* line 331, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 352, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 #focusedInput {
   border-color: #009cbd;
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 156, 189, 0.6); }
 
-/* line 337, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-.custom-radio-select .btn {
+/* line 358, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.custom-select .btn {
   position: relative; }
   /* line 14, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
-  .custom-radio-select .btn:before, .custom-radio-select .btn:after {
+  .custom-select .btn:before, .custom-select .btn:after {
     content: " ";
     display: table; }
   /* line 19, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
-  .custom-radio-select .btn:after {
+  .custom-select .btn:after {
     clear: both; }
 
-/* line 341, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-.custom-radio-select .option_description {
+/* line 362, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.custom-select .option_description {
   color: #565656;
   position: relative;
-  margin-left: 24px; }
+  margin-left: 24px;
+  text-align: left; }
 
-/* line 347, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-.custom-radio-select .option_price {
+/* line 369, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.custom-select .option_price {
   color: #a6a6a6;
   position: absolute;
   right: 16px;
@@ -7694,21 +7717,21 @@ a.text-gray:focus {
   -webkit-transition: 0.25s ease all;
   transition: 0.25s ease all; }
 
-/* line 358, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-.custom-radio-select .price .save-over {
+/* line 380, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.custom-select .price .save-over {
   font-weight: 400;
   margin-bottom: 4px;
   letter-spacing: normal; }
   @media (max-width: 360px) {
-    /* line 358, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-    .custom-radio-select .price .save-over {
+    /* line 380, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    .custom-select .price .save-over {
       display: none; } }
 
-/* line 367, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-.custom-radio-select .option_description:before {
+/* line 389, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.custom-select .option_description:before {
+  content: "\25CB";
   font-family: "fira-mono", Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 24px;
-  content: "\25CB";
   opacity: 0.35;
   -webkit-transition: 0.25s ease all;
   transition: 0.25s ease all;
@@ -7719,115 +7742,169 @@ a.text-gray:focus {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%); }
 
-/* line 378, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-.custom-radio-select .active .option_description,
-.custom-radio-select .active .option_price {
+/* line 400, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.custom-select .option_description.option-checkbox:before {
+  font-family: 'Glyphicons Halflings';
+  content: "\e157";
+  font-size: 16px;
+  -webkit-transition: none;
+  transition: none; }
+
+/* line 406, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.custom-select .active .option_description,
+.custom-select .active .option_price {
   color: #333333;
   -webkit-transition: 0.25s ease all;
   transition: 0.25s ease all; }
 
-/* line 383, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-.custom-radio-select .active .option-quantity {
+/* line 411, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.custom-select .active .option_description.active-color-red {
+  color: #891e22;
+  -webkit-transition: 0.25s ease all;
+  transition: 0.25s ease all; }
+
+/* line 415, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.custom-select .active .option_description.active-color-red:before {
+  color: #891e22;
+  -webkit-transition: 0.25s ease all;
+  transition: 0.25s ease all; }
+
+/* line 419, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.custom-select .active .option_quantity {
   color: #565656;
   -webkit-transition: 0.25s ease all;
   transition: 0.25s ease all; }
 
-/* line 387, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-.custom-radio-select .active .option_description:before {
+/* line 423, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.custom-select .active .option_description:before {
   content: "\25C9";
   color: #333333;
   opacity: 1; }
 
-/* line 392, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-.custom-radio-select .active.btn-default .badge-info-ghost {
+/* line 428, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.custom-select .active .option_description.option-checkbox:before {
+  font-family: 'Glyphicons Halflings';
+  content: "\e067";
+  -webkit-transition: none;
+  transition: none; }
+
+/* line 433, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.custom-select .active.btn-default .badge-info-ghost {
   color: #643856;
   border: 1px solid #643856;
   -webkit-transition: 0.25s ease all;
   transition: 0.25s ease all; }
 
-/* line 397, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-.custom-radio-select .active.btn-default:hover,
-.custom-radio-select .active.btn-default:focus {
+/* line 438, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.custom-select .active.btn-default:hover,
+.custom-select .active.btn-default:focus {
   background-color: #e6e6e6;
   border-color: #adadad; }
 
-/* line 402, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-.custom-radio-select .option-description {
+/* line 443, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.custom-select .option_name {
   display: inline-block;
   text-align: left; }
 
-/* line 406, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-.custom-radio-select .option-quantity {
+/* line 447, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.custom-select .option_quantity {
   font-size: 13px;
   display: block;
   color: #777777; }
 
 @media (max-width: 840px) {
-  /* line 414, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-  .custom-radio-select:not(.btn-group-vertical) > .btn {
+  /* line 455, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  .custom-select:not(.btn-group-vertical) > .btn {
     float: none;
     display: block;
     width: 100%;
     max-width: 100%; }
-    /* line 419, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-    .custom-radio-select:not(.btn-group-vertical) > .btn:not(:first-child):not(:last-child) {
+    /* line 460, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    .custom-select:not(.btn-group-vertical) > .btn:not(:first-child):not(:last-child) {
       border-radius: 0; }
-    /* line 422, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-    .custom-radio-select:not(.btn-group-vertical) > .btn:first-child:not(:last-child) {
+    /* line 463, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    .custom-select:not(.btn-group-vertical) > .btn:first-child:not(:last-child) {
       border-top-right-radius: 4px;
       border-top-left-radius: 4px;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0; }
-    /* line 426, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-    .custom-radio-select:not(.btn-group-vertical) > .btn:last-child:not(:first-child) {
+    /* line 467, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    .custom-select:not(.btn-group-vertical) > .btn:last-child:not(:first-child) {
       border-top-right-radius: 0;
       border-top-left-radius: 0;
       border-bottom-right-radius: 4px;
       border-bottom-left-radius: 4px; }
-  /* line 432, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
-  .custom-radio-select:not(.btn-group-vertical) > .btn + .btn {
+  /* line 473, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  .custom-select:not(.btn-group-vertical) > .btn + .btn {
     margin-top: -1px;
     margin-left: 0; } }
 
-/* line 440, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 481, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .check-security-header {
   display: inline-block;
   vertical-align: baseline; }
-  /* line 443, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 484, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .check-security-header img {
     margin-top: 3px;
     display: inline-block;
     vertical-align: baseline; }
     @media (max-width: 400px) {
-      /* line 443, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      /* line 484, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
       .check-security-header img {
         display: block;
         margin-bottom: 3px; } }
 
-/* line 459, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 495, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.fraud-armor-container {
+  margin-bottom: 5px; }
+  /* line 497, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  .fraud-armor-container ul {
+    padding-left: 12px;
+    list-style: none; }
+    /* line 501, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    .fraud-armor-container ul li:before {
+      content: "";
+      border-color: transparent #565656;
+      border-style: solid;
+      border-width: 0.35em 0 0.35em 0.45em;
+      display: block;
+      height: 0;
+      width: 0;
+      left: -0.7625em;
+      top: 1em;
+      position: relative; }
+    /* line 515, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    .fraud-armor-container ul li.no-style:before {
+      border-color: transparent transparent; }
+
+/* line 522, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.product-opts-price {
+  display: inline-block; }
+
+/* line 530, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .citm-primary-logo {
   width: 122px;
   height: 83px;
   line-height: 0;
   display: block; }
 
-/* line 470, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 541, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .citm-secondary-logo {
   width: 180px;
   height: 23px;
   line-height: 0;
   display: block; }
 
-/* line 486, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 557, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .footer-brand {
   display: block;
   height: auto;
   opacity: 0.85; }
-  /* line 492, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 562, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .footer-brand:hover, .footer-brand:focus {
     opacity: 1; }
 
-/* line 498, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 568, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .citm-footer-logo {
   width: 180px;
   height: 23px;
@@ -7836,13 +7913,13 @@ a.text-gray:focus {
   margin-bottom: 10px;
   margin-left: -17px; }
 
-/* line 523, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 590, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .two-column.dropdown-menu {
   min-width: 380px; }
-  /* line 525, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 592, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .two-column.dropdown-menu > li > ul.col-sm-6 {
     padding: 0; }
-  /* line 529, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 596, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .two-column.dropdown-menu > li > ul > li > a {
     display: block;
     padding: 3px 20px;
@@ -7853,33 +7930,33 @@ a.text-gray:focus {
     white-space: nowrap;
     text-decoration: none; }
 
-/* line 543, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 610, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .two-column.dropdown-menu > li > ul > li > a:hover, .two-column.dropdown-menu > li > ul > li > a:focus {
   text-decoration: none;
   color: #262626;
   background-color: #f5f5f5; }
 
-/* line 553, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 620, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .two-column.dropdown-menu > li > ul > .active > a, .two-column.dropdown-menu > li > ul > .active > a:hover, .two-column.dropdown-menu > li > ul > .active > a:focus {
   color: #fff;
   text-decoration: none;
   outline: 0;
   background-color: #009cbd; }
 
-/* line 571, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 638, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .navbar {
   border: none; }
 
-/* line 578, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 645, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .navbar-default {
   border-bottom: 1px solid #e7e7e7; }
 
-/* line 586, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 653, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .navbar-inverse {
   border-bottom: 1px solid #090909; }
 
 @media (max-width: 839px) {
-  /* line 600, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 667, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .navbar-nav .open .dropdown-menu.two-column {
     position: static;
     float: none;
@@ -7888,259 +7965,259 @@ a.text-gray:focus {
     background-color: transparent;
     border: 0;
     box-shadow: none; }
-    /* line 608, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 675, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-nav .open .dropdown-menu.two-column li > ul > li > a,
     .navbar-nav .open .dropdown-menu.two-column .dropdown-header {
       padding: 5px 15px 5px 25px; }
-    /* line 612, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 679, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-nav .open .dropdown-menu.two-column li > ul > li > a {
       line-height: 20px; }
-      /* line 614, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      /* line 681, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
       .navbar-nav .open .dropdown-menu.two-column li > ul > li > a:hover, .navbar-nav .open .dropdown-menu.two-column li > ul > li > a:focus {
         background-image: none; } }
 
-/* line 623, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 690, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .navbar-citm {
   background-color: #f1f1f1;
   border: none; }
   @media (min-width: 840px) {
-    /* line 623, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 690, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-citm {
       margin-top: 32px;
       margin-bottom: 34px; }
-      /* line 633, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      /* line 700, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
       .navbar-citm .input-group-sm {
         margin-top: 2px; }
-      /* line 637, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      /* line 704, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
       .navbar-citm .cart {
         padding-right: 0;
         border-left: 1px solid #e7e7e7;
         margin-left: 2px; }
-      /* line 643, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      /* line 710, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
       .navbar-citm .navbar-header {
         position: relative; } }
-  /* line 648, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 715, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .navbar-citm .navbar-brand {
     height: auto;
     color: #3b597c;
     padding-top: 15px;
     padding-bottom: 16px; }
-    /* line 654, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 721, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-citm .navbar-brand:hover, .navbar-citm .navbar-brand:focus {
       color: #2b4059;
       background-color: transparent; }
     @media (min-width: 840px) {
-      /* line 648, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      /* line 715, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
       .navbar-citm .navbar-brand {
         padding-top: 0;
         padding-bottom: 0;
         position: absolute;
         top: -17px;
         left: 0; } }
-  /* line 669, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 736, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .navbar-citm .navbar-text {
     color: #777; }
   @media (min-width: 840px) {
-    /* line 675, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 742, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-citm .navbar-nav.main-citm-nav {
       margin-left: 122px; } }
-  /* line 681, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 748, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .navbar-citm .navbar-nav > li > a {
     color: #3b597c; }
-    /* line 684, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 751, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-citm .navbar-nav > li > a:hover, .navbar-citm .navbar-nav > li > a:focus {
       color: #002855;
       background-color: transparent; }
-  /* line 691, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 758, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .navbar-citm .navbar-nav > .active > a, .navbar-citm .navbar-nav > .active > a:hover, .navbar-citm .navbar-nav > .active > a:focus {
     color: #21446b;
     background-color: #e7e7e7; }
-  /* line 699, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 766, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .navbar-citm .navbar-nav > .disabled > a, .navbar-citm .navbar-nav > .disabled > a:hover, .navbar-citm .navbar-nav > .disabled > a:focus {
     color: #ccc;
     background-color: transparent; }
   @media (min-width: 840px) {
-    /* line 708, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 775, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-citm .citm-service-links {
       position: absolute;
       right: 0;
       top: -26px; }
-      /* line 714, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      /* line 781, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
       .navbar-citm .citm-service-links > li > a {
         font-size: 12px;
         color: #999;
         padding-left: 0;
         padding-top: 0;
         padding-bottom: 0; }
-        /* line 721, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+        /* line 788, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
         .navbar-citm .citm-service-links > li > a:hover, .navbar-citm .citm-service-links > li > a:focus {
           color: #777; } }
-  /* line 729, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 796, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .navbar-citm .navbar-toggle {
     border-color: #ddd;
     margin-top: 39px;
     margin-bottom: 41px; }
-    /* line 731, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 798, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-citm .navbar-toggle:hover, .navbar-citm .navbar-toggle:focus {
       background-color: #ddd; }
-    /* line 735, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 802, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-citm .navbar-toggle .icon-bar {
       background-color: #888; }
-  /* line 741, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 808, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .navbar-citm .navbar-collapse,
   .navbar-citm .navbar-form {
     border-color: #e7e7e7; }
     @media (min-width: 839px) and (max-width: 920px) {
-      /* line 745, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      /* line 812, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
       .navbar-citm .navbar-collapse .nav-search-text-input,
       .navbar-citm .navbar-form .nav-search-text-input {
         width: 120px; } }
     @media (min-width: 839px) and (max-width: 870px) {
-      /* line 745, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      /* line 812, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
       .navbar-citm .navbar-collapse .nav-search-text-input,
       .navbar-citm .navbar-form .nav-search-text-input {
         width: 100px; } }
-  /* line 759, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 826, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .navbar-citm .navbar-nav > .open > a, .navbar-citm .navbar-nav > .open > a:hover, .navbar-citm .navbar-nav > .open > a:focus {
     background-color: #e7e7e7;
     color: #21446b; }
   @media (max-width: 839px) {
-    /* line 770, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 837, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-citm .navbar-nav .open .dropdown-menu > li > a {
       color: #3b597c; }
-      /* line 772, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      /* line 839, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
       .navbar-citm .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-citm .navbar-nav .open .dropdown-menu > li > a:focus {
         color: #002855;
         background-color: transparent; }
-    /* line 779, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 846, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-citm .navbar-nav .open .dropdown-menu > .active > a, .navbar-citm .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-citm .navbar-nav .open .dropdown-menu > .active > a:focus {
       color: #21446b;
       background-color: #e7e7e7; }
-    /* line 787, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 854, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-citm .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-citm .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-citm .navbar-nav .open .dropdown-menu > .disabled > a:focus {
       color: #ccc;
       background-color: transparent; }
-    /* line 797, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 864, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-citm .navbar-nav .open .dropdown-menu.two-column > li > ul > li > a {
       color: #3b597c; }
-      /* line 799, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      /* line 866, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
       .navbar-citm .navbar-nav .open .dropdown-menu.two-column > li > ul > li > a:hover, .navbar-citm .navbar-nav .open .dropdown-menu.two-column > li > ul > li > a:focus {
         color: #002855;
         background-color: transparent; }
-    /* line 806, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 873, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-citm .navbar-nav .open .dropdown-menu.two-column > li > ul > .active > a, .navbar-citm .navbar-nav .open .dropdown-menu.two-column > li > ul > .active > a:hover, .navbar-citm .navbar-nav .open .dropdown-menu.two-column > li > ul > .active > a:focus {
       color: #21446b;
       background-color: #e7e7e7; }
-    /* line 814, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 881, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-citm .navbar-nav .open .dropdown-menu.two-column > li > ul > .disabled > a, .navbar-citm .navbar-nav .open .dropdown-menu.two-column > li > ul > .disabled > a:hover, .navbar-citm .navbar-nav .open .dropdown-menu.two-column > li > ul > .disabled > a:focus {
       color: #ccc;
       background-color: transparent; } }
-  /* line 832, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 899, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .navbar-citm .navbar-link {
     color: #3b597c; }
-    /* line 834, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 901, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-citm .navbar-link:hover {
       color: #002855; }
-  /* line 839, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 906, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .navbar-citm .btn-link {
     color: #3b597c; }
-    /* line 841, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 908, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-citm .btn-link:hover, .navbar-citm .btn-link:focus {
       color: #002855; }
-    /* line 847, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 914, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .navbar-citm .btn-link[disabled]:hover, .navbar-citm .btn-link[disabled]:focus,
     fieldset[disabled] .navbar-citm .btn-link:hover,
     fieldset[disabled] .navbar-citm .btn-link:focus {
       color: #ccc; }
 
-/* line 860, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 927, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .badge-normal {
   font-weight: 400; }
 
-/* line 865, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 932, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .badge-active {
   background-color: #009cbd; }
 
-/* line 870, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 937, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .badge-info {
   background-color: #844b72; }
 
-/* line 875, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 942, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .badge-ghost {
   background-color: transparent;
   border: 1px solid #bbb;
   color: #777777; }
 
-/* line 882, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 949, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .btn-default .badge-info-ghost {
   background-color: transparent;
   color: #844b72;
   border: 1px solid #844b72; }
 
-/* line 895, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 962, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .accordion .panel-title > a {
   color: #3b597c; }
-  /* line 898, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 965, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .accordion .panel-title > a:hover, .accordion .panel-title > a:focus {
     text-decoration: none;
     color: #002855; }
 
-/* line 911, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 978, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .footer-nav-inner {
   padding-top: 32px;
   padding-bottom: 32px; }
-  /* line 915, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 982, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .footer-nav-inner h5 {
     font-weight: 500; }
-  /* line 919, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 986, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .footer-nav-inner ul {
     list-style: none;
     padding-left: 0; }
-    /* line 927, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 994, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .footer-nav-inner ul > li > a {
       color: #3b597c; }
-      /* line 930, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      /* line 997, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
       .footer-nav-inner ul > li > a:hover, .footer-nav-inner ul > li > a:focus {
         text-decoration: none;
         color: #002855; }
   @media (max-width: 839px) {
-    /* line 911, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 978, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .footer-nav-inner {
       margin: 0 auto;
       width: 164px; } }
 
-/* line 945, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 1012, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .footer-badges-copyright-inner {
   padding-top: 20px;
   padding-bottom: 20px; }
   @media (max-width: 839px) {
-    /* line 945, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 1012, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .footer-badges-copyright-inner {
       text-align: center; } }
-  /* line 953, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 1020, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .footer-badges-copyright-inner .copyright-address {
     padding-top: 10px; }
 
-/* line 958, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 1025, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .security-badge-list {
   padding-top: 14px; }
   @media (min-width: 840px) {
-    /* line 958, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 1025, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .security-badge-list {
       padding-top: 0;
       margin-bottom: 2px; } }
 
-/* line 967, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 1034, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .security-badge {
   padding-top: 10px; }
-  /* line 970, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 1037, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .security-badge .badge-container {
     width: 120px;
     height: 120px;
     background-color: #d4dbe3;
     border-radius: 3px;
     position: relative; }
-    /* line 977, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    /* line 1044, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .security-badge .badge-container img {
       margin: 0 auto;
       position: absolute;
@@ -8150,14 +8227,14 @@ a.text-gray:focus {
           -ms-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%); }
 
-/* line 994, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 1061, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .carousel-control.left {
   background-image: -webkit-linear-gradient(left, transparent 0%, transparent 100%);
   background-image: linear-gradient(to right, transparent 0%, transparent 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=1); }
 
-/* line 997, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 1064, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .carousel-control.right {
   left: auto;
   right: 0;
