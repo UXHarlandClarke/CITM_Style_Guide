@@ -34,6 +34,14 @@
   background-color: $color-clouds-lighter;
 }
 
+.bg-envelope {
+  background-color: $color-envelope;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
 // Text colors
 .text-envelope {
   color: $color-envelope;
@@ -45,6 +53,10 @@
 
 .text-clouds-dark {
   color: $color-clouds-dark;
+}
+
+.text-gray-dark {
+  color: $gray-dark;
 }
 
 // Font weights
@@ -102,8 +114,9 @@
   padding-left: 0;
 }
 
-.padding-left-30 {
-  padding-left: 30px;
+.padding-top-bottom-5 {
+  padding-top: 5px !important;
+  padding-bottom: 5px;
 }
 
 // Borders 
@@ -123,6 +136,10 @@
 .space-after:after {
   font-family: inherit;
   content: "\00A0";
+}
+
+.wrap-white-space {
+  white-space: normal;
 }
 
 
@@ -170,7 +187,7 @@ h1, .h1,
 }
 
 .price--lg {
-  font-size: $font-size-h2;
+  font-size: $font-size-h1;
 }
 
 .price__sup,
@@ -257,6 +274,10 @@ h1, .h1,
     .pdp--section-head:not(:first-child) {
       margin-top: 15px;
     }
+    &.panel-price-area {
+      padding-top: 0;
+      padding-bottom: 5px;
+    }
   }
 }
 
@@ -333,7 +354,7 @@ h1, .h1,
 }
 
 // Custom Radio Button Select
-.custom-radio-select {
+.custom-select {
   .btn {
     @include clearfix();
     position: relative;
@@ -343,6 +364,7 @@ h1, .h1,
     color: $gray;
     position: relative;
     margin-left: 24px;
+    text-align: left;
   }
   .option_price {
     @extend .pull-right;
@@ -365,9 +387,9 @@ h1, .h1,
     }
   }
   .option_description:before {
+    content: "\25CB";
     font-family: $font-family-monospace;
     font-size: 24px;
-    content: "\25CB";
     opacity: 0.35;
     transition: 0.25s ease all;
     position: absolute;
@@ -375,12 +397,26 @@ h1, .h1,
     top: 50%;
     transform: translateY(-50%);
   }
+  .option_description.option-checkbox:before {
+    font-family: 'Glyphicons Halflings';
+    content:"\e157";
+    font-size: 16px;
+    transition: none;
+  }
   .active .option_description,
   .active .option_price {
     color: $gray-dark;
     transition: 0.25s ease all;
   }
-  .active .option-quantity {
+  .active .option_description.active-color-red {
+    color: darken($color-red, 10%);
+    transition: 0.25s ease all;
+  }
+  .active .option_description.active-color-red:before {
+    color: darken($color-red, 10%);
+    transition: 0.25s ease all;
+  }
+  .active .option_quantity {
     color: $gray;
     transition: 0.25s ease all;
   }
@@ -388,6 +424,11 @@ h1, .h1,
     content: "\25C9";
     color: $gray-dark;
     opacity: 1;
+  }
+  .active .option_description.option-checkbox:before {
+    font-family: 'Glyphicons Halflings';
+    content:"\e067";
+    transition: none;
   }
   .active.btn-default .badge-info-ghost {
     color: darken($brand-info, 10%);
@@ -399,11 +440,11 @@ h1, .h1,
     background-color: #e6e6e6;
     border-color: #adadad;
   }
-  .option-description {
+  .option_name {
     display: inline-block;
     text-align: left;
   }
-  .option-quantity {
+  .option_quantity {
     font-size: 13px;
     display: block;
     color: $gray-light;
@@ -451,6 +492,36 @@ h1, .h1,
   }
 }
 
+.fraud-armor-container {
+  margin-bottom: 5px;
+  ul {
+    padding-left: $padding-base-horizontal;
+    list-style: none;
+    li {
+      &:before {
+        content: "";
+        border-color: transparent $text-color;
+        border-style: solid;
+        border-width: 0.35em 0 0.35em 0.45em;
+        display: block;
+        height: 0;
+        width: 0;
+        left: -0.7625em;
+        top: 1em;
+        position: relative;
+      }
+    }
+    li.no-style {
+      &:before {
+        border-color: transparent transparent;
+      }
+    }
+  }
+}
+
+.product-opts-price {
+  display: inline-block;
+}
 
 //
 // CITM Main Logo
@@ -487,7 +558,6 @@ h1, .h1,
   display: block;
   height: auto;
   opacity: 0.85;
-  // padding-top: 1px;
     
   &:hover,
   &:focus {
@@ -505,10 +575,7 @@ h1, .h1,
   line-height: 0;
   display: block;
   margin-bottom: ($line-height-computed / 2);
-  
-  // @media (min-width: $grid-float-breakpoint) {
-    margin-left: -17px;
-  // }
+  margin-left: -17px;
 }
 
 

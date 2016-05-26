@@ -2340,7 +2340,7 @@
                                 <div class="panel panel-default panel-pdp">
                                     <div class="panel-body">
                                         <h4 class="pdp--section-head">Select style</h4>
-                                        <div class="btn-group btn-group-justified custom-radio-select" data-toggle="buttons">
+                                        <div class="btn-group btn-group-justified custom-select" data-toggle="buttons">
                                             <label class="btn btn-default btn-lg active">
                                                 <span class="option_description">
                                                     <input type="radio" name="rdProductOpts" id="rdDuplicates" autocomplete="off" checked>Duplicate Checks
@@ -2353,10 +2353,10 @@
                                             </label>
                                         </div>
                                         <h4 class="pdp--section-head">Select quantity</h4>
-                                        <div class="btn-group btn-group-vertical btn-group-justified custom-radio-select" data-toggle="buttons">
+                                        <div class="btn-group btn-group-vertical btn-group-justified custom-select" data-toggle="buttons">
                                             <label class="btn btn-default btn-lg active">
                                                 <span class="option_description">
-                                                    <input type="radio" name="rdDuplicatesProductOpts" id="quantity1" autocomplete="off" checked><span class="option-description">1 Box <small class="option-quantity">150 Checks</small></span>
+                                                    <input type="radio" name="rdDuplicatesProductOpts" id="quantity1" autocomplete="off" checked><span class="option_name">1 Box <small class="option_quantity">150 Checks</small></span>
                                                 </span>
                                                 <span class="option_price">
                                                     <span class="price price--md">
@@ -2369,7 +2369,7 @@
                                             </label>
                                             <label class="btn btn-default btn-lg">
                                                 <span class="option_description">
-                                                    <input type="radio" name="rdDuplicatesProductOpts" id="quantity2" autocomplete="off"><span class="option-description">2 Boxes <small class="option-quantity">300 Checks</small></span>
+                                                    <input type="radio" name="rdDuplicatesProductOpts" id="quantity2" autocomplete="off"><span class="option_name">2 Boxes <small class="option_quantity">300 Checks</small></span>
                                                 </span>
                                                 <span class="option_price">
                                                     <span class="price price--md">
@@ -2382,7 +2382,7 @@
                                             </label>
                                             <label class="btn btn-default btn-lg">
                                                 <span class="option_description">
-                                                    <input type="radio" name="rdDuplicatesProductOpts" id="quantity3" autocomplete="off"><span class="option-description">3 Boxes <small class="option-quantity">450 Checks</small></span>
+                                                    <input type="radio" name="rdDuplicatesProductOpts" id="quantity3" autocomplete="off"><span class="option_name">3 Boxes <small class="option_quantity">450 Checks</small></span>
                                                 </span> 
                                                 <span class="option_price">
                                                     <span class="price price--md">
@@ -2395,7 +2395,7 @@
                                             </label>
                                             <label class="btn btn-default btn-lg">
                                                 <span class="option_description">
-                                                    <input type="radio" name="rdDuplicatesProductOpts" id="quantity4" autocomplete="off"><span class="option-description">4 Boxes <small class="option-quantity">600 Checks</small></span>
+                                                    <input type="radio" name="rdDuplicatesProductOpts" id="quantity4" autocomplete="off"><span class="option_name">4 Boxes <small class="option_quantity">600 Checks</small></span>
                                                 </span>
                                                 <span class="option_price">
                                                     <span class="price price--md">
@@ -2408,22 +2408,36 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="fraud-armor">
+                                    <div class="fraud-armor-container">
                                         <div class="panel-intermezzo bg-clouds-lighter">
                                             <h4 class="pdp--section-head check-security-header">
                                                 <img class="img-responsive" src="/images/fraud-armor-logo-small.png" alt="Fraud Armor"> Fraud Service <span class="badge badge-normal badge-ghost"><em>recommended</em></span>
                                             </h4>
-                                            <ul class="padding-left-20">
+                                            <ul>
                                                 <li>Up to $25,000 advancement within 72&nbsp;hours</li>
                                                 <li>Check and financial account protection</li>
                                                 <li>Identity restoration with <em>free</em> internet monitoring</li>
                                                 <li>Lost wallet and document replacement for only $3.95 per box of checks&nbsp;ordered</li>
+                                                <li><a href="#">Learn more &rarr;</a></li>
                                             </ul>
-                                            <a href="#" class="btn btn-link">Learn more</a>
+                                            <div class="btn-group btn-group-justified custom-select" data-toggle="buttons">
+                                                <label for="add-fraud-armor" class="btn btn-link wrap-white-space">
+                                                    <span class="option_description option-checkbox active-color-red">
+                                                        <input type="checkbox" id="add-fraud-armor">Yes, add FraudArmor&trade; for $7.90 (2 boxes)
+                                                    </span>
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="panel-body">
-                                        <a href="#" class="btn btn-cta">Personalize</a>
+                                    <div class="panel-body panel-price-area">
+                                        <div class="product-opts-price">
+                                            <span class="price price--lg text-gray-dark">
+                                                <sup class="price__currency">$</sup><span class="price__dollar">16</span><sup class="price__sup">92</sup>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer clearfix">
+                                        <a href="#" class="btn btn-cta pull-right">Personalize</a>
                                     </div>
                                 </div>
                             </div>
