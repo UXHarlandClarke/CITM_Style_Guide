@@ -98,6 +98,15 @@
   border-top-color: shade($color-clouds, 5%);
 }
 
+// White Space modifiers
+// --------------------------------------------------
+
+// Space left
+.space-after:after {
+  font-family: inherit;
+  content: "\00A0";
+}
+
 
 //
 // Typography
