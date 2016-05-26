@@ -2,6 +2,11 @@
 // Helpers
 // --------------------------------------------------
 
+// Display
+.inline-block {
+  display: inline-block;
+}
+
 // Background colors
 .bg-zodiac {
   background-color: $color-zodiac;
@@ -23,6 +28,10 @@
 
 .bg-clouds-light {
   background-color: $color-clouds-light;
+}
+
+.bg-clouds-lighter {
+  background-color: $color-clouds-lighter;
 }
 
 // Text colors
@@ -86,6 +95,15 @@
 
 .margin-bottom-2 {
   margin-bottom: 2px;
+}
+
+// Padding
+.padding-left-0 {
+  padding-left: 0;
+}
+
+.padding-left-30 {
+  padding-left: 30px;
 }
 
 // Borders 
@@ -339,7 +357,7 @@ h1, .h1,
   .price {
     .save-over {
       font-weight: 400;
-      margin-bottom: 5px;
+      margin-bottom: 4px;
       letter-spacing: normal;
       @media (max-width: 360px) {
         display: none;
@@ -415,6 +433,20 @@ h1, .h1,
         margin-top: -1px;
         margin-left: 0;
       }
+    }
+  }
+}
+
+.check-security-header {
+  display: inline-block;
+  vertical-align: baseline;
+  img {
+    margin-top: 3px;
+    display: inline-block;
+    vertical-align: baseline;
+    @media (max-width: 400px) {
+      display: block;
+      margin-bottom: 3px;
     }
   }
 }
@@ -843,7 +875,7 @@ h1, .h1,
 .badge-ghost {
   @extend .badge;
   background-color: transparent;
-  border: 1px solid $badge-bg;
+  border: 1px solid #bbb;
   color: $badge-bg;
 }
 
