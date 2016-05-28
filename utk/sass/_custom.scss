@@ -1,4 +1,22 @@
 //
+// Grid system
+// --------------------------------------------------
+
+// Container modifications
+.container.container-expand {
+  &.container-expand-md-down {
+    @media (max-width: $screen-md-max) {
+      width: 100%;
+    }
+  }
+  &.container-expand-sm-down {
+    @media (max-width: $screen-sm-max) {
+      width: 100%;
+    }   
+  }
+}
+
+//
 // Helpers
 // --------------------------------------------------
 
@@ -689,9 +707,7 @@ h1, .h1,
 
 .navbar-citm {
   background-color: $color-envelope;
-  // border-color:  $navbar-default-border;
   border: none;
-  // border-bottom:    1px solid $navbar-citm-border;
 
   @media (min-width: $grid-float-breakpoint) {
     margin-top: 32px;
@@ -707,7 +723,8 @@ h1, .h1,
       margin-left: 2px;
     }
 
-    .navbar-header {
+    .navbar-header,
+    .container-expand {
       position: relative;
     }
   }
@@ -773,6 +790,25 @@ h1, .h1,
   }
   
   .citm-service-links {
+    > li > a {
+      &.quick-reorder {
+        color: $link-color;
+        font-weight: 500;
+        
+        > .quick-reorder-arrow {
+          color: tint($link-color, 15%);
+        }
+        
+        &:hover,
+        &:focus {
+          color: darken($link-color, 10%);
+          > .quick-reorder-arrow {
+            color: darken($link-color, 10%);
+          }
+        }
+      }
+    }
+    
     @media (min-width: $grid-float-breakpoint) {
       position: absolute;
       right: 0;
@@ -789,6 +825,11 @@ h1, .h1,
         &:focus {
           color: #777;
         }
+        
+        &.quick-reorder {
+          font-weight: 400;
+        }
+
       }
     }
   }
@@ -917,6 +958,7 @@ h1, .h1,
       }
     }
   }
+  
 }
 
 
