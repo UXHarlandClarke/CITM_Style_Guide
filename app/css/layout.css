@@ -316,6 +316,10 @@ body.modal-open .navbar-fixed-top {
     color: #959595;
 }
 
+.citm-example .citm-example-name.testing {
+    color: rgb(179,39,45);
+}
+
 .citm-example .citm-example-name .btn {
     letter-spacing: 0;
 }
