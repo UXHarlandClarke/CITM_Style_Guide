@@ -384,8 +384,15 @@ h1, .h1,
     margin-left: 24px;
     text-align: left;
   }
+  .option_help {
+    color: lighten($gray-base, 65%);
+    font-size: $font-size-base;
+    position: absolute;
+    right: $padding-large-horizontal;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   .option_price {
-    @extend .pull-right;
     color: lighten($gray-base, 65%);
     position: absolute;
     right: $padding-large-horizontal;
@@ -399,7 +406,7 @@ h1, .h1,
       font-weight: 400;
       margin-bottom: 4px;
       letter-spacing: normal;
-      @media (max-width: 360px) {
+      @media (max-width: 359px) {
         display: none;
       }
     }
