@@ -716,6 +716,36 @@ h1, .h1,
   background-color: $color-envelope;
   border: none;
 
+  .cart {
+    @extend .clearfix;
+  }
+  .cart-indicators {
+    float: left;
+  }
+  .cart-count-container {
+    float: left;
+    position: relative;
+    margin-left: 4px;
+    display: inline-block;
+    font-size: 10px;
+    color: $color-zodiac;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid tint($color-zodiac, 50%);
+    text-align: center;
+    font-weight: 500;
+    &.cart-active {
+      border-color: $brand-primary;
+    }
+  }
+  .cart-count {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   @media (min-width: $grid-float-breakpoint) {
     margin-top: 32px;
     margin-bottom: 34px;
@@ -728,6 +758,10 @@ h1, .h1,
       padding-right: 0;
       border-left: 1px solid rgb(231, 231, 231);
       margin-left: 2px;
+    }
+    
+    .cart-count-container {
+      float: right;
     }
 
     .navbar-header,
