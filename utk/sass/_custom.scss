@@ -1152,6 +1152,7 @@ h1, .h1,
 // Carousel
 // --------------------------------------------------
 
+// Left and Right arrows
 .carousel-control {
   // Remove gradients for backgrounds by setting opacity to "0"
   &.left {
@@ -1164,16 +1165,27 @@ h1, .h1,
   }
 }
 
-.carousel-caption {
-  // text-shadow: none;
-  text-align: left;
-  left: 13.5%;
-  top: 45%;
-  transform: translateY(-45%);
+// Bottom carousel dots
+.carousel-indicators {
+  bottom: 0;
+  
+  li {
+    opacity: 0.6;
+  }
+  
+  li:hover {
+    opacity: 1;
+  }
+}
 
+// Live Carousel text
+.carousel-caption {
+  // mobile
+  text-align: center;
+  
   .hero-text {
     font-family: $font-family-serif;
-    font-size: ceil(($font-size-base * 3.5));
+    font-size: ceil(($font-size-base * 2.75));
     font-weight: 600;
     margin-top: 0;
   }
@@ -1183,4 +1195,54 @@ h1, .h1,
     font-size: $jumbotron-font-size;
     font-weight: 300;
   }
+  
+  // small screens and up
+  @media (min-width: $grid-float-breakpoint) {
+    left: 12%;
+    top: 41%;
+    transform: translateY(-41%);
+    text-align: left;
+    
+    .hero-text {
+      font-size: ceil(($font-size-base * 1.75));
+      margin-bottom: ceil(($jumbotron-padding / 5));
+    }
+    
+    p {
+      margin-bottom: ceil(($jumbotron-padding / 3.25));
+      font-size: $font-size-base;
+    }
+  }
+  
+  // medium screens and up
+  @media (min-width: $screen-md-min) {
+    top: 43%;
+    transform: translateY(-43%);
+    
+    .hero-text {
+      font-size: ceil(($font-size-base * 2.25));
+    }
+    
+    p {
+      font-size: ceil(($font-size-base * 1.25));
+    }
+  }
+  
+  // large screens and up
+  @media (min-width: $screen-lg-min) {
+    top: 46%;
+    transform: translateY(-46%);
+    
+    .hero-text {
+      font-size: ceil(($font-size-base * 2.75));
+    }
+    
+    p {
+      margin-bottom: ($jumbotron-padding / 2);
+      font-size: $jumbotron-font-size;
+    }
+
+  }
+
+
 }
