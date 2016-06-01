@@ -8306,14 +8306,14 @@ a.text-gray:focus {
           -ms-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%); }
 
-/* line 1157, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 1158, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .carousel-control.left {
   background-image: -webkit-linear-gradient(left, transparent 0%, transparent 100%);
   background-image: linear-gradient(to right, transparent 0%, transparent 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=1); }
 
-/* line 1160, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 1161, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .carousel-control.right {
   left: auto;
   right: 0;
@@ -8322,24 +8322,73 @@ a.text-gray:focus {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=1); }
 
-/* line 1167, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+/* line 1169, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+.carousel-indicators {
+  bottom: 0; }
+  /* line 1172, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  .carousel-indicators li {
+    opacity: 0.6; }
+  /* line 1176, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  .carousel-indicators li:hover {
+    opacity: 1; }
+
+/* line 1182, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
 .carousel-caption {
-  text-align: left;
-  left: 13.5%;
-  top: 45%;
-  -webkit-transform: translateY(-45%);
-      -ms-transform: translateY(-45%);
-          transform: translateY(-45%); }
-  /* line 1174, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  text-align: center; }
+  /* line 1186, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .carousel-caption .hero-text {
     font-family: "abril-titling-semicondensed", "Times New Roman", Times, serif;
-    font-size: 49px;
+    font-size: 39px;
     font-weight: 600;
     margin-top: 0; }
-  /* line 1181, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+  /* line 1193, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
   .carousel-caption p {
     margin-bottom: 15px;
     font-size: 21px;
     font-weight: 300; }
+  @media (min-width: 840px) {
+    /* line 1182, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    .carousel-caption {
+      left: 12%;
+      top: 41%;
+      -webkit-transform: translateY(-41%);
+          -ms-transform: translateY(-41%);
+              transform: translateY(-41%);
+      text-align: left; }
+      /* line 1206, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      .carousel-caption .hero-text {
+        font-size: 25px;
+        margin-bottom: 6px; }
+      /* line 1211, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      .carousel-caption p {
+        margin-bottom: 10px;
+        font-size: 14px; } }
+  @media (min-width: 992px) {
+    /* line 1182, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    .carousel-caption {
+      top: 43%;
+      -webkit-transform: translateY(-43%);
+          -ms-transform: translateY(-43%);
+              transform: translateY(-43%); }
+      /* line 1222, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      .carousel-caption .hero-text {
+        font-size: 32px; }
+      /* line 1226, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      .carousel-caption p {
+        font-size: 18px; } }
+  @media (min-width: 1200px) {
+    /* line 1182, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+    .carousel-caption {
+      top: 46%;
+      -webkit-transform: translateY(-46%);
+          -ms-transform: translateY(-46%);
+              transform: translateY(-46%); }
+      /* line 1236, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      .carousel-caption .hero-text {
+        font-size: 39px; }
+      /* line 1240, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
+      .carousel-caption p {
+        margin-bottom: 15px;
+        font-size: 21px; } }
 
 /*# sourceMappingURL=sass */
