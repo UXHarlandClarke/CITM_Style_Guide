@@ -7753,7 +7753,7 @@ a.text-gray:focus {
   font-weight: 400;
   margin-bottom: 4px;
   letter-spacing: normal; }
-  @media (max-width: 359px) {
+  @media (max-width: 399px) {
     /* line 418, /Users/a049088/Documents/DESIGN/CITM/CITM_Style_Guide/utk/sass/_custom.scss */
     .custom-select .price .save-over {
       display: none; } }
