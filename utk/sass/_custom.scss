@@ -184,6 +184,7 @@
 h1, .h1,
 .accordion h4, .accordion .h4 {
   font-weight: 500;
+  color: red;
 }
 
 // Body Text
@@ -236,8 +237,7 @@ h1, .h1,
 .jumbotron {
 
   .hero-text {
-      font-family: $font-family-serif;
-      font-weight: 600;
+      font-weight: 500;
   }
 
   .container &,
@@ -427,6 +427,7 @@ h1, .h1,
   .option_description:before {
     content: "\25CB";
     font-family: $font-family-monospace;
+    font-weight: 700;
     font-size: 24px;
     opacity: 0.35;
     transition: 0.25s ease all;
@@ -1184,9 +1185,7 @@ h1, .h1,
   text-align: center;
   
   .hero-text {
-    font-family: $font-family-serif;
     font-size: ceil(($font-size-base * 2.75));
-    font-weight: 600;
     margin-top: 0;
   }
   
