@@ -27,8 +27,12 @@
     "gulp-rename": "^1.2.2",
     "gulp-strip-debug": "^1.1.0",
     "gulp-html-replace": "^1.5.5",
+    "gulp-print": "^2.0.1",
+    "gulp-util": "^3.0.7",
+    "gulp-html-ssi": "^0.0.92",
     "gulp-gh-pages": "^0.5.4",
     "browser-sync": "^2.11.2",
+    "browsersync-ssi": "^0.2.4 ",
     "run-sequence": "^1.1.2"
   },
   "filename": "citm"
