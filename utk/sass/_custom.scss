@@ -90,6 +90,10 @@
   color: $gray-dark;
 }
 
+.text-zodiac-muted {
+  color: tint($color-zodiac, 50%);
+}
+
 // Font weights
 .font-light {
   font-weight: 300;
@@ -1243,4 +1247,26 @@ h1, .h1,
   }
 
 
+}
+
+// Homepage Bucket Customizations
+.reorder-bucket {
+  position: relative;
+  
+  .reorder-bucket-graphic {
+    opacity: 0.12;
+    font-size: 80px;
+    line-height: 0;
+    position: absolute;
+    right: $panel-body-padding;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .reorder-bucket-body {
+    width: 70%;
+    @media (min-width: $grid-float-breakpoint) {
+      width: 80%;
+    }
+  }
 }
