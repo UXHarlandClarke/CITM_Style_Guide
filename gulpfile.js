@@ -107,7 +107,7 @@ gulp.task('build-dev', function(done) {
 /* build static app */
 gulp.task('build-static-utk', function(done) {
     console.log(gp_util.colors.cyan("Moving DIST UTK resources (js,css,images,fonts)"));
-    return gulp.src(['./app/**/*', './dist/utk/**/*', '!./dist/app', '!./dist/app/**/*'])
+    return gulp.src(['./app/**/*', './dist/**/*', '!./app/**/_*.html', '!./dist/app', '!./dist/app/**/*']) 
         .pipe(gulp.dest('./dist/app/'));   
 });
 
@@ -117,12 +117,12 @@ gulp.task('build-static-index', function(done) {
         .pipe(gp_print())
         .pipe(gp_include_ssi())
         .pipe(gp_html_replace({
-              css: {
-                src: [['css/citm.css']],
+              citmcss: {
+                src: [['utk/css/citm.css']],
                 tpl: '<link rel="stylesheet" href="%s">'
               },
-              js: {
-                src: [['js/citm.min.js']],
+              citmjs: {
+                src: [['utk/js/citm.min.js']],
                 tpl: '<script src="%s"></script>'
               }
 
@@ -148,6 +148,7 @@ gulp.task('build-test', function(done) {
 gulp.task('app', ['sass'], function() {
 
     console.log(gp_util.colors.cyan("Starting LIVE APP web service"));
+    
     gp_browserSync.init({
 		server: {
 		    baseDir: "./app/",
@@ -158,13 +159,13 @@ gulp.task('app', ['sass'], function() {
           })  
         ], 
 		    routes: {
-		        "/dist": "dist"
+		        "/dist/utk": "dist"
 		    }
 		}
     });
 
     /* utk updated */
-    gulp.watch(['./utk/sass/*.scss','./utk/js/*.js', ,'./utk/images/**/*'], function(event) {
+    gulp.watch(['./utk/sass/*.scss','./utk/js/*.js', ,'./utk/img/**/*'], function(event) {
         console.log(gp_util.colors.cyan("UTK scss/js/images change detected"));
         gulp.start('build-dev');
     });
@@ -184,69 +185,74 @@ gulp.task('sass', function () {
     .pipe(gp_print())
     .pipe(gp_sass(options.sass).on('error', gp_sass.logError))
     .pipe(gp_autoprefixer(options.autoprefixer))
-    .pipe(gulp.dest('./utk/css'));
+    .pipe(gulp.dest('./dev/css')); // move the concat to dev
 });
  
 
 gulp.task('dist-css', function(){
   console.log(gp_util.colors.cyan("Building UTK SASS files for Dist"));
-
-	return gulp.src('./utk/css/' + APP_NAME + '.css')
+	return gulp.src('./dev/css/' + APP_NAME + '.css')
     .pipe(gp_print())
     .pipe(gp_uglifycss({
       "maxLineLen": 80,
       "uglyComments": true
      }))
     .pipe(gp_cleancss({compatibility: 'ie8'}))
-    .pipe(gulp.dest('./dist/css/'))
+    .pipe(gulp.dest('./dist/utk/css/'))
     .pipe(gp_browserSync.stream());
 });
 
 
 gulp.task('js', function () {
-  console.log(gp_util.colors.cyan("Building UTK JS files"));
+  console.log(gp_util.colors.cyan("Building UTK JS Vendor files"));
+  // TODO - rename this vendor.min.js and setup a new app specific JS build task
   return gulp.src('./utk/js/' + APP_NAME + '.js')
     .pipe(gp_print())
     .pipe(gp_include_socket())
-    .pipe(gp_uglifyjs())
-    .pipe(gp_rename('./utk/js.min/' + APP_NAME + '.min.js'))
+    .pipe(gp_rename({
+          suffix: '.min'
+        }))
     .on('error', console.log)
-	  .pipe(gulp.dest('./utk/js/'));
+	  .pipe(gulp.dest('./dev/js/'));
 });
+
 
 
 gulp.task('dist-js', function(){
   console.log(gp_util.colors.cyan("Building UTK JS files for Dist"));
-	return gulp.src('./utk/js.min/' + APP_NAME + '.min.js')
+	return gulp.src('./dev/js/' + APP_NAME + '.min.js')
     .pipe(gp_print())
+    .pipe(gp_uglifyjs())
     .pipe(gp_stripdebug())
-    .pipe(gulp.dest('./dist/js/'))
+    .pipe(gulp.dest('./dist/utk/js/'))
     .pipe(gp_browserSync.stream());
 }); 
 
 
 gulp.task('images', function () {
   console.log(gp_util.colors.cyan("Gathering UTK Images Files"));
-  return gulp.src('./utk/images/**/*')
-    .pipe(gp_print())
-  .pipe(gulp.dest('./app/images/'));
+  return gulp.src('./utk/img/**/*')
+    .pipe(gp_print());
+  //.pipe(gulp.dest('./dist/utk/img/'));
 });
 
 
 gulp.task('dist-images', function(){
     console.log(gp_util.colors.cyan("Moving APP and UTK Image files to Dist"));
-    return gulp.src(['./app/images/**/*'])
+    return gulp.src(['./utk/img/**/*'])
     .pipe(gp_print())
-    .pipe(gulp.dest('./dist/app/images/'));
+    .pipe(gulp.dest('./dist/utk/img/'));
 });
+
 
 gulp.task('dist-fonts', function(){
     console.log(gp_util.colors.cyan("Moving UTK FONT files to Dist"));
     return gulp.src(['bower_components/bootstrap-sass/assets/fonts/**/*'])
     .pipe(gp_print())
-    .pipe(gulp.dest('./dist/fonts/'));
+    .pipe(gulp.dest('./dist/utk/fonts/'));
 }); 
 
+ 
 
 
 /* phase out */
