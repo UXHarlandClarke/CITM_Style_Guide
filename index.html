@@ -8,7 +8,7 @@
     <title>CITM UI Toolkit</title>
     <script src="https://use.typekit.net/rhd4ymf.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
-    <link rel="stylesheet" href="css/citm.css">
+    <link rel="stylesheet" href="utk/css/citm.css">
     <link href="css/layout.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,7 +23,7 @@
     <!-- top navigation -->
     <div class="container-fluid">
         <div class="row">
-            <nav class="navbar navbar-default navbar-fixed-top citm-utk-topnav">
+			<nav class="navbar navbar-default navbar-fixed-top citm-utk-topnav">
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#citm-utk-menu">
@@ -108,13 +108,15 @@
             </h1>
             <p class="text-clouds-dark">
                 This toolkit is a growing resource with ready-to-use front-end building blocks based on Bootstrap. The library is built with the <a href="http://atomicdesign.bradfrost.com/" target="_blank" class="jumbotron-link">Atomic Design</a> concept in mind. Please check it out if you’re not familiar with it before jumping in.
+                <br />
+                <a href="pages.html">Go to Pages</a>
             </p>
         </div>
     </div>
 
     <!-- TESTING HOME PAGE -->
     <div class="citm-example example-full well-testing">
-        <h3 class="citm-example-name testing">Testing&hellip; not finalized component</h3>
+        <h3 class="citm-example-name testing">Testing Homepage&hellip; not finalized</h3>
         <div class="citm-component">
             <div class="container-fluid">
                 <div class="row">
@@ -135,49 +137,29 @@
                                 <ul class="nav navbar-nav main-citm-nav">
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="space-after">Personal Checks</span><span class="caret"></span></a>
-                                        <ul class="dropdown-menu two-column" role="menu">
-                                            <li>
-                                                <!-- Column 1 -->
-                                                <ul class="list-unstyled col-sm-6">
-                                                    <li><a href="#">Best Sellers</a></li>
-                                                    <li><a href="#">New Check Designs</a></li>
-                                                    <li><a href="#">Classic</a></li>
-                                                    <li><a href="#">Design Your Own</a></li>
-                                                    <li><a href="#">Hip &amp; Cool</a></li>
-                                                    <li><a href="#">Disney Checks</a></li>
-                                                    <li><a href="#">Animals</a></li>
-                                                    <li><a href="#">High Security Checks</a></li>
-                                                    <li><a href="#">Top 25 Best Sellers</a></li>
-                                                    <li class="divider hidden-xs"></li>
-                                                </ul>
-                                                <!-- Column 2 -->
-                                                <ul class="list-unstyled col-sm-6">
-                                                    <li><a href="#">Animated/Pop Icons</a></li>
-                                                    <li><a href="#">Charitable</a></li>
-                                                    <li><a href="#">Eco-Friendly</a></li>
-                                                    <li><a href="#">Floral</a></li>
-                                                    <li><a href="#">Inspirational/Religious</a></li>
-                                                    <li><a href="#">Patriotic</a></li>
-                                                    <li><a href="#">Patterns</a></li>
-                                                    <li><a href="#">Scenic</a></li>
-                                                    <li><a href="#">View All</a></li>
-                                                    <li class="divider hidden-xs"></li>
-                                                    <li class="hidden-xs"><a href="#">Quick Reorder <span class="glyphicon glyphicon-arrow-right text-primary" aria-hidden="true"></span></a></li>
-                                                </ul>
-                                            </li>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">High Security</a></li>
+                                            <li><a href="#">New Designs</a></li>
+                                            <li><a href="#">Best Sellers</a></li>
+                                            <li><a href="#">Classic</a></li>
+                                            <li><a href="#">Animals</a></li>
+                                            <li><a href="#">Patterns</a></li>
+                                            <li><a href="#">Characters</a></li>
+                                            <li><a href="#">Shop All Personal Checks</a></li>
+                                            <li class="divider hidden-xs"></li>
+                                            <li class="hidden-xs"><a href="#">Quick Reorder <span class="glyphicon glyphicon-arrow-right text-primary" aria-hidden="true"></span></a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="space-after">Business Products</span><span class="caret"></span></a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="space-after">Business</span><span class="caret"></span></a>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Laser Check On Top</a></li>
-                                            <li><a href="#">Desk Checks</a></li>
-                                            <li><a href="#">General Purpose</a></li>
-                                            <li><a href="#">Custom Stamps</a></li>
+                                            <li><a href="#">High Security Checks</a></li>
+                                            <li><a href="#">Manual Checks</a></li>
+                                            <li><a href="#">Computer Checks</a></li>
                                             <li><a href="#">Deposit Supplies</a></li>
+                                            <li><a href="#">Stock Stamps</a></li>
                                             <li><a href="#">Binders &amp; Covers</a></li>
-                                            <li><a href="#">Business Stationery</a></li>
-                                            <li><a href="#">View All</a></li>
+                                            <li><a href="#">Shop All Business</a></li>
                                             <li class="divider hidden-xs"></li>
                                             <li class="hidden-xs"><a href="#">Quick Reorder <span class="glyphicon glyphicon-arrow-right text-primary" aria-hidden="true"></span></a></li>
                                         </ul>
@@ -185,14 +167,13 @@
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="space-after">Accessories</span><span class="caret"></span></a>
                                         <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Custom / Address Labels</a></li>
                                             <li><a href="#">Checkbook Covers</a></li>
-                                            <li><a href="#">Deposits/Registers</a></li>
+                                            <li><a href="#">Deposits &amp; Registers</a></li>
                                             <li><a href="#">Debit Caddies</a></li>
-                                            <li><a href="#">Organizers</a></li>
-                                            <li><a href="#">Coin Purses</a></li>
-                                            <li><a href="#">Keychains/Wristlets</a></li>
-                                            <li><a href="#">Personal Ink Stamps</a></li>
-                                            <li><a href="#">View All</a></li>
+                                            <li><a href="#">Address Stamps</a></li>
+                                            <li><a href="#">Card &amp; ID Cases</a></li>
+                                            <li><a href="#">Shop All Accessories</a></li>
                                             <li class="divider hidden-xs"></li>
                                             <li class="hidden-xs"><a href="#">Quick Reorder <span class="glyphicon glyphicon-arrow-right text-primary" aria-hidden="true"></span></a></li>
                                         </ul>
@@ -253,7 +234,7 @@
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active">
-                                    <img src="/images/marvel-banner-desktop.jpg" alt="Banner 1">
+                                    <img src="http://placehold.it/1140x360/002855/f1f1f1.png/?text=&nbsp;" alt="Banner 1">
                                     <div class="carousel-caption">
                                         <h1 class="hero-text text-white">20% off all Marvel products</h1>
                                         <p>Use offer code <span class="text-medium text-uppercase text-letterspace-1">marvel20</span>.</p>
@@ -316,6 +297,245 @@
                     </div>
                 </div>
                 <!-- /Carousel -->
+                <!-- Marketing Content and Reorder -->
+                <div class="row margin-top-30">
+                    <div class="col-md-8">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><h2 class="panel-title">High Security Checks</h2></div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-xs-7">
+                                        <p class="lead">Designed with state-of-the-art features to help protect you from check fraud and identity theft</p>
+                                        <a href="#" class="btn btn-default">Shop Checks &rarr;</a>
+                                    </div>
+                                    <div class="col-xs-5">
+                                        <img class="img-responsive pull-right" src="http://placehold.it/220x110/999999/f1f1f1.png/?text=High+Security+Checks" alt="High Security Checks">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-primary reorder-bucket">
+                            <div class="panel-body">
+                                <h2 class="h4 text-primary margin-top-0">Ready to Reorder?</h2>
+                                <p class="reorder-bucket-body">
+                                    Checks In The Mail reorders are fast, easy and totally secure.
+                                </p>
+                                <a href="#" class="btn btn-sm btn-default-emph">Reorder Now &rarr;</a>
+                                <div class="reorder-bucket-graphic text-primary">
+                                    <span class="glyphicon glyphicon-repeat"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default order-status-bucket">
+                            <div class="panel-body">
+                                <h2 class="h4 text-zodiac-muted margin-top-0 margin-bottom-0">Order Status</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Marketing Content and Reorder -->
+                <!-- Best Selling Personal Checks -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="h3 margin-top-0">Best Selling Personal Checks</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="gallery-item">
+                            <a href="#">
+                                <img src="https://placehold.it/450x450" alt="" class="img-responsive">
+                            </a>
+                            <p class="text-medium text-primary margin-bottom-0">
+                                From <span class="price price--md"><sup class="price__currency">$</sup>6<sup class="price__sup">46</sup></span>
+                            </p>
+                            <h3 class="h5 margin-top-0">
+                                Blue Secure Checks
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="gallery-item">
+                            <a href="#">
+                                <img src="https://placehold.it/450x450" alt="" class="img-responsive">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="gallery-item">
+                            <a href="#">
+                                <img src="https://placehold.it/450x450" alt="" class="img-responsive">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="gallery-item">
+                            <a href="#">
+                                <img src="https://placehold.it/450x450" alt="" class="img-responsive">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="gallery-item">
+                            <a href="#">
+                                <img src="https://placehold.it/450x450" alt="" class="img-responsive">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-2">
+                        <div class="gallery-item">
+                            <a href="#">
+                                <img src="https://placehold.it/450x450" alt="" class="img-responsive">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Best Selling Personal Checks -->
+                <!-- Bottom 3 Marketing Buckets -->
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="well">
+                            Marketing Bucket
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="well">
+                            Marketing Bucket
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="well">
+                            Marketing Bucket
+                        </div>
+                    </div>
+                </div>
+                <!-- /Bottom 3 Marketing Buckets -->
+            </div>
+            <div id="footer">
+                <div id="footer-nav" class="container-fluid bg-clouds-light text-zodiac margin-top-60">
+                    <div class="row">
+                        <div class="container">
+                            <div class="footer-nav-inner">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <a href="#" class="footer-brand">
+                                            <svg class="citm-footer-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 19" version="1.1"><title>citm-secondary-logo</title><desc>Created with Sketch.</desc><defs><path d="M0.72 19L7.63 19 7.63 0.54 0.72 0.54 0.72 19 0.72 19Z"/><path d="M0.27 19L7.18 19 7.18 0.54 0.27 0.54 0.27 19 0.27 19Z"/><path d="M0 19.46L150 19.46 150 1 0 1 0 19.46Z"/></defs><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-758.000000, -563.000000)"><g transform="translate(758.000000, 562.000000)"><g transform="translate(14.000000, 0.459900)"><mask fill="white"><use xlink:href="#path-1"/></mask><path d="M4.99 7.38L4.99 3.76C4.99 2.86 4.72 2.66 4.19 2.66 3.64 2.66 3.37 2.86 3.37 3.76L3.37 15.78C3.37 16.68 3.64 16.88 4.19 16.88 4.72 16.88 4.99 16.68 4.99 15.78L4.99 11.94 7.63 11.94 7.63 16.01C7.63 18.33 5.81 19 4.17 19 2.55 19 0.72 18.33 0.72 16.01L0.72 3.53C0.72 1.21 2.55 0.54 4.17 0.54 5.81 0.54 7.63 1.21 7.63 3.53L7.63 7.38 4.99 7.38Z" fill="#002855" mask="url(#mask-2)"/></g><path d="M23.11 19.11L23.11 1.35 25.75 1.35 25.75 8.16 27.22 8.16 27.22 1.35 29.87 1.35 29.87 19.11 27.22 19.11 27.22 10.48 25.75 10.48 25.75 19.11 23.11 19.11Z" fill="#002855"/><path d="M31.41 19.11L31.41 1.35 37.3 1.35 37.3 3.67 34.06 3.67 34.06 8.23 37.17 8.23 37.17 10.55 34.06 10.55 34.06 16.79 37.35 16.79 37.35 19.11 31.41 19.11Z" fill="#002855"/><g transform="translate(38.000000, 0.459900)"><mask fill="white"><use xlink:href="#path-3"/></mask><path d="M4.54 7.38L4.54 3.76C4.54 2.86 4.26 2.66 3.74 2.66 3.19 2.66 2.92 2.86 2.92 3.76L2.92 15.78C2.92 16.68 3.19 16.88 3.74 16.88 4.26 16.88 4.54 16.68 4.54 15.78L4.54 11.94 7.18 11.94 7.18 16.01C7.18 18.33 5.36 19 3.72 19 2.09 19 0.27 18.33 0.27 16.01L0.27 3.53C0.27 1.21 2.09 0.54 3.72 0.54 5.36 0.54 7.18 1.21 7.18 3.53L7.18 7.38 4.54 7.38Z" fill="#002855" mask="url(#mask-4)"/></g><path d="M46.65 19.11L46.65 1.35 49.3 1.35 49.3 9.36 49.37 9.36 51.39 1.35 53.96 1.35 51.94 9.46 54.01 19.11 51.29 19.11 49.37 10.11 49.3 10.11 49.3 19.11 46.65 19.11Z" fill="#002855"/><path d="M57.53 16.24C57.53 17.14 57.8 17.34 58.35 17.34 58.88 17.34 59.15 17.14 59.15 16.24L59.15 14.37C59.15 11.88 54.89 9.43 54.89 6.54L54.89 3.99C54.89 1.67 56.71 1 58.33 1 59.98 1 61.8 1.67 61.8 3.99L61.8 7.74 59.15 7.74 59.15 4.22C59.15 3.32 58.88 3.12 58.35 3.12 57.8 3.12 57.53 3.32 57.53 4.22L57.53 6.41C57.53 7.68 61.8 11.53 61.8 13.32L61.8 16.47C61.8 18.79 59.98 19.46 58.33 19.46 56.71 19.46 54.89 18.79 54.89 16.47L54.89 12.37 57.53 12.37 57.53 16.24Z" fill="#002855"/><mask fill="white"><use xlink:href="#path-5"/></mask><path d="M67.38 19.11L70.03 19.11 70.03 1.35 67.38 1.35 67.38 19.11Z" fill="#002855" mask="url(#mask-6)"/><path d="M75.54 1.35L76.29 6.46C76.89 9.76 77.31 13.17 77.54 16.52L77.64 16.52 77.64 15.57C77.66 13.85 77.56 12.1 77.56 10.38L77.56 1.35 79.73 1.35 79.73 19.11 75.81 19.11 74.57 10.23C74.14 8.04 73.99 6.04 73.77 3.94L73.67 3.94C73.67 4.72 73.72 5.49 73.74 6.24L73.74 19.11 71.57 19.11 71.57 1.35 75.54 1.35Z" fill="#002855" mask="url(#mask-6)"/><path d="M92.2 1.35L92.2 3.67 89.91 3.67 89.91 19.11 87.26 19.11 87.26 3.67 84.95 3.67 84.95 1.35 92.2 1.35Z" fill="#002855" mask="url(#mask-6)"/><path d="M93.28 19.11L93.28 1.35 95.92 1.35 95.92 8.16 97.39 8.16 97.39 1.35 100.04 1.35 100.04 19.11 97.39 19.11 97.39 10.48 95.92 10.48 95.92 19.11 93.28 19.11Z" fill="#002855" mask="url(#mask-6)"/><path d="M101.58 19.11L101.58 1.35 107.47 1.35 107.47 3.67 104.23 3.67 104.23 8.23 107.35 8.23 107.35 10.55 104.23 10.55 104.23 16.79 107.52 16.79 107.52 19.11 101.58 19.11Z" fill="#002855" mask="url(#mask-6)"/><path d="M116.67 19.11L115.73 10.55C115.53 8.73 115.28 6.14 115.1 4.62L115 4.62C115.03 5.69 115.1 7.01 115.1 8.08L115.1 19.11 112.78 19.11 112.78 1.35 116.7 1.35 117.55 8.68C117.7 9.78 117.95 11.98 117.97 14.22L118.1 14.22C118.17 12.38 118.2 10.13 118.35 8.71L119.07 1.35 122.99 1.35 122.99 19.11 120.67 19.11 120.67 10.93C120.67 8.83 120.69 6.86 120.77 4.62L120.67 4.62C120.52 5.94 120.12 10.5 120.02 11.45L119.09 19.11 116.67 19.11Z" fill="#002855" mask="url(#mask-6)"/><path d="M128.62 11.98L128.07 4.59 127.9 4.59 127.25 11.98 128.62 11.98ZM126.05 1.35L130.02 1.35 132.04 19.11 129.37 19.11 128.87 14.3 127 14.3 126.43 19.11 124.03 19.11 126.05 1.35Z" fill="#002855" mask="url(#mask-6)"/><path d="M132.94 19.11L135.58 19.11 135.58 1.35 132.94 1.35 132.94 19.11Z" fill="#002855" mask="url(#mask-6)"/><path d="M137.13 19.11L137.13 1.35 139.77 1.35 139.77 16.79 143.14 16.79 143.14 19.11 137.13 19.11Z" fill="#002855" mask="url(#mask-6)"/><path d="M147.79 15.73C148.08 15.73 148.32 15.7 148.32 15.36 148.32 15.07 148.04 15.03 147.8 15.03L147.34 15.03 147.34 15.73 147.79 15.73ZM147.34 17.15L146.9 17.15 146.9 14.67 147.84 14.67C148.44 14.67 148.77 14.88 148.77 15.4 148.77 15.85 148.5 16.03 148.11 16.07L148.79 17.15 148.32 17.15 147.7 16.09 147.34 16.09 147.34 17.15ZM147.76 17.71C148.7 17.71 149.47 16.97 149.47 15.95 149.47 14.93 148.7 14.19 147.76 14.19 146.81 14.19 146.06 14.93 146.06 15.95 146.06 16.97 146.81 17.71 147.76 17.71L147.76 17.71ZM145.53 15.95C145.53 14.64 146.57 13.76 147.76 13.76 148.95 13.76 150 14.64 150 15.95 150 17.26 148.95 18.14 147.76 18.14 146.57 18.14 145.53 17.26 145.53 15.95L145.53 15.95Z" fill="#002855" mask="url(#mask-6)"/><path d="M6.25 3.17L7.73 7.71 12.51 7.71 8.64 10.52 10.12 15.07 6.25 12.26 2.39 15.07 3.87 10.52 0 7.71 4.78 7.71 6.25 3.17Z" fill="#002855" mask="url(#mask-6)"/></g></g></g></svg>
+                                        </a>
+                                        <ul>
+                                            <li><a href="#">About Us</a></li>
+                                            <li><a href="#">Security &amp; Privacy</a></li>
+                                            <li><a href="#">Guarantee</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                            <li><a href="#">Site Map</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h5>Personal Checks</h5>
+                                        <ul>
+                                            <li><a href="#">New Check Designs</a></li>
+                                            <li><a href="#">Best Sellers</a></li>
+                                            <li><a href="#">Classic</a></li>
+                                            <li><a href="#">Design Your Own</a> </li>
+                                            <li><a href="#">Hip &amp; Cool</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h5>Business Products</h5>
+                                        <ul>
+                                            <li><a href="#">Laser Check on Top</a></li>
+                                            <li><a href="#">Desk Checks</a></li>
+                                            <li><a href="#">General Purpose</a></li>
+                                            <li><a href="#">Custom Stamps</a></li>
+                                            <li><a href="#">Deposit Supplies</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h5>Accessories</h5>
+                                        <ul>
+                                            <li><a href="#">Checkbook Covers</a></li>
+                                            <li><a href="#">Deposits/Registers</a></li>
+                                            <li><a href="#">Debit Caddies</a></li>
+                                            <li><a href="#">Organizers</a></li>
+                                            <li><a href="#">Personal Ink Stamps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row visible-xs-block">
+                                    <div class="col-sm-3 visible-xs-block">
+                                        <hr class="footer-hr margin-bottom-2 margin-top-10 visible-xs-block">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer-badges-copyright" class="container-fluid bg-clouds text-zodiac">
+                    <div class="row">
+                        <div class="container">
+                            <div class="footer-badges-copyright-inner">
+                                <div class="row">
+                                    <div class="col-sm-3 copyright-address">
+                                        <small class="copyright-address">
+                                            &copy; 2016 Checks In The Mail
+                                            <ul class="list-unstyled margin-bottom-0 margin-top-4">
+                                                <li>2435 Goodwin Lane</li>
+                                                <li>New Braunfels, TX 78135</li>
+                                            </ul>
+                                        </small>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <ul class="security-badge-list list-unstyled list-inline">
+                                            <li class="security-badge">
+                                                <a href="#">
+                                                    <div class="badge-container">
+                                                        <img src="http://placehold.it/100x60/f1f1f1/002855.png/?text=Badge+1" alt="">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="security-badge">
+                                                <a href="#">
+                                                    <div class="badge-container">
+                                                        <img src="http://placehold.it/100x50/f1f1f1/002855.png/?text=Badge+2" alt="">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="security-badge">
+                                                <a href="#">
+                                                    <div class="badge-container">
+                                                        <img src="http://placehold.it/100x70/f1f1f1/002855.png/?text=Badge+3" alt="">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="security-badge">
+                                                <a href="#">
+                                                    <div class="badge-container">
+                                                        <img src="http://placehold.it/100x75/f1f1f1/002855.png/?text=Badge+4" alt="">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="security-badge">
+                                                <a href="#">
+                                                    <div class="badge-container">
+                                                        <img src="http://placehold.it/100x80/f1f1f1/002855.png/?text=Badge+5" alt="">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="security-badge">
+                                                <a href="#">
+                                                    <div class="badge-container">
+                                                        <img src="http://placehold.it/100x65/f1f1f1/002855.png/?text=Badge+6" alt="">
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -2757,8 +2977,8 @@
         </div>
     </div>
 
-    <script src="js/citm.min.js"></script>
-    <script src="js/styleguide-helper.js"></script>
+    <!-- #include file="_footer.html" -->
+
 </body>
 
 </html>
