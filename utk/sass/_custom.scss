@@ -94,6 +94,10 @@
   color: tint($color-zodiac, 50%);
 }
 
+.text-transport-bright {
+  color: $color-transport-bright;
+}
+
 // Margins
 .margin-top-0 {
   margin-top: 0;
@@ -1237,8 +1241,21 @@ h1, .h1,
 
   }
 
-
 }
+
+
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+.breadcrumb {
+  background-color: transparent;
+  border-radius: 0;
+  
+  border-bottom: 5px solid $breadcrumb-bg;
+  padding-bottom: 1px;
+}
+
 
 // Homepage Bucket Customizations
 .reorder-bucket {
@@ -1260,4 +1277,21 @@ h1, .h1,
       width: 80%;
     }
   }
+}
+
+// Checkout-flow-specific styles
+.check-preview__overlay {
+  position: relative;
+}
+
+.check-preview__overlay--personal0:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  height: 100%;
+  width: 100%;
+  background: url(/images/overlay_PersonalCheck_Tab1.png) no-repeat;
+  background-size: contain;
 }
