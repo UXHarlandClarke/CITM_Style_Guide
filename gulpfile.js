@@ -70,14 +70,21 @@ gulp.task('default', function(done){
 
 gulp.task('help', ['default'], function(){});
 
-gulp.task('local', ['build-dev', 'app'], function(){});
-
 gulp.task('build', function(done) {
     gp_runsequence(
         'build-dev',
         'buildstatic',
         done);
 });
+
+gulp.task('local', function(done) {
+    gp_runsequence(
+        'build-dev',
+        'app',
+        done);
+});
+
+
 
 
 gulp.task('buildstatic', function(done) {
@@ -145,7 +152,7 @@ gulp.task('build-test', function(done) {
         done);
 });
 
-gulp.task('app', ['sass'], function() {
+gulp.task('app', function(done) {
 
     console.log(gp_util.colors.cyan("Starting LIVE APP web service"));
     
@@ -159,14 +166,14 @@ gulp.task('app', ['sass'], function() {
           })  
         ], 
 		    routes: {
-		        "/dist/utk": "dist"
+		        "/dist": "dist/utk/"
 		    }
 		}
     });
 
     /* utk updated */
-    gulp.watch(['./utk/sass/*.scss','./utk/js/*.js', ,'./utk/img/**/*'], function(event) {
-        console.log(gp_util.colors.cyan("UTK scss/js/images change detected"));
+    gulp.watch(['./utk/sass/*.scss','./utk/js/*.js','./utk/img/**/*'], function(event) {
+        console.log(gp_util.colors.cyan("UTK scss/js/img change detected"));
         gulp.start('build-dev');
     });
 
@@ -176,6 +183,7 @@ gulp.task('app', ['sass'], function() {
       console.log(gp_util.colors.cyan("App change detected"));
       gp_browserSync.reload()
     });
+
 });
 
 
