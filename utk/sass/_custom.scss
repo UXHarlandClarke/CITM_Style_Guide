@@ -625,7 +625,9 @@ h1, .h1,
 
 // Two-column dropdown menu (ul)
 .two-column.dropdown-menu {
-  min-width: 380px;
+  @media (min-width: $grid-float-breakpoint) {
+    min-width: 380px;
+  }
   > li > ul.col-sm-6 {
     padding: 0;
   }
