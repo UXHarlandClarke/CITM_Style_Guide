@@ -49,7 +49,7 @@
     }
 
     // Scrollspy.js
-    $('body').scrollspy({ target: '#app-nav' })
+    // $('body').scrollspy({ target: '#app-nav' })
     
     // Affix.js
     // $('#utk-nav').affix({
