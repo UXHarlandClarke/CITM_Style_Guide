@@ -803,6 +803,11 @@ h1, .h1,
       top: -17px;
       left: 0;
     }
+    
+    &.navbar-brand-mobile {
+      padding-top: 13px;
+      padding-bottom: 14px;
+    }
   }
 
   .navbar-text {
@@ -898,7 +903,7 @@ h1, .h1,
     .icon-bar {
       background-color: $navbar-default-toggle-icon-bar-bg;
     }
-    @include citm-mobile-navbar-vertical-align(34px);
+    // @include citm-mobile-navbar-vertical-align(34px);
   }
 
   .navbar-collapse,
