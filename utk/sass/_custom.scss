@@ -1078,6 +1078,16 @@ h1, .h1,
   
   h5 {
     font-weight: 500;
+    a {
+      color: $navbar-default-link-hover-color;
+      opacity: 0.85;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $navbar-default-link-hover-color;
+        opacity: 1;
+      }
+    }
   }
   
   ul {
