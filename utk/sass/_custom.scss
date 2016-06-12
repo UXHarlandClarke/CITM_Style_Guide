@@ -44,8 +44,20 @@
   background-color: $color-clouds;
 }
 
+.bg-clouds-muted {
+  background-color: $color-clouds-muted;
+}
+
 .bg-clouds-light {
   background-color: $color-clouds-light;
+}
+
+.bg-clouds-light-35 {
+  background-color: $color-clouds-light-35;
+}
+
+.bg-clouds-light-50 {
+  background-color: $color-clouds-light-50;
 }
 
 .bg-clouds-lighter {
@@ -600,6 +612,10 @@ h1, .h1,
   &:focus {
     opacity: 1;
   }
+  
+  &.footer-brand-mobile {
+    opacity: 1;
+  }
 }
 
 .citm-footer-logo {
@@ -613,6 +629,11 @@ h1, .h1,
   display: block;
   margin-bottom: ($line-height-computed / 2);
   margin-left: -17px;
+}
+
+.citm-footer-logo-mobile {
+  // margin: 0 auto;
+  margin-bottom: ($line-height-computed / 2);
 }
 
 
@@ -803,6 +824,11 @@ h1, .h1,
       top: -17px;
       left: 0;
     }
+    
+    &.navbar-brand-mobile {
+      padding-top: 13px;
+      padding-bottom: 14px;
+    }
   }
 
   .navbar-text {
@@ -898,7 +924,7 @@ h1, .h1,
     .icon-bar {
       background-color: $navbar-default-toggle-icon-bar-bg;
     }
-    @include citm-mobile-navbar-vertical-align(34px);
+    // @include citm-mobile-navbar-vertical-align(34px);
   }
 
   .navbar-collapse,
@@ -911,6 +937,9 @@ h1, .h1,
       }
       @media (min-width: $screen-xs-max) and (max-width: 870px) {
         width: 100px;
+      }
+      @media (min-width: $screen-xs-max) and (max-width: 790px) {
+        width: 80px;
       }
     }
   }
@@ -1078,6 +1107,16 @@ h1, .h1,
   
   h5 {
     font-weight: 500;
+    a {
+      color: $navbar-default-link-hover-color;
+      opacity: 0.85;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $navbar-default-link-hover-color;
+        opacity: 1;
+      }
+    }
   }
   
   ul {
@@ -1134,7 +1173,7 @@ h1, .h1,
   .badge-container {
     width: 120px;
     height: 120px;
-    background-color: $color-clouds-light;
+    background-color: $color-clouds-light-35;
     border-radius: $border-radius-small;
     position: relative;
     
