@@ -294,15 +294,37 @@ h1, .h1,
 
 // Base class
 .well {
-    border-radius: 0;
+  border-radius: 0;
+  
+  // as marketing bucket with link
+  &.well-marketing {
+    @extend .clearfix;
+    padding: 0;
+    box-shadow: none;
+    border-radius: $border-radius-base;
+    border-color: $panel-default-border;
+    position: relative;
+    
+    .well-marketing-title {
+      position: absolute;
+      top: 0;
+      left: ($line-height-computed / 2);
+    }
+    
+    img {
+      @extend .pull-right;
+      border-top-right-radius: $border-radius-base;
+      border-bottom-right-radius: $border-radius-base;
+    }
+  }
 }
 
 // Sizes
 .well-lg {
-    border-radius: 0;
+  border-radius: 0;
 }
 .well-sm {
-    border-radius: 0;
+  border-radius: 0;
 }
 
 
@@ -1346,10 +1368,19 @@ h1, .h1,
   border-radius: $border-radius-base;
   padding: 10px;
   
+  img {
+    margin: 0 auto;
+  }
+  
+  &.gallery-item-198-min-h {
+    min-height: 198px;
+  }
+  
   .gallery-item-title {
     margin-top: 0;
     margin-bottom: 0;
     color: $gray-dark;
+    text-overflow: ellipsis;
   }
   
   &:hover,
