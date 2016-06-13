@@ -25,10 +25,12 @@
             <h3 class="example-name">Example (not finalized)</h3>
             <div class="component">
                 <!--#include file="_citm_nav.html" -->
+
                 <div class="container">
                     <!-- Carousel -->
-                    <div class="row">
+                    <div class="row carousel-container">
                         <div class="col-md-12">
+                            <!-- Desktop Carousel -->
                             <div id="citm-carousel-desktop" class="carousel slide hidden-xs" data-ride="carousel">
                                 <!-- Indicators -->
                                 <ol class="carousel-indicators">
@@ -41,17 +43,26 @@
                                     <div class="item active">
                                         <img src="http://placehold.it/1140x360/002855/f1f1f1.png/?text=&nbsp;" alt="Banner 1">
                                         <div class="carousel-caption">
-                                            <h1 class="hero-text text-white">20% off all Marvel products</h1>
-                                            <p>Use offer code <span class="text-medium text-uppercase text-letterspace-1">marvel20</span>.</p>
-                                            <p class="hidden-xs hidden-sm"><a href="#" class="btn btn-cta">Shop Now &rarr;</a></p>
-                                            <p class="hidden-md hidden-lg"><a href="#" class="btn btn-sm btn-cta">Shop Now &rarr;</a></p>
+                                            <h1 class="hero-text text-white">New Customer Offer: <span class="price"><sup class="price__currency">$</sup><span class="price__dollar">5</span><span class="price__mark">.</span><sup class="price__sup">49</sup></span>&#8202;<small>per&nbsp;box</small></h1>
+                                            <p>Use code <span class="text-medium text-uppercase text-letterspace-1">new549</span>. Includes <em>free</em> shipping &amp; processing.</p>
+                                            <p><a href="#" class="btn btn-cta">Shop Personal Checks &rarr;</a></p>
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <img src="http://placehold.it/1140x360/C5CFDA/f1f1f1.png/?text=&nbsp;" alt="Banner 2">
+                                        <img src="http://placehold.it/1140x360/5B6770/f1f1f1.png/?text=&nbsp;" alt="Banner 2">
+                                        <div class="carousel-caption">
+                                            <h1 class="hero-text text-white">20% off New Designs</h1>
+                                            <p>Use code <span class="text-medium text-uppercase text-letterspace-1">check20</span>.</p>
+                                            <p><a href="#" class="btn btn-cta">Shop New Designs &rarr;</a></p>
+                                        </div>
                                     </div>
                                     <div class="item">
                                         <img src="http://placehold.it/1140x360/007096/f1f1f1.png/?text=&nbsp;" alt="Banner 3">
+                                        <div class="carousel-caption">
+                                            <h1 class="hero-text text-white">Personal High Security Checks</h1>
+                                            <p>Added security with every&nbsp;check!</p>
+                                            <p><a href="#" class="btn btn-cta">Secure Your Checks &rarr;</a></p>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- Controls -->
@@ -64,6 +75,9 @@
                                     <span class="sr-only">Next</span>
                                 </a>
                             </div>
+                            <!-- /Desktop Carousel -->
+
+                            <!-- Mobile Carousel -->
                             <div id="citm-carousel-mobile" class="carousel slide hidden-sm hidden-md hidden-lg" data-ride="carousel">
                                 <!-- Indicators -->
                                 <ol class="carousel-indicators">
@@ -76,17 +90,26 @@
                                     <div class="item active">
                                         <img src="http://placehold.it/767x700/002855/f1f1f1.png/?text=&nbsp;" alt="Banner 1">
                                         <div class="carousel-caption">
-                                            <h1 class="hero-text text-white">20% off all Marvel products</h1>
-                                            <p>Use offer code <span class="text-medium text-uppercase text-letterspace-1">marvel20</span>.</p>
-                                            <p class="hidden-xs hidden-sm"><a href="#" class="btn btn-cta">Shop Now &rarr;</a></p>
-                                            <p class="hidden-md hidden-lg"><a href="#" class="btn btn-sm btn-cta">Shop Now &rarr;</a></p>
+                                            <h1 class="hero-text text-white">New Customer Offer: <span class="price"><sup class="price__currency">$</sup><span class="price__dollar">5</span><span class="price__mark">.</span><sup class="price__sup"><span class="hidden">.</span>49</sup></span>&#8202;<small>per&nbsp;box</small></h1>
+                                            <p>Use code <span class="text-medium text-uppercase text-letterspace-1">new549</span>. Includes <em>free</em> shipping &amp; processing.</p>
+                                            <p><a href="#" class="btn btn-cta">Shop Personal Checks &rarr;</a></p>
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <img src="http://placehold.it/767x700/C5CFDA/f1f1f1.png/?text=&nbsp;" alt="Banner 2">
+                                        <img src="http://placehold.it/767x700/5B6770/f1f1f1.png/?text=&nbsp;" alt="Banner 2">
+                                        <div class="carousel-caption">
+                                            <h1 class="hero-text text-white">20% off New Designs</h1>
+                                            <p>Use code <span class="text-medium text-uppercase text-letterspace-1">check20</span>.</p>
+                                            <p><a href="#" class="btn btn-cta">Shop New Designs &rarr;</a></p>
+                                        </div>
                                     </div>
                                     <div class="item">
                                         <img src="http://placehold.it/767x700/007096/f1f1f1.png/?text=&nbsp;" alt="Banner 3">
+                                        <div class="carousel-caption">
+                                            <h1 class="hero-text text-white">Personal High Security Checks</h1>
+                                            <p>Added security with every&nbsp;check!</p>
+                                            <p><a href="#" class="btn btn-cta">Secure Your Checks &rarr;</a></p>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- Controls -->
@@ -99,11 +122,13 @@
                                     <span class="sr-only">Next</span>
                                 </a>
                             </div>
+                            <!-- /Mobile Carousel -->
                         </div>
                     </div>
                     <!-- /Carousel -->
+
                     <!-- Marketing Content and Reorder -->
-                    <div class="row margin-top-30">
+                    <div class="row">
                         <div class="col-md-8">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><h2 class="panel-title">High Security Checks</h2></div>
@@ -141,6 +166,7 @@
                         </div>
                     </div>
                     <!-- /Marketing Content and Reorder -->
+
                     <!-- Best Selling Personal Checks -->
                     <div class="row">
                         <div class="col-md-12">
@@ -151,53 +177,84 @@
                         <div class="col-xs-6 col-sm-4 col-md-2">
                             <div class="gallery-item">
                                 <a href="#">
-                                    <img src="https://placehold.it/450x450" alt="" class="img-responsive">
-                                </a>
-                                <p class="text-medium text-primary margin-bottom-0">
-                                    From <span class="price price--md"><sup class="price__currency">$</sup>6<sup class="price__sup">46</sup></span>
-                                </p>
-                                <h3 class="h5 margin-top-0">
-                                    Blue Secure Checks
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-2">
-                            <div class="gallery-item">
-                                <a href="#">
-                                    <img src="https://placehold.it/450x450" alt="" class="img-responsive">
+                                    <img src="https://placehold.it/450x450/EEEEEE" alt="" class="img-responsive">
+                                    <p class="price-group">
+                                        From <span class="price price--smmd"><sup class="price__currency">$</sup><span class="price__dollar">6</span><span class="price__mark">.</span><sup class="price__sup">46</sup></span>
+                                    </p>
+                                    <h3 class="h5 gallery-item-title">
+                                        Blue Secure Checks
+                                    </h3>
                                 </a>
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-2">
                             <div class="gallery-item">
                                 <a href="#">
-                                    <img src="https://placehold.it/450x450" alt="" class="img-responsive">
+                                    <img src="https://placehold.it/450x450/EEEEEE" alt="" class="img-responsive">
+                                    <p class="price-group">
+                                        From <span class="price price--smmd"><sup class="price__currency">$</sup><span class="price__dollar">6</span><span class="price__mark">.</span><sup class="price__sup">46</sup></span>
+                                    </p>
+                                    <h3 class="h5 gallery-item-title">
+                                        Blue Secure Checks
+                                    </h3>
                                 </a>
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-2">
                             <div class="gallery-item">
                                 <a href="#">
-                                    <img src="https://placehold.it/450x450" alt="" class="img-responsive">
+                                    <img src="https://placehold.it/450x450/EEEEEE" alt="" class="img-responsive">
+                                    <p class="price-group">
+                                        From <span class="price price--smmd"><sup class="price__currency">$</sup><span class="price__dollar">6</span><span class="price__mark">.</span><sup class="price__sup">46</sup></span>
+                                    </p>
+                                    <h3 class="h5 gallery-item-title">
+                                        Blue Secure Checks
+                                    </h3>
                                 </a>
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-2">
                             <div class="gallery-item">
                                 <a href="#">
-                                    <img src="https://placehold.it/450x450" alt="" class="img-responsive">
+                                    <img src="https://placehold.it/450x450/EEEEEE" alt="" class="img-responsive">
+                                    <p class="price-group">
+                                        From <span class="price price--smmd"><sup class="price__currency">$</sup><span class="price__dollar">6</span><span class="price__mark">.</span><sup class="price__sup">46</sup></span>
+                                    </p>
+                                    <h3 class="h5 gallery-item-title">
+                                        Blue Secure Checks
+                                    </h3>
                                 </a>
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-4 col-md-2">
                             <div class="gallery-item">
                                 <a href="#">
-                                    <img src="https://placehold.it/450x450" alt="" class="img-responsive">
+                                    <img src="https://placehold.it/450x450/EEEEEE" alt="" class="img-responsive">
+                                    <p class="price-group">
+                                        From <span class="price price--smmd"><sup class="price__currency">$</sup><span class="price__dollar">6</span><span class="price__mark">.</span><sup class="price__sup">46</sup></span>
+                                    </p>
+                                    <h3 class="h5 gallery-item-title">
+                                        Blue Secure Checks
+                                    </h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-4 col-md-2">
+                            <div class="gallery-item">
+                                <a href="#">
+                                    <img src="https://placehold.it/450x450/EEEEEE" alt="" class="img-responsive">
+                                    <p class="price-group">
+                                        From <span class="price price--smmd"><sup class="price__currency">$</sup><span class="price__dollar">6</span><span class="price__mark">.</span><sup class="price__sup">46</sup></span>
+                                    </p>
+                                    <h3 class="h5 gallery-item-title">
+                                        Blue Secure Checks
+                                    </h3>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- /Best Selling Personal Checks -->
+
                     <!-- Bottom 3 Marketing Buckets -->
                     <div class="row">
                         <div class="col-sm-6 col-md-4">

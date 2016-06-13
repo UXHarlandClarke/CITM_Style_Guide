@@ -220,8 +220,18 @@ h1, .h1,
   letter-spacing: 0.02em;
 }
 
+.price__mark {
+  font-size: .0001em;
+  opacity: 0;
+  letter-spacing: 0;
+}
+
 .price--sm {
   font-size: $font-size-h4;
+}
+
+.price--smmd {
+  font-size: $font-size-h3;
 }
 
 .price--md {
@@ -340,7 +350,8 @@ h1, .h1,
 // --------------------------------------------------
 
 .btn-cta {
-  @include button-variant($color-zodiac, $color-daisy, $btn-cta-border);
+  // @include button-variant($color-zodiac, $color-daisy, $btn-cta-border);
+  @include button-variant-alternate($color-zodiac, $color-daisy, $btn-cta-border);
 }
 
 .btn-default-emph {
@@ -1226,6 +1237,10 @@ h1, .h1,
   .hero-text {
     font-size: ceil(($font-size-base * 2.75));
     margin-top: 0;
+    small {
+      font-weight: inherit;
+      color: inherit;
+    }
   }
   
   p {
@@ -1237,8 +1252,8 @@ h1, .h1,
   // small screens and up
   @media (min-width: $grid-float-breakpoint) {
     left: 12%;
-    top: 41%;
-    transform: translateY(-41%);
+    top: 38%;
+    transform: translateY(-38%);
     text-align: left;
     
     .hero-text {
@@ -1298,6 +1313,11 @@ h1, .h1,
 }
 
 
+// Homepage Carousel
+.carousel-container {
+  margin-bottom: $line-height-computed;
+}
+
 // Homepage Bucket Customizations
 .reorder-bucket {
   position: relative;
@@ -1316,6 +1336,43 @@ h1, .h1,
     width: 70%;
     @media (min-width: $grid-float-breakpoint) {
       width: 80%;
+    }
+  }
+}
+
+.gallery-item {
+  margin-bottom: $line-height-computed;
+  border: 1px solid $panel-default-border;
+  border-radius: $border-radius-base;
+  padding: 10px;
+  
+  .gallery-item-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    opacity: 0.8;
+  }
+  
+  &:hover,
+  &:focus {
+    border-color: $panel-primary-border;
+    .price-group {
+      color: tint($brand-primary, 15%);
+    }
+    .gallery-item-title {
+      color: $brand-primary;
+      opacity: 1;
+    }
+  }
+  .price-group {
+    color: $gray-light;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+  a {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $brand-primary;
     }
   }
 }
