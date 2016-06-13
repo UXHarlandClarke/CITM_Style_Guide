@@ -1349,18 +1349,17 @@ h1, .h1,
   .gallery-item-title {
     margin-top: 0;
     margin-bottom: 0;
-    opacity: 0.8;
+    color: $gray-dark;
   }
   
   &:hover,
   &:focus {
-    border-color: $panel-primary-border;
+    border-color: tint($color-zodiac, 69%);
     .price-group {
-      color: tint($brand-primary, 15%);
+      color: tint($color-zodiac, 35%);
     }
     .gallery-item-title {
-      color: $brand-primary;
-      opacity: 1;
+      color: $color-zodiac;
     }
   }
   .price-group {
@@ -1372,7 +1371,6 @@ h1, .h1,
     &:hover,
     &:focus {
       text-decoration: none;
-      color: $brand-primary;
     }
   }
 }
