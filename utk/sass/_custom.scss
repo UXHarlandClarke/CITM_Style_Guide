@@ -103,11 +103,15 @@
 }
 
 .text-zodiac-muted {
-  color: tint($color-zodiac, 50%);
+  color: $color-zodiac-muted;
 }
 
 .text-transport-bright {
   color: $color-transport-bright;
+}
+
+.text-tin-muted {
+  color: $color-tin-muted;
 }
 
 // Margins
@@ -226,11 +230,11 @@ h1, .h1,
   letter-spacing: 0;
 }
 
-.price--sm {
+.price--xs {
   font-size: $font-size-h4;
 }
 
-.price--smmd {
+.price--sm {
   font-size: $font-size-h3;
 }
 
@@ -304,17 +308,31 @@ h1, .h1,
     border-radius: $border-radius-base;
     border-color: $panel-default-border;
     position: relative;
+    display: block;
     
     .well-marketing-title {
       position: absolute;
-      top: 0;
+      top: 48%;
+      transform: translateY(-48%);
       left: ($line-height-computed / 2);
+      margin-top: 0;
+      color: $gray;
     }
     
     img {
       @extend .pull-right;
       border-top-right-radius: $border-radius-base;
       border-bottom-right-radius: $border-radius-base;
+    }
+    
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      border-color: tint($color-zodiac, 69%);
+
+      .well-marketing-title {
+        color: tint($color-zodiac, 10%);
+      }
     }
   }
 }
@@ -331,6 +349,31 @@ h1, .h1,
 //
 // Panels
 // --------------------------------------------------
+
+.panel {
+  &.panel-marketing {
+    @extend .clearfix;
+    .panel-body {
+      padding: 0;
+      position: relative;
+      
+      img {
+        @extend .pull-right;
+      }
+      
+      .panel-marketing-copy {
+        position: absolute;
+        top: $panel-body-padding;
+        left: $panel-body-padding;
+        width: 60%
+      }
+    }
+  }
+}
+
+.panel-zodiac-muted {
+  @include panel-variant($color-zodiac-muted, $color-zodiac-muted, $color-zodiac-muted, $color-zodiac-muted);
+}
 
 .panel-intermezzo {
   @extend .panel-footer;
@@ -1253,12 +1296,15 @@ h1, .h1,
 
 // Live Carousel text
 .carousel-caption {
-  // mobile
+  // mobile base styles
   text-align: center;
+  top: 0;
+  left: 10%;
+  right: 10%;
   
   .hero-text {
-    font-size: ceil(($font-size-base * 2.75));
     margin-top: 0;
+    font-size: ceil(($font-size-base * 1.25));
     small {
       font-weight: inherit;
       color: inherit;
@@ -1266,9 +1312,50 @@ h1, .h1,
   }
   
   p {
-    margin-bottom: ($jumbotron-padding / 2);
-    font-size: $jumbotron-font-size;
     font-weight: 300;
+    font-size: $font-size-h6;
+  }
+  
+  .btn {
+    @media (max-width: 318px) {
+      font-size: $font-size-h6;
+    }
+  }
+  
+  // mobile 319px and up
+  @media (min-width: 319px) {
+    .hero-text {
+      font-size: ceil(($font-size-base * 1.5));
+    }
+    
+    p {
+      margin-bottom: ($jumbotron-padding / 2);
+      font-size: $font-size-base;
+    }  
+  }
+  
+  // mobile 359px and up
+  @media (min-width: 359px) {
+    .hero-text {
+      font-size: ceil(($font-size-base * 2));
+    }
+    
+    p {
+      margin-bottom: ($jumbotron-padding / 2);
+      font-size: ceil(($font-size-base * 1.25));
+    }    
+  }
+  
+  // mobile 399px and up
+  @media (min-width: 399px) {
+    .hero-text {
+      font-size: ceil(($font-size-base * 2.75));
+    }
+    
+    p {
+      margin-bottom: ($jumbotron-padding / 2);
+      font-size: $jumbotron-font-size;
+    }
   }
   
   // small screens and up
@@ -1362,11 +1449,24 @@ h1, .h1,
   }
 }
 
+.order-status-bucket {
+  max-height: 51px;
+  a {
+    color: $color-zodiac-muted;
+    &:hover,
+    &:focus {
+      color: tint($color-zodiac, 35%);
+      text-decoration: none;
+    }
+  }
+}
+
 .gallery-item {
   margin-bottom: $line-height-computed;
   border: 1px solid $panel-default-border;
   border-radius: $border-radius-base;
   padding: 10px;
+  display: block;
   
   img {
     margin: 0 auto;
@@ -1382,26 +1482,22 @@ h1, .h1,
     color: $gray-dark;
     text-overflow: ellipsis;
   }
+
+  .price-group {
+    color: $gray-light;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
   
   &:hover,
   &:focus {
+    text-decoration: none;
     border-color: tint($color-zodiac, 69%);
     .price-group {
       color: tint($color-zodiac, 35%);
     }
     .gallery-item-title {
       color: $color-zodiac;
-    }
-  }
-  .price-group {
-    color: $gray-light;
-    font-weight: 500;
-    margin-bottom: 0;
-  }
-  a {
-    &:hover,
-    &:focus {
-      text-decoration: none;
     }
   }
 }
