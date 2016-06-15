@@ -1476,11 +1476,28 @@ h1, .h1,
     min-height: 198px;
   }
   
+  // specific styles to gallery cards on product gallery pages
+  &.gallery-page-item {
+    @media (min-width: $grid-float-breakpoint) {
+      min-height: 450px;
+    }
+    @media (min-width: $screen-md-min) {
+      min-height: 318px;
+    }
+    @media (min-width: $screen-lg-min) {
+      min-height: 368px;
+    }
+  }
+  
   .gallery-item-title {
     margin-top: 0;
     margin-bottom: 0;
     color: $gray-dark;
-    text-overflow: ellipsis;
+  }
+  
+  .gallery-item-meta {
+    color: $gray;
+    margin-bottom: 0;
   }
 
   .price-group {
@@ -1498,6 +1515,9 @@ h1, .h1,
     }
     .gallery-item-title {
       color: $color-zodiac;
+    }
+    .gallery-item-meta {
+      color: tint($color-zodiac, 18%);
     }
   }
 }
