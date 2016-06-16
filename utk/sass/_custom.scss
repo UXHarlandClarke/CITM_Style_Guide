@@ -384,10 +384,10 @@ h1, .h1,
   .panel-body,
   .panel-intermezzo {
     padding-top: 5px;
-    &:not(:first-child) {
+    &:not(:first-of-type) {
       padding-top: $panel-body-padding;
     }
-    .pdp--section-head:not(:first-child) {
+    .pdp--section-head:not(:first-of-type) {
       margin-top: 15px;
     }
     &.panel-price-area {
