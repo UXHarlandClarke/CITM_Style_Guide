@@ -990,6 +990,20 @@ h1, .h1,
       }
     }
   }
+  
+  .nav-links-pers-flow {
+    @media (max-width: $grid-float-breakpoint-max) {
+      position: absolute;
+      right: $navbar-padding-horizontal;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0;
+      
+      > li > a {
+        padding-right: 0;
+      }
+    }
+  }
 
   .navbar-toggle {
     border-color: $navbar-default-toggle-border-color;
@@ -1000,7 +1014,6 @@ h1, .h1,
     .icon-bar {
       background-color: $navbar-default-toggle-icon-bar-bg;
     }
-    // @include citm-mobile-navbar-vertical-align(34px);
   }
 
   .navbar-collapse,
