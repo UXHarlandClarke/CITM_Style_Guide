@@ -1435,12 +1435,19 @@ h1, .h1,
 }
 
 
+//
 // Homepage Carousel
+// --------------------------------------------------
+
 .carousel-container {
   margin-bottom: $line-height-computed;
 }
 
+
+//
 // Homepage Bucket Customizations
+// --------------------------------------------------
+
 .reorder-bucket {
   position: relative;
   
@@ -1474,6 +1481,11 @@ h1, .h1,
   }
 }
 
+
+//
+// Gallery Cards
+// --------------------------------------------------
+
 .gallery-item {
   margin-bottom: $line-height-computed;
   border: 1px solid $panel-default-border;
@@ -1488,7 +1500,7 @@ h1, .h1,
   &.gallery-item-198-min-h {
     min-height: 198px;
   }
-  
+
   // specific styles to gallery cards on product gallery pages
   &.gallery-page-item {
     @media (min-width: $grid-float-breakpoint) {
@@ -1535,7 +1547,11 @@ h1, .h1,
   }
 }
 
+
+//
 // Checkout-flow-specific styles
+// --------------------------------------------------
+
 .check-preview__overlay {
   position: relative;
 }
@@ -1550,4 +1566,49 @@ h1, .h1,
   width: 100%;
   background: url(/images/overlay_PersonalCheck_Tab1.png) no-repeat;
   background-size: contain;
+}
+
+
+// **************************************************************************************************************
+// Selected Clone-site Source CSS
+// --------------------------------------------------------------------------------------------------------------
+// TODO: remove after full UI Toolkit components are designed to improve these styles
+// --------------------------------------------------------------------------------------------------------------
+
+// PDP Page
+.crosssell--container {
+  background: tint($color-zodiac, 95%);
+  margin-top: $grid-gutter-width;
+}
+.crosssell--container h5 {
+  @extend .h3;
+}
+
+.crosssell--container .crossSellItem {
+  width: 165px;
+  min-height: 225px;
+  margin: ($line-height-computed / 2) ($grid-gutter-width / 2) ($grid-gutter-width / 2) $line-height-computed;
+  background: #fff;
+  border: 1px solid $panel-default-border;
+  border-radius: $border-radius-base;
+  padding: ($line-height-computed / 2);
+  float: left;
+  
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+img.pdp-image__style {
+  border: 1px solid $panel-default-border;
+  border-radius: $border-radius-large;
+  margin: 10px 0;
+  width: 90%;
+}
+@media (max-width: $grid-float-breakpoint-max) {
+  img.pdp-image__style {
+    width: 100%;
+  }
 }
