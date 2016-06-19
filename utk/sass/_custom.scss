@@ -1699,6 +1699,10 @@ label .entryheads {
   margin-bottom: 0;
 }
 
+.requiredField {
+  color: $brand-danger;
+}
+
 .twenty-above {margin-top: 20px}
 
 /* -------------- TABS FOR REORDER AND PERSONALIZE --------------*/
