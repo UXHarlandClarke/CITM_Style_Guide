@@ -17,6 +17,7 @@ $color-transport:       rgb(0,156,189); // Transport
 
 $btn-cta-border:        darken($color-daisy, 5%);
 $navbar-citm-border:    darken($color-envelope, 6.5%);
+$color-clouds-lightest: tint($color-clouds, 90%);
 $color-clouds-lighter:  tint($color-clouds, 70%);
 $color-clouds-light-50: tint($color-clouds, 50%);
 $color-clouds-light-35: tint($color-clouds, 35%);
@@ -25,4 +26,5 @@ $color-clouds-muted:    tint($color-clouds, 10%);
 $color-clouds-dark:     darken($color-clouds, 15%);
 $color-transport-bright: lighten($color-transport, 8%);
 $color-tin-muted: tint($color-tin, 10%);
-$color-zodiac-muted: tint($color-zodiac, 50%);
+$color-zodiac-muted: tint($color-zodiac, 70%);
+$color-zodiac-lightest: tint($color-zodiac, 96%);
