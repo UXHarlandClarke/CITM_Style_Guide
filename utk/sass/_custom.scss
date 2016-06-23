@@ -85,8 +85,20 @@
 }
 
 // Text variations
+.text-light {
+  font-weight: 300;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+
 .text-medium {
   font-weight: 500;
+}
+
+.text-bold {
+  font-weight: 700;
 }
 
 .text-letterspace-1 {
@@ -114,8 +126,16 @@
   color: $gray-dark;
 }
 
+.text-zodiac-med {
+  color: $color-zodiac-med;
+}
+
 .text-zodiac-muted {
   color: $color-zodiac-muted;
+}
+
+.text-zodiac-light {
+  color: $color-zodiac-light;
 }
 
 .text-transport-bright {
@@ -175,6 +195,14 @@
   margin-bottom: 2px;
 }
 
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.margin-bottom-15 {
+  margin-bottom: 15px;
+}
+
 // Padding
 .padding-left-0 {
   padding-left: 0;
@@ -193,6 +221,10 @@
 // Horizontal Rules
 .footer-hr {
   border-top-color: shade($color-clouds, 5%);
+}
+
+.hr-dark {
+  border-top-color: #ddd;
 }
 
 // White Space modifiers
@@ -493,6 +525,13 @@ h1, .h1,
 //
 // Forms
 // --------------------------------------------------
+
+// Page Sort
+.page-sort-select {
+  @media (max-width: $grid-float-breakpoint-max) {
+    width: 100%;
+  }
+}
 
 // Feedback states
 .has-success {
@@ -1554,7 +1593,9 @@ h1, .h1,
     }
   }
   
-  .gallery-item-title {
+  // TO DO: remove .gallery-item__title (deprecated class) after initial launch
+  .gallery-item-title,
+  .gallery-item__title {
     margin-top: 0;
     margin-bottom: 0;
     color: $gray-dark;
@@ -1565,7 +1606,9 @@ h1, .h1,
     margin-bottom: 0;
   }
 
-  .price-group {
+  // TO DO: remove .gallery-item__price (deprecated class) after initial launch
+  .price-group,
+  .gallery-item__price {
     color: $gray-light;
     font-weight: 500;
     margin-bottom: 0;
@@ -1575,10 +1618,14 @@ h1, .h1,
   &:focus {
     text-decoration: none;
     border-color: tint($color-zodiac, 69%);
-    .price-group {
+    // TO DO: remove .gallery-item__price (deprecated class) after initial launch
+    .price-group, 
+    .gallery-item__price {
       color: tint($color-zodiac, 35%);
     }
-    .gallery-item-title {
+    // TO DO: remove .gallery-item__title (deprecated class) after initial launch
+    .gallery-item-title,
+    .gallery-item__title {
       color: $color-zodiac;
     }
     .gallery-item-meta {
