@@ -20,6 +20,7 @@
   "dependencies": {
     "jquery": "2.2.4",
     "jquery-touch-events": "1.0.5",
+    "bootstrap-hover-dropdown": "2.2.1",
     "bootstrap-sass": "3.3.6"
   }
 }
