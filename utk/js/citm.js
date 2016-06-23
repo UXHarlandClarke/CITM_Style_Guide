@@ -7,15 +7,23 @@
 
 //=include ./debug.js
 
-
-// Add swipe functionality to Bootstrap carousels
 $(document).ready(function() {
   
+    // Add swipe functionality to Bootstrap carousels
     $(".carousel").swiperight(function() {
         $(this).carousel('prev');
     });
     $(".carousel").swipeleft(function() {  
         $(this).carousel('next');
+    });
+    
+
+    // Disable click on hover dropdowns
+    // ---------------------------------------------------
+    
+    // UTK top menu
+    $('#utk-menu .dropdown-toggle').click(function() { 
+        return false; 
     });
  
 }); /* END document ready */
