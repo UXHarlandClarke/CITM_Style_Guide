@@ -20,17 +20,20 @@ $(document).ready(function() {
 
     // Click and Tap functionality for dropdowns
     // ---------------------------------------------------
+
+    function clickArea() {
+        return false;
+    }
     
-    // UTK top menu 
-    // (disable click so menu stays open if clicking while hovering)
-    $('#utk-menu .dropdown-toggle').click(function() { 
-        return false; 
-    });
-    
-    // UTK top menu 
-    // (allow menu to be opened on mobile 'touchstart')
-    $('#utk-menu .dropdown').on('touchstart', function() { 
+    function tapArea() {
         $(this).toggleClass('open');
-    });
+    }
+
+    if(typeof window.ontouchstart === 'undefined') {
+        $('#utk-menu .dropdown-toggle').on('click', clickArea);
+    } else {
+        $('#utk-menu .dropdown').on('tap', tapArea);
+    }
+
  
 }); /* END document ready */
