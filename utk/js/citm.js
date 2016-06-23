@@ -16,5 +16,5 @@ $(document).ready(function() {
     $(".carousel").swipeleft(function() {  
         $(this).carousel('next');
     });
- 
+
 }); /* END document ready */
