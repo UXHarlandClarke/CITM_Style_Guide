@@ -316,6 +316,10 @@ table.cart .cart_item_shipping input[type="radio"] {
   margin-right: 5px;
 }
 
+.cart_item_shipping label {
+  font-weight: normal;
+}
+
 .cart_subtotal,
 .cart_subtotal_text {
   font-weight: 500; 
@@ -501,7 +505,7 @@ table.cart .cart_item_shipping input[type="radio"] {
   }
   
   table.cart .cart_item_shipping label {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
 
   #divEditCustomize {
@@ -610,10 +614,11 @@ table.cart .cart_item_shipping input[type="radio"] {
 }
 
 span.checkout-heading {
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-  margin: 10px 0;
+  @extend .h4;
+  // font-size: 16px;
+  // font-weight: 500;
+  // text-transform: uppercase;
+  // margin: 10px 0;
 }
 
 // .embed-responsive-item {
@@ -625,7 +630,7 @@ span.checkout-heading {
 iframe#PaymentFrame {
   width: 100% !important;
   min-height: 670px;
-  margin: 15px;  
+  margin-top: $line-height-computed;  
 }
 
 .payment-block {
