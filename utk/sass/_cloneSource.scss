@@ -4,6 +4,11 @@
 // TODO: remove after full UI Toolkit components are designed to improve these styles
 // --------------------------------------------------------------------------------------------------------------
 
+// General Structural Classes
+.section-title {
+  font-weight: bold;
+}
+
 // PDP Page
 .crosssell--container {
   background: $color-zodiac-lightest;
@@ -341,8 +346,8 @@ table.cart .cart_item_shipping input[type="radio"] {
     @extend .btn-primary;
     width: 115px;
     // color: #fff;
-    // background-color: #007dc6;
-    // border: 1px solid #007dc6;
+    // background-color: $brand-primary;
+    // border: 1px solid $brand-primary;
     // width: 150px;
     // text-transform: none;
     // text-decoration: none;
@@ -413,7 +418,7 @@ table.cart .cart_item_shipping input[type="radio"] {
     // -ms-user-select: none;
     // user-select: none;
     // background-image: none;
-    // color: #007dc6;
+    // color: $brand-primary;
     // background-color: #fff;
     // border: 1px solid #d9d9d9;
     // border-radius: 4px;
@@ -626,4 +631,270 @@ iframe#PaymentFrame {
 .payment-block {
   margin: 10px 0 20px 0;
   border-bottom: 1px solid #eee;
+}
+
+
+// Error messages from server
+// ---------------------------------------------------
+
+.ErrorMessageCtlWrapper {
+  @extend .alert;
+  @extend .alert-danger;
+  
+  img {
+    display: none;
+  }
+  
+  .bodytextinbold {
+    font-weight: bold;
+  }
+}
+
+// Confirmation Page
+// ------------------------------------------
+
+#divFaxInstructions {
+  display: none;
+}
+
+
+// Reorder Steps (general)
+// ------------------------------------------
+.gallery-item.CheckedOverlay {
+  position: relative; 
+  
+  &:after {
+    font-family: 'Glyphicons Halflings';
+    font-size: 16px;
+    content:"\e013";
+    color: lighten($color-mint, 5%);
+    position: absolute;
+    right: 3px;
+    bottom: 0;
+  }
+  background: tint($color-mint, 97%); 
+  border:1px solid lighten($color-mint, 5%);
+}
+
+.gallery-item__thumb {
+  width: 100%;
+  height: auto;
+}
+
+.plinectl_ProductLink {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+
+// Reorder Step 2
+// ------------------------------------------
+
+/* --------- BX SLIDER  --------- */
+.bx-wrapper {
+  margin: 0 auto 60px;
+  padding: 0;
+  position: relative;
+}
+.bx-wrapper img {
+  display: inline-block;
+  max-width: 90%;
+}
+.bx-wrapper .bx-viewport {
+  background: none repeat scroll 0 0 #fff;
+  border: 5px solid #fff;
+  text-align: center;
+  height: auto !important;
+  /*box-shadow: 0 0 5px #ccc;
+  left: -5px;*/
+}
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+  bottom: -30px;
+  position: absolute;
+  width: 100%;
+}
+.bx-wrapper .bx-loading {
+  background: url('/images/bx_loader.gif') no-repeat scroll center center #fff;
+  height: 100%;
+  left: 0;
+  min-height: 50px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+}
+.bx-wrapper .bx-pager {
+  color: #666;
+  font-family: Arial;
+  font-size: 0.85em;
+  font-weight: bold;
+  padding-top: 20px;
+  text-align: center;
+}
+.bx-wrapper .bx-pager .bx-pager-item, .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: none repeat scroll 0 0 #666;
+  border-radius: 5px;
+  display: block;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0 none;
+  text-indent: -9999px;
+  width: 10px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: none repeat scroll 0 0 #000;
+}
+.bx-wrapper .bx-prev {
+    background: url("/images/controls.png") no-repeat scroll 0 -32px rgba(0, 0, 0, 0);
+    left: 10px;
+}
+.bx-wrapper .bx-next {
+    background: url("/images/controls.png") no-repeat scroll -43px -32px rgba(0, 0, 0, 0);
+    right: 10px;
+}
+.bx-wrapper .bx-prev:hover {
+    background-position: 0 0;
+}
+.bx-wrapper .bx-next:hover {
+    background-position: -43px 0;
+}
+.bx-wrapper .bx-controls-direction a {
+    height: 32px;
+    margin-top: -16px;
+    outline: 0 none;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    width: 32px;
+    z-index: 8;
+}
+.bx-wrapper .bx-controls-direction a.disabled {
+    display: none;
+}
+.bx-wrapper .bx-controls-auto {
+    text-align: center;
+}
+.bx-wrapper .bx-controls-auto .bx-start {
+    background: url("/images/controls.png") no-repeat scroll -86px -11px rgba(0, 0, 0, 0);
+    display: block;
+    height: 11px;
+    margin: 0 3px;
+    outline: 0 none;
+    text-indent: -9999px;
+    width: 10px;
+}
+.bx-wrapper .bx-controls-auto .bx-start:hover, .bx-wrapper .bx-controls-auto .bx-start.active {
+    background-position: -86px 0;
+}
+.bx-wrapper .bx-controls-auto .bx-stop {
+    background: url("/images/controls.png") no-repeat scroll -86px -44px rgba(0, 0, 0, 0);
+    display: block;
+    height: 11px;
+    margin: 0 3px;
+    outline: 0 none;
+    text-indent: -9999px;
+    width: 9px;
+}
+.bx-wrapper .bx-controls-auto .bx-stop:hover, .bx-wrapper .bx-controls-auto .bx-stop.active {
+    background-position: -86px -33px;
+}
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    text-align: left;
+    width: 80%;
+}
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+    right: 0;
+    width: 35px;
+}
+.bx-wrapper .bx-caption {
+    background: none repeat scroll 0 0 rgba(80, 80, 80, 0.75);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+.bx-wrapper .bx-caption span {
+    color: #fff;
+    display: block;
+    font-family: Arial;
+    font-size: 0.85em;
+    padding: 10px;
+}
+
+ /*--**************** REORDER MODALS **************** --*/
+
+.numPages {color: #666666; font-size: 12px;}
+.numPages span{float:left;}
+.numPages span.numPagesTT{border-right: 1px #D9D9D9 solid; display:block; line-height:19px; padding-right:10px; }
+.numPages div{float:left; margin:0 5px 0 0 ;}
+.numPages a.viewAllPro{ display:block; float:left;    line-height: 19px;    padding: 0 0 0 10px; border-left: 1px #D9D9D9 solid; }
+.numPages a{ border:1px #666666 solid;  padding:2px 5px; color:$brand-primary; text-decoration:none; margin-left: 2px; }
+.numPages a.selectedNum{ background-color:#666666; color:#FFF;}
+#ProductLine_productgroupings #pagediv { margin-top: 100px;}
+
+
+
+// Pagination
+// -------------------------------------------------
+.pagination-container {margin-top: 20px}
+.pagenumber_clicked, .pagenumber_link, a.pagenumbering_text {
+    display: inline-block;
+  margin-left: 2px;
+  font-size: 16px;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+.pagenumber_clicked, .pagenumber_link {
+  padding: 2px 7px 4px;
+  border: 1px solid transparent;
+  background: 0 0;
+  color: $brand-primary;
+  line-height: 1;
+  text-align: center;
+}
+
+a.pagenumbering_text {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  background: #fff;
+  color: $brand-primary;
+    text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-top: 5px;
+  font-size: 1.4em;
+  font-weight: 700
+}
+.pagenumber_clicked {
+  border-color: $brand-primary;
+  background: $brand-primary;
+  color: #fff;
+}
+.pagenumber_link:hover, a.pagenumbering_text:hover,
+.pagenumber_link:focus, a.pagenumbering_text:focus {
+  border-color: #d9d9d9;
+  color: $brand-primary;
+  outline: 0;
+  text-decoration: none;
+}
+.pagenumber_clicked:hover,
+.pagenumber_clicked:focus {
+  text-decoration: none; color:white;
+}
+a.pagenumbering_text:hover, a.pagenumbering_text:focus {
+  border-color: $brand-primary;
+  background: $brand-primary;
+  color: #fff;
+  outline: 0;
 }
