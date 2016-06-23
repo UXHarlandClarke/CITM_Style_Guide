@@ -16,24 +16,5 @@ $(document).ready(function() {
     $(".carousel").swipeleft(function() {  
         $(this).carousel('next');
     });
-    
-
-    // Click and Tap functionality for dropdowns
-    // ---------------------------------------------------
-
-    function clickArea() {
-        return false;
-    }
-    
-    function tapArea() {
-        $(this).toggleClass('open');
-    }
-
-    if(typeof window.ontouchstart === 'undefined') {
-        $('#utk-menu .dropdown-toggle').on('click', clickArea);
-    } else {
-        $('#utk-menu .dropdown').on('tap', tapArea);
-    }
-
  
 }); /* END document ready */
