@@ -208,6 +208,10 @@
   padding-left: 0;
 }
 
+.padding-left-computed {
+  padding-left: $line-height-computed;
+}
+
 .padding-top-bottom-5 {
   padding-top: 5px !important;
   padding-bottom: 5px;
@@ -216,6 +220,11 @@
 // Borders 
 .border-none {
   border: none;
+}
+
+// Border Radii 
+.border-radius-large {
+  border-radius: $border-radius-large;
 }
 
 // Horizontal Rules
@@ -1549,12 +1558,24 @@ h1, .h1,
 }
 
 .order-status-bucket {
+  position: relative;
   max-height: 51px;
+  
+  .order-status-bucket-graphic {
+    opacity: 0.25;
+    font-size: 34px;
+    line-height: 0;
+    position: absolute;
+    right: $panel-body-padding;
+    top: 50%;
+    transform: translateY(-50%);  
+  }
+  
   a {
-    color: $color-zodiac-muted;
+    color: $color-zodiac-light;
     &:hover,
     &:focus {
-      color: tint($color-zodiac, 35%);
+      color: $color-zodiac-med;
       text-decoration: none;
     }
   }
