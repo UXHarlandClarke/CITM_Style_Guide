@@ -208,6 +208,10 @@
   padding-left: 0;
 }
 
+.padding-left-computed {
+  padding-left: $line-height-computed;
+}
+
 .padding-top-bottom-5 {
   padding-top: 5px !important;
   padding-bottom: 5px;
@@ -216,6 +220,11 @@
 // Borders 
 .border-none {
   border: none;
+}
+
+// Border Radii 
+.border-radius-large {
+  border-radius: $border-radius-large;
 }
 
 // Horizontal Rules
