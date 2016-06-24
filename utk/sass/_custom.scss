@@ -566,11 +566,13 @@ h1, .h1,
 }
 
 // Custom Radio Button Select
+// ---------------------------------
 .custom-select {
   .btn {
     @include clearfix();
     position: relative;
   }
+      
   .option_description {
     @extend .pull-left;
     color: $gray;
@@ -594,13 +596,21 @@ h1, .h1,
     transform: translateY(-50%);
     text-align: right;
     transition: 0.25s ease all;
+    .save-over {
+      font-weight: 400;
+      margin-bottom: 10px;
+      letter-spacing: normal;
+      @media (max-width: 560px) {
+        display: none;
+      }
+    }
   }
   .price {
     .save-over {
       font-weight: 400;
       margin-bottom: 4px;
       letter-spacing: normal;
-      @media (max-width: 399px) {
+      @media (max-width: 560px) {
         display: none;
       }
     }
@@ -696,7 +706,85 @@ h1, .h1,
       }
     }
   }
-}
+  
+  
+  // Adjust the font sizes and padding at every breakpoint to account for extra long label text on some CITM products
+  &.btn-group .btn-default {
+    font-size: 12px;
+    padding: 10px 12px;
+    
+    .option_description {
+      margin-left: 20px;
+    }
+    
+    .option_description:before {
+      left: -20px;
+    }
+    
+    .option_price {
+      right: 12px;
+      
+      .price--md {
+        font-size: $font-size-h4;
+      }
+    }
+    
+    .option_quantity {
+      font-size: 12px;
+    }
+    
+    // extra small screens
+    @media (min-width: 375px) {
+      font-size: 14px;
+      padding: 10px 16px;
+      
+      .option_description {
+        margin-left: 24px;
+      }
+      
+      .option_description:before {
+        left: -24px;
+      }
+      
+      .option_price {
+        right: $padding-large-horizontal;
+        .price--md {
+          font-size: $font-size-h4;
+        }
+      }
+      
+      .option_quantity {
+        font-size: 13px;
+      }
+    }
+    
+    // somewhat small screens
+    @media (min-width: 425px) {
+      .option_price {
+        .price--md {
+          font-size: $font-size-h3;
+        }
+      }
+    }
+    
+    @media (min-width: 450px) {
+      font-size: $font-size-large;
+    }
+    
+    @media (min-width: 475px) {
+      .option_price {
+        .price--md {
+          font-size: $font-size-h2;
+        }
+      }      
+    }
+    
+    
+  }
+} // end .custom-select
+
+
+
 
 .check-security-header {
   display: inline-block;
@@ -1703,3 +1791,14 @@ h1, .h1,
 }
 
 
+
+
+// ********************************************************************************************
+// KILL CLASSES - stuff hidden from clone site for initial due to difficulties - refactor later
+// ********************************************************************************************
+
+.custom-select {
+  .save-over {
+    display: none;
+  }
+}
