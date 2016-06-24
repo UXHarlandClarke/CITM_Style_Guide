@@ -456,6 +456,13 @@ h1, .h1,
 }
 
 .panel-pdp {
+  // TODO: Remove this class below after fixing the whitespace issue coming from prices in the backend
+  .product_option_price .price__dollar {
+    margin-right: -0.52em;
+    margin-left: -0.25em;
+  }
+  // TODO (end)
+  
   .panel-body,
   .panel-intermezzo {
     padding-top: 5px;
@@ -1603,6 +1610,13 @@ h1, .h1,
 
   // specific styles to gallery cards on product gallery pages
   &.gallery-page-item {
+    
+    // TODO: Remove this class after price whitespace problem is fixed post-launch
+    #divPrice .price-group .price__dollar {
+      margin-right: -0.26em;
+    }
+    // TODO (end)
+    
     @media (min-width: $grid-float-breakpoint) {
       min-height: 450px;
     }

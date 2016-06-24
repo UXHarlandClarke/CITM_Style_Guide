@@ -693,6 +693,12 @@ iframe#PaymentFrame {
   }
 }
 
+#lblLogOut {
+  @extend .center-block;
+  @extend .alert;
+  @extend .alert-info;
+}
+
 
 // Reorder Step 2
 // ------------------------------------------
