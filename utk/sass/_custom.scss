@@ -20,6 +20,11 @@
 // Helpers
 // --------------------------------------------------
 
+// Remove Text Shadow
+.remove-text-shadow {
+  text-shadow: none;
+}
+
 // Display
 .inline-block {
   display: inline-block;
@@ -1487,6 +1492,23 @@ h1, .h1,
   
   li:hover {
     opacity: 1;
+  }
+}
+
+.carousel-copyright {
+    opacity: 0.8;
+    font-weight: 300;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 36px;
+    white-space: nowrap;
+
+  @media (min-width: $grid-float-breakpoint) {
+    left: auto;
+    right: 14px;
+    bottom: 12px;
+    transform: none;
   }
 }
 
