@@ -279,6 +279,10 @@ h1, .h1,
   }
 }
 
+.smaller {
+  font-size: 65%;
+}
+
 // Emphasis & misc
 // -------------------------
 
@@ -480,6 +484,7 @@ h1, .h1,
     &.panel-price-area {
       padding-top: 0;
       padding-bottom: 5px;
+      text-align: right;
     }
   }
 }
@@ -1574,6 +1579,18 @@ h1, .h1,
       margin-bottom: ($jumbotron-padding / 2);
       font-size: $jumbotron-font-size;
     }
+  }
+  
+  // mobile 550px and up
+  @media (min-width: 549px) {
+    .hero-text {
+      font-size: ceil(($font-size-base * 3.25));
+    }
+    
+    p {
+      margin-bottom: ($jumbotron-padding / 2);
+      font-size: ceil(($font-size-base * 2));
+    }    
   }
   
   // small screens and up
