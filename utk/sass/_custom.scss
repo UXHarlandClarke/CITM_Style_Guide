@@ -20,6 +20,11 @@
 // Helpers
 // --------------------------------------------------
 
+// Add Text Shadow
+.add-text-shadow {
+  text-shadow: $carousel-text-shadow;
+}
+
 // Remove Text Shadow
 .remove-text-shadow {
   text-shadow: none;
@@ -45,12 +50,20 @@
   }
 }
 
+.bg-zodiac-light {
+  background-color: $color-zodiac-light;
+}
+
 .bg-zodiac-lightest {
   background-color: $color-zodiac-lightest;
 }
 
 .bg-primary-lightest {
   background-color: $brand-primary-lightest;
+}
+
+.bg-zodiac-med {
+  background-color: $color-zodiac-med;
 }
 
 .bg-clouds {
@@ -79,6 +92,10 @@
 
 .bg-clouds-lightest {
   background-color: $color-clouds-lightest;
+}
+
+.bg-tin-light {
+  background-color: $color-tin-light;
 }
 
 .bg-envelope {
@@ -230,6 +247,11 @@
 // Border Radii 
 .border-radius-large {
   border-radius: $border-radius-large;
+}
+
+// Border Colors 
+.border-color-clouds {
+  border-color: $color-clouds;
 }
 
 // Horizontal Rules
@@ -436,15 +458,69 @@ h1, .h1,
       padding: 0;
       position: relative;
       
-      img {
+      .panel-marketing-image {
         @extend .pull-right;
+        @media (max-width: 490px) {
+          opacity: 0;
+        }
+      }
+      
+      .label-fraud-armor {
+        background-color: $color-clouds-lightest;
+        padding: 0.62em 0.8em;
+        color: $color-zodiac;
+        font-weight: 500;
+        border: 1px solid $color-clouds;
+        .label-content {
+          display: inline;
+          .fraud-armor-marketing {
+            display: inline-block;
+            width: 62px;
+            margin-left: 5px;
+            margin-bottom: 1px;
+          }
+        }
+        
+        @media (max-width: 375px) {
+          display: block;
+          margin-top: $panel-body-padding;
+          margin-right: $panel-body-padding;
+        }
       }
       
       .panel-marketing-copy {
         position: absolute;
         top: $panel-body-padding;
         left: $panel-body-padding;
-        width: 60%
+        
+        .panel-marketing-title {
+          @extend .h3;
+          color: $color-tin;
+          margin-top: 0;
+          font-weight: 500;
+          
+          @media (max-width: 375px) {
+            font-size: $font-size-h4;
+            font-weight: bold;
+          }
+        }
+        
+        p {
+          width: 66%;
+          @media (max-width: $grid-float-breakpoint-max) {
+            width: 55%;
+            font-weight: normal;
+          }
+          @media (max-width: 490px) {
+            width: 80%;
+          }
+          @media (max-width: 375px) {
+            font-size: $font-size-base;
+          }
+          @media (max-width: 320px) {
+            width: 95%;
+          }
+        }
       }
     }
   }
