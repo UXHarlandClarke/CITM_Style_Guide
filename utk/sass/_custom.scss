@@ -284,8 +284,7 @@
 // Headings
 // -------------------------
 
-h1, .h1,
-.accordion h4, .accordion .h4 {
+h1, .h1 {
   font-weight: 500;
 }
 
@@ -1457,6 +1456,9 @@ h1, .h1,
 // --------------------------------------------------
 
 .accordion {
+    .panel-title {
+      font-weight: 500;
+    }
     .panel-title > a {
       color: $navbar-default-link-color;
       
