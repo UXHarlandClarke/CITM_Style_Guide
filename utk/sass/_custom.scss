@@ -20,6 +20,11 @@
 // Helpers
 // --------------------------------------------------
 
+// Add Text Shadow
+.add-text-shadow {
+  text-shadow: $carousel-text-shadow;
+}
+
 // Remove Text Shadow
 .remove-text-shadow {
   text-shadow: none;
@@ -45,12 +50,20 @@
   }
 }
 
+.bg-zodiac-light {
+  background-color: $color-zodiac-light;
+}
+
 .bg-zodiac-lightest {
   background-color: $color-zodiac-lightest;
 }
 
 .bg-primary-lightest {
   background-color: $brand-primary-lightest;
+}
+
+.bg-zodiac-med {
+  background-color: $color-zodiac-med;
 }
 
 .bg-clouds {
@@ -79,6 +92,10 @@
 
 .bg-clouds-lightest {
   background-color: $color-clouds-lightest;
+}
+
+.bg-tin-light {
+  background-color: $color-tin-light;
 }
 
 .bg-envelope {
@@ -232,6 +249,11 @@
   border-radius: $border-radius-large;
 }
 
+// Border Colors 
+.border-color-clouds {
+  border-color: $color-clouds;
+}
+
 // Horizontal Rules
 .footer-hr {
   border-top-color: shade($color-clouds, 5%);
@@ -376,6 +398,7 @@ h1, .h1,
   // as marketing bucket with link
   &.well-marketing {
     @extend .clearfix;
+    background-color: $color-clouds-lightest;
     padding: 0;
     box-shadow: none;
     border-radius: $border-radius-base;
@@ -385,17 +408,24 @@ h1, .h1,
     
     .well-marketing-title {
       position: absolute;
-      top: 48%;
-      transform: translateY(-48%);
+      top: ($line-height-computed / 2);
       left: ($line-height-computed / 2);
       margin-top: 0;
       color: $gray;
+      font-weight: 500;
+      
+      @media (min-width: 540px) and (max-width: $grid-float-breakpoint-max) {
+        top: 48%;
+        left: $line-height-computed;
+        transform: translateY(-48%);     
+        font-size: $font-size-h3;
+        font-weight: normal;  
+      }
     }
     
     img {
       @extend .pull-right;
-      border-top-right-radius: $border-radius-base;
-      border-bottom-right-radius: $border-radius-base;
+      border-radius: $border-radius-base;
     }
     
     &:hover,
@@ -436,15 +466,75 @@ h1, .h1,
       padding: 0;
       position: relative;
       
-      img {
+      .panel-marketing-image {
         @extend .pull-right;
+        @media (max-width: 490px) {
+          opacity: 0;
+        }
+      }
+      
+      .label-fraud-armor {
+        background-color: $color-clouds-lightest;
+        // padding: 0.62em 0.8em;
+        padding: 5px 8px;
+        color: $color-zodiac;
+        font-weight: 500;
+        border: 1px solid $color-clouds-light;
+        border-radius: 15px;
+        margin-left: 5px;
+
+        .fraud-armor-marketing {
+          display: inline;
+          width: 62px;
+          height: auto;
+          margin-left: 5px;
+          margin-bottom: 1px;
+        }
+
+        @media (max-width: 375px) {
+          display: block;
+          border: none;
+          margin-left: 0;
+          margin-top: 30px;
+          margin-right: $panel-body-padding;
+          text-align: right;
+          padding-right: 0;
+        }
       }
       
       .panel-marketing-copy {
         position: absolute;
         top: $panel-body-padding;
         left: $panel-body-padding;
-        width: 60%
+        
+        .panel-marketing-title {
+          @extend .h3;
+          color: $color-tin;
+          margin-top: 0;
+          font-weight: 500;
+          
+          @media (max-width: 375px) {
+            font-size: $font-size-h4;
+            font-weight: bold;
+          }
+        }
+        
+        p {
+          width: 66%;
+          @media (max-width: $grid-float-breakpoint-max) {
+            width: 55%;
+            font-weight: normal;
+          }
+          @media (max-width: 490px) {
+            width: 80%;
+          }
+          @media (max-width: 375px) {
+            font-size: $font-size-base;
+          }
+          @media (max-width: 320px) {
+            width: 95%;
+          }
+        }
       }
     }
   }
