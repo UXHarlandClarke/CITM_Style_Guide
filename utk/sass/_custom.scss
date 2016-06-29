@@ -349,6 +349,28 @@ h1, .h1 {
 
 
 //
+// Thumbnails
+// --------------------------------------------------
+
+a.thumbnail:hover,
+a.thumbnail:focus {
+  text-decoration: none;
+  border-color: tint($color-zodiac, 69%);
+}
+
+.thumbnail {
+  &.gallery-thumbnail {
+    img {
+      margin-top: ($line-height-computed / 2);
+      margin-bottom: ($line-height-computed / 2);
+    }
+  }
+}
+
+
+
+
+//
 // Jumbotron
 // --------------------------------------------------
 
@@ -1813,6 +1835,7 @@ h1, .h1 {
 // --------------------------------------------------
 
 .gallery-item {
+  @include transition(border .2s ease-in-out);
   margin-bottom: $line-height-computed;
   border: 1px solid $panel-default-border;
   border-radius: $border-radius-base;
