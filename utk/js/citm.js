@@ -20,6 +20,9 @@ $(document).ready(function() {
     $('.dropdown').on('mouseenter mouseleave click', function() {
         $(this).toggleClass("open");
     });
+    
+    // Tooltip
+    $('[data-toggle="tooltip"]').tooltip();
 
 
 }); /* END document ready */
