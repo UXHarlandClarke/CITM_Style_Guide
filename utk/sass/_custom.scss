@@ -419,6 +419,7 @@ a.thumbnail:focus {
   // as marketing bucket with link
   &.well-marketing {
     @extend .clearfix;
+    @include transition(border .2s ease-in-out);
     background-color: $color-clouds-lightest;
     padding: 0;
     box-shadow: none;
