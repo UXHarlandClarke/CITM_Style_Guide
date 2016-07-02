@@ -6,180 +6,254 @@
 
 // General Structural Classes
 .section-title {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 // PDP Page
 .crosssell--container {
-  background: $color-zodiac-lightest;
-  margin-top: $grid-gutter-width;
-  padding-bottom: $grid-gutter-width;
+    background: $color-zodiac-lightest;
+    margin-top: $grid-gutter-width;
+    padding-bottom: $grid-gutter-width;
 }
 
 .crosssell--container h5 {
-  @extend .h3;
-  margin-bottom: $line-height-computed;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+    color: $headings-color;
+    margin-top: $line-height-computed;
+    font-size: $font-size-h3;
+    margin-bottom: $line-height-computed;
 }
 
 .crosssell--container .crossSellItem {
-  width: 165px;
-  // min-height: 232px;
-  // margin: 0 ($grid-gutter-width / 2) $line-height-computed ($grid-gutter-width / 2);
-  margin-right: $grid-gutter-width;
-  margin-bottom: $line-height-computed;
-  background: #fff;
-  border: 1px solid $panel-default-border;
-  border-radius: $border-radius-base;
-  padding: ($line-height-computed / 2);
-  float: left;
+    width: 165px;
+    margin-right: $grid-gutter-width;
+    margin-bottom: $line-height-computed;
+    background: #fff;
+    border: 1px solid $panel-default-border;
+    border-radius: $border-radius-base;
+    padding: ($line-height-computed / 2);
+    float: left;
 }
 
 .crossselllink {
-  color: $gray;
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
-  
-  img {
-    margin-bottom: 5px;
-  }
+    color: $gray;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+    img {
+        margin-bottom: 5px;
+    }
 }
 
 .crossselllink:hover span.crossselllink,
 .crossselllink:focus span.crossselllink {
-  color: tint($color-zodiac, 18%);
-  text-decoration: none ;
+    color: tint($color-zodiac, 18%);
+    text-decoration: none;
 }
 
 img.pdp-image__style {
-  border: 1px solid $panel-default-border !important;
-  border-radius: $border-radius-large;
-  margin: 0;
-  width: 90%;
-  margin-bottom: ($line-height-computed / 2);
+    border: 1px solid $panel-default-border !important;
+    border-radius: $border-radius-large;
+    margin: 0;
+    width: 90%;
+    margin-bottom: ($line-height-computed / 2);
 }
 
 .productThumbImg {
-  border: 1px solid $panel-default-border !important;
-  border-radius: $border-radius-base;
-  margin-right: ($line-height-computed / 2);
-  margin-bottom: ($line-height-computed / 2);
+    border: 1px solid $panel-default-border !important;
+    border-radius: $border-radius-base;
+    margin-right: ($line-height-computed / 2);
+    margin-bottom: ($line-height-computed / 2);
 }
 
 @media (max-width: $grid-float-breakpoint-max) {
-  img.pdp-image__style {
-    width: 100%;
-  }
+    img.pdp-image__style {
+        width: 100%;
+    }
 }
 
-// InfoEntryIII.aspx
-.InfoEntryPreview {
-  // width:465px; 
-  // margin: 0 auto;
-}
-
+// BAD
 .InfoEntryInput,
 .form-group select.resetInput_class {
-  @extend .form-control;
+    display: block;
+    width: 100%;
+    height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+    padding: $padding-base-vertical $padding-base-horizontal;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $input-color;
+    background-color: $input-bg;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid $input-border;
+    border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+    @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .075));
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+    // Customize the `:focus` state to imitate native WebKit styles.
+    @include form-control-focus;
+    // Placeholder
+    @include placeholder;
+    // Unstyle the caret on `<select>`s in IE10+.
+    &::-ms-expand {
+        border: 0;
+        background-color: transparent;
+    }
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty, we
+    // don't honor that edge case; we style them as disabled anyway.
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+        background-color: $input-bg-disabled;
+        opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+    }
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: $cursor-disabled;
+    }
 }
 
+// BAD
 .errorInput,
-.form-group select.errorInput { 
-  @extend .form-control;
-  border-color: #b3272d;
+.form-group select.errorInput {
+    display: block;
+    width: 100%;
+    height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+    padding: $padding-base-vertical $padding-base-horizontal;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $input-color;
+    background-color: $input-bg;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid $input-border;
+    border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+    @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .075));
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+    // Customize the `:focus` state to imitate native WebKit styles.
+    @include form-control-focus;
+    // Placeholder
+    @include placeholder;
+    // Unstyle the caret on `<select>`s in IE10+.
+    &::-ms-expand {
+        border: 0;
+        background-color: transparent;
+    }
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty, we
+    // don't honor that edge case; we style them as disabled anyway.
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+        background-color: $input-bg-disabled;
+        opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+    }
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: $cursor-disabled;
+    }
+    border-color: #b3272d;
 }
 
 .pers--h1 {
-  &.page-header {
-    margin-top: 0;
-  }
+    &.page-header {
+        margin-top: 0;
+    }
 }
 
 .optional {
-  display: none;
+    display: none;
 }
 
 .showhide {
-  margin-bottom: $line-height-computed;
-  display: block;
-  &:before {
-    font-family: 'Glyphicons Halflings';
-    content:"\2b";
-    padding-right: 0.25em;
-  }
+    margin-bottom: $line-height-computed;
+    display: block;
+    &:before {
+        font-family: 'Glyphicons Halflings';
+        content: "\2b";
+        padding-right: 0.25em;
+    }
 }
 
 .InfoEntryTab1Container,
 .InfoEntryTab2Container,
 .InfoEntryTab3Container {
-  padding: 0 10px 10px 10px;
+    padding: 0 10px 10px 10px;
 }
 
 .entryheads {
-  font-weight: bold;
-  margin-bottom: 5px;
-  display: inline-block;
-  
-  &.text-medium {
-    font-weight: 500;
-  }
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+    &.text-medium {
+        font-weight: 500;
+    }
 }
 
 label .entryheads {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .requiredField {
-  color: $brand-danger;
-  font-weight: 500;
+    color: $brand-danger;
+    font-weight: 500;
 }
 
-.twenty-above {margin-top: 20px}
+.twenty-above {
+    margin-top: 20px
+}
 
-/* -------------- TABS FOR REORDER AND PERSONALIZE --------------*/
-/*
- * SmartTab plugin v2.0
- */
+// -------------- TABS FOR REORDER AND PERSONALIZE --------------
+// SmartTab plugin v2.0
 .stMain {
-  display:block;
-  margin:0;
-  padding:0;
-  border: 0px solid #CCC;
-  font-size: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0 solid #CCC;
+    font-size: 100%;
 }
+
 .stContainer {
-  display:block;
-  margin:0;
-  padding:0;
-  border: 1px solid #CCC;
-  overflow:hidden;
-  position: relative;
-  min-height: 300px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #CCC;
+    overflow: hidden;
+    position: relative;
+    min-height: 300px;
 }
+
 .stMain div.tabContent {
-  display:block;
-  margin:0;
-  padding:10px;
-  border: 0px solid #D4D4D4;
-  text-align:left;
+    display: block;
+    margin: 0;
+    padding: 10px;
+    border: 0 solid #D4D4D4;
+    text-align: left;
 }
+
 .stMain ul.tabAnchor {
-  display: inline-block;
-  list-style-type: none;
-  position:relative;
-  padding:0;
-  margin:0;
-  clear: both;
-  margin-bottom: -1px;
-  z-index: 100;
+    display: inline-block;
+    list-style-type: none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    clear: both;
+    margin-bottom: -1px;
+    z-index: 100;
 }
-.stMain ul.tabAnchor li{
-  position: relative;
-  margin: 0;
-  padding: 0;
-  float: left;
+
+.stMain ul.tabAnchor li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    float: left;
 }
+
 .stMain ul.tabAnchor li span {
     height: 20px;
     left: 85px;
@@ -188,592 +262,713 @@ label .entryheads {
     width: 20px;
     z-index: 999999;
 }
+
 .stMain ul.tabAnchor li a {
-  display:block;
-  margin:0;
-  margin-right: -1px;
-  font-size: 16px;
-  color:#ddd;
-  text-decoration: none;
-  outline-style:none;
-  border: 1px solid #D4D4D4;
-  background: $color-dove;
-  line-height: $line-height-computed;
+    display: block;
+    margin: 0;
+    margin-right: -1px;
+    font-size: 16px;
+    color: #ddd;
+    text-decoration: none;
+    outline-style: none;
+    border: 1px solid #D4D4D4;
+    background: $color-dove;
+    line-height: $line-height-computed;
 }
+
 .stMain ul.tabAnchor li a small {
-  font-size:15px;
+    font-size: 15px;
 }
+
 .stMain ul.tabAnchor li a:hover {
-  color:#FFF;
-  background: $brand-primary;
+    color: #FFF;
+    background: $brand-primary;
 }
+
 .stMain ul.tabAnchor li a.sel {
-  color: $brand-primary;
-  border-bottom-color: #F6f6f6;
-  cursor: default;
-  background: #ffffff;
-  font-weight: 700;
+    color: $brand-primary;
+    border-bottom-color: #F6f6f6;
+    cursor: default;
+    background: #ffffff;
+    font-weight: 700;
 }
-.loader{
-  position: absolute;
-  left:48%;
-  top:40%;
-  display:block;
-  margin:0;
-  padding:5px;
-  padding-top: 35px;
-  font-size: 10px;
-  color:#666;
-  text-decoration: none;
-  outline-style:none;
-  border: 1px solid #D4D4D4;
-  background: #f6f6f6 url(/images/loader.gif) no-repeat 10px 10px ;
+
+.loader {
+    position: absolute;
+    left: 48%;
+    top: 40%;
+    display: block;
+    margin: 0;
+    padding: 5px;
+    padding-top: 35px;
+    font-size: 10px;
+    color: #666;
+    text-decoration: none;
+    outline-style: none;
+    border: 1px solid #D4D4D4;
+    background: #f6f6f6 url(/images/loader.gif) no-repeat 10px 10px;
 }
+
 a.stLinks {
-  margin:0;
-  padding:5px;
-  color:#666;
-  text-decoration: none;
-  outline-style:none;
-  border: 1px solid #D4D4D4;
-  background-color: #f6f6f6;
- }
+    margin: 0;
+    padding: 5px;
+    color: #666;
+    text-decoration: none;
+    outline-style: none;
+    border: 1px solid #D4D4D4;
+    background-color: #f6f6f6;
+}
+
 a.stLinks:hover {
-  color:#FFF;
-  background-color: $brand-primary;
+    color: #FFF;
+    background-color: $brand-primary;
 }
 
 // Added to Cart image
 .added-to-cart-image {
-  border: 1px solid $panel-default-border !important;
-  border-radius: $border-radius-large;
-  @media (max-width: $grid-float-breakpoint-max) {
-    margin-bottom: $line-height-computed;
-  }
+    border: 1px solid $panel-default-border !important;
+    border-radius: $border-radius-large;
+    @media (max-width: $grid-float-breakpoint-max) {
+        margin-bottom: $line-height-computed;
+    }
 }
 
-
-/* ------------ Dynamic XSells ----------*/
-
-
-#upsellWrapper .productContainer {
-  // width:175px;
-  // height:170px;
-  // margin-left:10px;
-  // margin-right:10px;
-  // margin-bottom:30px;
-  // margin-top:10px;
-  // float:left;
-  // display:block;
-  // overflow:visible;
-  // position:relative;
-  // text-align:center;
-}
-
-#upsellWrapper .contentContainer{
-  // width:175px;
-  // display:inline-block;
-  // z-index:100;
-    // float:left;
-    // vertical-align: middle;
-    // text-align: center;
-}
-
+// ------------ Dynamic XSells ----------
 #upsellWrapper .productContainer .hasBeenAddedOuter {
-  // margin: 0 auto;
-  // width:153px;
-  // height:198px;
-  // padding:10px;
-  display:none;
-  // overflow:hidden;
-  // background-color:#EFEFEF;
-  // border: 1px solid #D3D3D3;
-  // position:absolute;
-  // z-index:200;
-  // top:0;
-  // left: ($grid-gutter-width / 2);
+    display: none;
 }
-
-#upsellWrapper .productContainer .hasBeenAddedInner {
-    // width: 131px;
-    // height: 174px;
-    // display: block;
-    // overflow: hidden;
-    // padding: 10px;
-    // background-color: #CADFF4;
-    // border: 1px solid #D3D3D3;
-    // text-align: center;
-}
-
-
 
 // Shopping Cart
 // --------------------------------------------------------------
-
-
-
 table.cart .cart_item_shipping input[type="radio"] {
-  margin-right: 5px;
+    margin-right: 5px;
 }
 
 .cart_item_shipping label {
-  font-weight: normal;
+    font-weight: normal;
 }
 
 .cart_subtotal,
 .cart_subtotal_text {
-  font-weight: 500; 
-  color: tint($color-zodiac, 10%);
+    font-weight: 500;
+    color: tint($color-zodiac, 10%);
 }
 
 .removeChArm a {
-  @extend .btn;
-  @extend .btn-xs;
-  @extend .btn-default-emph;
-  width: 115px;
-  p {
-    margin-bottom: 0;
-    text-transform: capitalize;
-  }
+    display: inline-block;
+    margin-bottom: 0; // For input.btn
+    font-weight: $btn-font-weight;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid transparent;
+    white-space: nowrap;
+    @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+    @include user-select(none);
+    &,
+    &:active,
+    &.active {
+        &:focus,
+        &.focus {
+            @include tab-focus;
+        }
+    }
+    &:hover,
+    &:focus,
+    &.focus {
+        color: $btn-default-color;
+        text-decoration: none;
+    }
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+        @include box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: $cursor-disabled;
+        @include opacity(.65);
+        @include box-shadow(none);
+    }
+    @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+    @include button-variant($btn-default-color, tint($brand-primary, 93%), $btn-default-border);
+    width: 115px;
+    p {
+        margin-bottom: 0;
+        text-transform: capitalize;
+    }
 }
-
 
 .mobile_only {
-  display: none;
+    display: none;
 }
 
-/* Custom Cart Buttons*/
-
+// Custom Cart Buttons
 .cart_item_actions .divEditCustomize a {
-    @extend .btn;
-    @extend .btn-xs;
-    @extend .btn-primary;
+    display: inline-block;
+    margin-bottom: 0; // For input.btn
+    font-weight: $btn-font-weight;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid transparent;
+    white-space: nowrap;
+    @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+    @include user-select(none);
+    &,
+    &:active,
+    &.active {
+        &:focus,
+        &.focus {
+            @include tab-focus;
+        }
+    }
+    &:hover,
+    &:focus,
+    &.focus {
+        color: $btn-default-color;
+        text-decoration: none;
+    }
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+        @include box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: $cursor-disabled;
+        @include opacity(.65);
+        @include box-shadow(none);
+    }
+    @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+    @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
     width: 115px;
-    // color: #fff;
-    // background-color: $brand-primary;
-    // border: 1px solid $brand-primary;
-    // width: 150px;
-    // text-transform: none;
-    // text-decoration: none;
-    // cursor: pointer;
-    // display: inline-block;
-    // padding: 6px 12px;
-    // margin-bottom: 0;
-    // font-size: 14px;
-    // font-weight: normal;
-    // line-height: 1.42857143;
-    // text-align: center;
-    // white-space: nowrap;
-    // vertical-align: middle;
-    // -ms-touch-action: manipulation;
-    // touch-action: manipulation;
-    // -webkit-user-select: none;
-    // -moz-user-select: none;
-    // -ms-user-select: none;
-    // user-select: none;
-    // background-image: none;
-    // border-radius: 4px;
-  }
+}
 
-  // .cart_item_actions .divEditCustomize a:hover {
-  //   background-color: #0070b2;
-  //   border-color: #0070b2;
-  // }
-
-  .cart_item_actions .divEditCustomize a img {
+.cart_item_actions .divEditCustomize a img {
     display: none;
-  }
+}
 
-  .cart_item_actions .divEditCustomize a:before {
+.cart_item_actions .divEditCustomize a:before {
     content: "Edit Item";
-  }
+}
 
-  .cart_item_actions .cart_item_btn_remove {
+.cart_item_actions .cart_item_btn_remove {
     margin-bottom: 16px;
-  }
-  
-  .cart_item_actions .cart_item_btn_remove a:last-child {
-    @extend .btn;
-    @extend .btn-xs;
-    @extend .btn-default-emph;
+}
+
+.cart_item_actions .cart_item_btn_remove a:last-child {
+    display: inline-block;
+    margin-bottom: 0; // For input.btn
+    font-weight: $btn-font-weight;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid transparent;
+    white-space: nowrap;
+    @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+    @include user-select(none);
+    &,
+    &:active,
+    &.active {
+        &:focus,
+        &.focus {
+            @include tab-focus;
+        }
+    }
+    &:hover,
+    &:focus,
+    &.focus {
+        color: $btn-default-color;
+        text-decoration: none;
+    }
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+        @include box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: $cursor-disabled;
+        @include opacity(.65);
+        @include box-shadow(none);
+    }
+    @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+    @include button-variant($btn-default-color, tint($brand-primary, 93%), $btn-default-border);
     margin-top: 8px;
     width: 115px;
-  }
+}
 
-  .cart_item_actions .cart_item_btn_remove a p {
-    // width: 150px !important;
+.cart_item_actions .cart_item_btn_remove a p {
     text-transform: capitalize;
-    // text-decoration: none;
-    // margin-top: 8px;
-    // cursor: pointer;
-    // display: inline-block;
-    // padding: 6px 12px;
     margin-bottom: 0;
-    // font-size: 14px;
-    // font-weight: normal;
-    // line-height: 1.42857143;
-    // text-align: center;
-    // white-space: nowrap;
-    // vertical-align: middle;
-    // -ms-touch-action: manipulation;
-    // touch-action: manipulation;
-    // -webkit-user-select: none;
-    // -moz-user-select: none;
-    // -ms-user-select: none;
-    // user-select: none;
-    // background-image: none;
-    // color: $brand-primary;
-    // background-color: #fff;
-    // border: 1px solid #d9d9d9;
-    // border-radius: 4px;
-  }
+}
 
-  // .cart_item_actions .cart_item_btn_remove p:hover {
-  //   background-color: #fff;
-  //   border-color: #79b9e7;
-  // }
-  
-  .PromoTxt {
-    @extend .form-control;
+.PromoTxt {
+    display: block;
+    width: 100%;
+    height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+    padding: $padding-base-vertical $padding-base-horizontal;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $input-color;
+    background-color: $input-bg;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid $input-border;
+    border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+    @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .075));
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+    // Customize the `:focus` state to imitate native WebKit styles.
+    @include form-control-focus;
+    // Placeholder
+    @include placeholder;
+    // Unstyle the caret on `<select>`s in IE10+.
+    &::-ms-expand {
+        border: 0;
+        background-color: transparent;
+    }
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty, we
+    // don't honor that edge case; we style them as disabled anyway.
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+        background-color: $input-bg-disabled;
+        opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+    }
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: $cursor-disabled;
+    }
     width: 90%;
     margin: 0 auto;
-  }
-  
-  .smbtn_green {
-    @extend .btn;
-    @extend .btn-default-emph;
-  }
-  
-  a#offerCode {
-    display: none;
-  }
-  
-  table.cart_totals {
-    margin-top: $line-height-computed;
-  }
-  
-  table.cart .cart_item_qty select {
-    @extend .form-control;
-    @media (min-width: $grid-float-breakpoint) {
-      width: 95%;
-    }
-  }
-  
-  .cart_btns_utils a {
-    margin-bottom: ($line-height-computed / 2);
-  }
-  
-  
-@media (max-width: $screen-sm-max) {
-  table.cart .cart_item_shipping label {
-    font-size: 0.7em;
-  }
 }
-  
-@media (max-width: $grid-float-breakpoint) {
-  /** MOBILE CART **/
-  .mobile_only {
-    display: block !important; /* o-r */
-  }
-  .mobile_hide {
-    display: none !important; /* o-r */
-  }
 
-
-  table.cart {
-    border-collapse: separate;
-    border-spacing: 5px;
-    padding: 2px !important;
-    border: 1px solid #ccc !important;
-    border-radius: 5px !important;
-    -moz-box-shadow: 0 1px 4px rgba(0,0,0,.11);
-    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.11);
-    box-shadow: 0 1px 4px rgba(0,0,0,.11);
-  }
-
-  table.cart tr {
-    display:table;
-    width:100%;
-  }
-
-  table.cart td {
-    display:table-row;
-  }
-
-  table.cart_header {
-    display: none;
-  }
-  
-  table.cart .cart_item_shipping label {
-    font-size: 0.85em;
-  }
-
-  #divEditCustomize {
-    margin-bottom: 20px;
-  }
-
-  .cart_mob_item_name {
-    clear: both;
-    font-size: 1.4em;
-    font-weight: bold;
-    text-align: left;
-  }
-
-  .cart_item_img_name p {
-    display: none;
-  }
-
-  .cart_item_img_name {
-    float: left;
-  }
-
-  .cart_item_actions {
-    float: right;
-  }
-
-  .cart_item_sep {
-    display: none !important;
-  }
-
-  table.cart .cart_item_shipping_title, table.cart .cart_item_qty_title {
-    padding-top: 20px;
-    font-size: 1.23em;
-  }
-
-  // table.cart .cart_item_shipping, table.cart .cart_item_qty {
-
-  // }
-
-  // table.cart .cart_item_shipping input[type="radio"] {
-  //   margin-right: 5px;
-  // }
-
-  table.cart .cart_item_shipping_subtotal {
-    display: inline !important;
-  }
-
-  table.cart .cart_item_product {
+.smbtn_green {
+    display: inline-block;
+    margin-bottom: 0; // For input.btn
+    font-weight: $btn-font-weight;
     text-align: center;
-  }
-
-  table.cart .cart_item_product p {
-    width: 100% !important; /* o-r */
-  }
-
-  .cart_btns_utils {
-    float: left;
-    width: 150px;
-  }
-
-  .cart_btns_utils a {
-    width: 150px;
-  }
-
-  .cart_info_checks {
-    margin-top: 20px;
-  }
-
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid transparent;
+    white-space: nowrap;
+    @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+    @include user-select(none);
+    &,
+    &:active,
+    &.active {
+        &:focus,
+        &.focus {
+            @include tab-focus;
+        }
+    }
+    &:hover,
+    &:focus,
+    &.focus {
+        color: $btn-default-color;
+        text-decoration: none;
+    }
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+        @include box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: $cursor-disabled;
+        @include opacity(.65);
+        @include box-shadow(none);
+    }
+    @include button-variant($btn-default-color, tint($brand-primary, 93%), $btn-default-border);
 }
 
-@media screen and (max-width: 320px) {
-
-  .title_cart {
-    font-size: 30px;
-  }
-  
-  table.cart .cart_item_shipping label {
-    font-size: 0.70em;
-  }
-
-  // .cart_item_actions .divEditCustomize a {
-  //   width: 120px;
-  // }
-
-  // .cart_item_actions .cart_item_btn_remove a p {
-  //   width: 120px !important;
-  //   font-size: 12px;
-  //   padding: 8px 6px;
-  // }
-
+a#offerCode {
+    display: none;
 }
 
+table.cart_totals {
+    margin-top: $line-height-computed;
+}
+
+table.cart .cart_item_qty select {
+    display: block;
+    width: 100%;
+    height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+    padding: $padding-base-vertical $padding-base-horizontal;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $input-color;
+    background-color: $input-bg;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid $input-border;
+    border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+    @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, .075));
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+    // Customize the `:focus` state to imitate native WebKit styles.
+    @include form-control-focus;
+    // Placeholder
+    @include placeholder;
+    // Unstyle the caret on `<select>`s in IE10+.
+    &::-ms-expand {
+        border: 0;
+        background-color: transparent;
+    }
+    // Disabled and read-only inputs
+    //
+    // HTML5 says that controls under a fieldset > legend:first-child won't be
+    // disabled if the fieldset is disabled. Due to implementation difficulty, we
+    // don't honor that edge case; we style them as disabled anyway.
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+        background-color: $input-bg-disabled;
+        opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+    }
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: $cursor-disabled;
+    }
+    @media (min-width: $grid-float-breakpoint) {
+        width: 95%;
+    }
+}
+
+.cart_btns_utils a {
+    margin-bottom: ($line-height-computed / 2);
+}
+
+@media (max-width: $screen-sm-max) {
+    table.cart .cart_item_shipping label {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: $grid-float-breakpoint) {
+    // MOBILE CART
+    .mobile_only {
+        display: block !important;
+    }
+    .mobile_hide {
+        display: none !important;
+    }
+    table.cart {
+        border-collapse: separate;
+        border-spacing: 5px;
+        padding: 2px !important;
+        border: 1px solid #ccc !important;
+        border-radius: 5px !important;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .11);
+    }
+    table.cart tr {
+        display: table;
+        width: 100%;
+    }
+    table.cart td {
+        display: table-row;
+    }
+    table.cart_header {
+        display: none;
+    }
+    table.cart .cart_item_shipping label {
+        font-size: 0.85em;
+    }
+    #divEditCustomize {
+        margin-bottom: 20px;
+    }
+    .cart_mob_item_name {
+        clear: both;
+        font-size: 1.4em;
+        font-weight: bold;
+        text-align: left;
+    }
+    .cart_item_img_name p {
+        display: none;
+    }
+    .cart_item_img_name {
+        float: left;
+    }
+    .cart_item_actions {
+        float: right;
+    }
+    .cart_item_sep {
+        display: none !important;
+    }
+    table.cart .cart_item_shipping_title,
+    table.cart .cart_item_qty_title {
+        padding-top: 20px;
+        font-size: 1.23em;
+    }
+    table.cart .cart_item_shipping_subtotal {
+        display: inline !important;
+    }
+    table.cart .cart_item_product {
+        text-align: center;
+    }
+    table.cart .cart_item_product p {
+        width: 100% !important;
+    }
+    .cart_btns_utils {
+        float: left;
+        width: 150px;
+    }
+    .cart_btns_utils a {
+        width: 150px;
+    }
+    .cart_info_checks {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .title_cart {
+        font-size: 30px;
+    }
+    table.cart .cart_item_shipping label {
+        font-size: 0.70em;
+    }
+}
 
 // Payment.aspx
 // ------------------------------------------------------
-.payment-block .edit-info {
-  @extend .btn;
-  @extend .btn-default-emph;
-  float: right;
-  // width: 50px;
-  // height: 32px;
-  // background: url(/images/edit-orange.png) no-repeat;
-  border-width: 1px !important;
-  &:before {
-    content: "Edit";
-  }
+// .payment-block .edit-info {
+//     float: right;
+//     width: 50px;
+//     height: 32px;
+//     background: url(/images/edit-default-emph.png) no-repeat;
+//     cursor: pointer;
+// }
+// Use image button for now
+input[type='image'].edit-info {
+    float: right;
+    width: 50px;
+    height: 32px;
+    background: url(/images/edit-default-emph.png) no-repeat;
+    cursor: pointer;
+    cursor: hand;
 }
 
 span.checkout-heading {
-  @extend .h4;
-  // font-size: 16px;
-  // font-weight: 500;
-  // text-transform: uppercase;
-  // margin: 10px 0;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+    color: $headings-color;
+    margin-top: ($line-height-computed / 2);
+    margin-bottom: ($line-height-computed / 2);
+    font-size: $font-size-h4;
 }
 
-// .embed-responsive-item {
-//   width: 100%;
-//   min-height: 670px;
-//   margin: 15px;
-// }
-
 iframe#PaymentFrame {
-  width: 100% !important;
-  min-height: 670px;
-  margin-top: $line-height-computed;  
+    width: 100% !important;
+    min-height: 670px;
+    margin-top: $line-height-computed;
 }
 
 .payment-block {
-  margin: 10px 0 20px 0;
-  border-bottom: 1px solid #eee;
+    margin: 10px 0 20px 0;
+    border-bottom: 1px solid #eee;
 }
-
 
 // Error messages from server
 // ---------------------------------------------------
-
 .ErrorMessageCtlWrapper {
-  @extend .alert;
-  @extend .alert-danger;
-  
-  img {
-    display: none;
-  }
-  
-  .bodytextinbold {
-    font-weight: bold;
-  }
+    padding: $alert-padding;
+    margin-bottom: $line-height-computed;
+    border: 1px solid transparent;
+    border-radius: $alert-border-radius;
+    // Headings for larger alerts
+    h4 {
+        margin-top: 0;
+        // Specified for the h4 to prevent conflicts of changing $headings-color
+        color: inherit;
+    }
+    // Provide class for links that match alerts
+    .alert-link {
+        font-weight: $alert-link-font-weight;
+    }
+    // Improve alignment and spacing of inner content
+    > p,
+    > ul {
+        margin-bottom: 0;
+    }
+    > p + p {
+        margin-top: 5px;
+    }
+    @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+    img {
+        display: none;
+    }
+    .bodytextinbold {
+        font-weight: bold;
+    }
 }
 
 // Confirmation Page
 // ------------------------------------------
-
 #divFaxInstructions {
-  display: none;
+    display: none;
 }
-
 
 // Reorder Steps (general)
 // ------------------------------------------
 .gallery-item.CheckedOverlay {
-  position: relative; 
-  
-  &:after {
-    font-family: 'Glyphicons Halflings';
-    font-size: 16px;
-    content:"\e013";
-    color: lighten($color-mint, 5%);
-    position: absolute;
-    right: 3px;
-    bottom: 0;
-  }
-  background: tint($color-mint, 97%); 
-  border:1px solid lighten($color-mint, 5%);
+    position: relative;
+    &:after {
+        font-family: 'Glyphicons Halflings';
+        font-size: 16px;
+        content: "\e013";
+        color: lighten($color-mint, 5%);
+        position: absolute;
+        right: 3px;
+        bottom: 0;
+    }
+    background: tint($color-mint, 97%);
+    border:1px solid lighten($color-mint, 5%);
 }
 
 .gallery-item__thumb {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .plinectl_ProductLink {
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
 }
 
 #lblLogOut {
-  @extend .center-block;
-  @extend .alert;
-  @extend .alert-info;
+    @include center-block;
+    padding: $alert-padding;
+    margin-bottom: $line-height-computed;
+    border: 1px solid transparent;
+    border-radius: $alert-border-radius;
+    // Headings for larger alerts
+    h4 {
+        margin-top: 0;
+        // Specified for the h4 to prevent conflicts of changing $headings-color
+        color: inherit;
+    }
+    // Provide class for links that match alerts
+    .alert-link {
+        font-weight: $alert-link-font-weight;
+    }
+    // Improve alignment and spacing of inner content
+    > p,
+    > ul {
+        margin-bottom: 0;
+    }
+    > p + p {
+        margin-top: 5px;
+    }
+    @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
 }
-
 
 // Reorder Step 2
 // ------------------------------------------
-
-/* --------- BX SLIDER  --------- */
+// --------- BX SLIDER  ---------
 .bx-wrapper {
-  margin: 0 auto 60px;
-  padding: 0;
-  position: relative;
+    margin: 0 auto 60px;
+    padding: 0;
+    position: relative;
 }
+
 .bx-wrapper img {
-  display: inline-block;
-  max-width: 90%;
+    display: inline-block;
+    max-width: 90%;
 }
+
 .bx-wrapper .bx-viewport {
-  background: none repeat scroll 0 0 #fff;
-  border: 5px solid #fff;
-  text-align: center;
-  height: auto !important;
-  /*box-shadow: 0 0 5px #ccc;
-  left: -5px;*/
+    background: none repeat scroll 0 0 #fff;
+    border: 5px solid #fff;
+    text-align: center;
+    height: auto !important;
 }
-.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
-  bottom: -30px;
-  position: absolute;
-  width: 100%;
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+    bottom: -30px;
+    position: absolute;
+    width: 100%;
 }
+
 .bx-wrapper .bx-loading {
-  background: url('/images/bx_loader.gif') no-repeat scroll center center #fff;
-  height: 100%;
-  left: 0;
-  min-height: 50px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 2000;
+    background: url('/images/bx_loader.gif') no-repeat scroll center center #fff;
+    height: 100%;
+    left: 0;
+    min-height: 50px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
 }
+
 .bx-wrapper .bx-pager {
-  color: #666;
-  font-family: Arial;
-  font-size: 0.85em;
-  font-weight: bold;
-  padding-top: 20px;
-  text-align: center;
+    color: #666;
+    font-size: 0.85em;
+    font-weight: bold;
+    padding-top: 20px;
+    text-align: center;
 }
-.bx-wrapper .bx-pager .bx-pager-item, .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
-  display: inline-block;
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+    display: inline-block;
 }
+
 .bx-wrapper .bx-pager.bx-default-pager a {
-  background: none repeat scroll 0 0 #666;
-  border-radius: 5px;
-  display: block;
-  height: 10px;
-  margin: 0 5px;
-  outline: 0 none;
-  text-indent: -9999px;
-  width: 10px;
+    background: none repeat scroll 0 0 #666;
+    border-radius: 5px;
+    display: block;
+    height: 10px;
+    margin: 0 5px;
+    outline: none;
+    text-indent: -9999px;
+    width: 10px;
 }
-.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active {
-  background: none repeat scroll 0 0 #000;
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: none repeat scroll 0 0 #000;
 }
+
 .bx-wrapper .bx-prev {
     background: url("/images/controls.png") no-repeat scroll 0 -32px rgba(0, 0, 0, 0);
     left: 10px;
 }
+
 .bx-wrapper .bx-next {
     background: url("/images/controls.png") no-repeat scroll -43px -32px rgba(0, 0, 0, 0);
     right: 10px;
 }
+
 .bx-wrapper .bx-prev:hover {
     background-position: 0 0;
 }
+
 .bx-wrapper .bx-next:hover {
     background-position: -43px 0;
 }
+
 .bx-wrapper .bx-controls-direction a {
     height: 32px;
     margin-top: -16px;
@@ -784,12 +979,15 @@ iframe#PaymentFrame {
     width: 32px;
     z-index: 8;
 }
+
 .bx-wrapper .bx-controls-direction a.disabled {
     display: none;
 }
+
 .bx-wrapper .bx-controls-auto {
     text-align: center;
 }
+
 .bx-wrapper .bx-controls-auto .bx-start {
     background: url("/images/controls.png") no-repeat scroll -86px -11px rgba(0, 0, 0, 0);
     display: block;
@@ -799,9 +997,12 @@ iframe#PaymentFrame {
     text-indent: -9999px;
     width: 10px;
 }
-.bx-wrapper .bx-controls-auto .bx-start:hover, .bx-wrapper .bx-controls-auto .bx-start.active {
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
     background-position: -86px 0;
 }
+
 .bx-wrapper .bx-controls-auto .bx-stop {
     background: url("/images/controls.png") no-repeat scroll -86px -44px rgba(0, 0, 0, 0);
     display: block;
@@ -811,17 +1012,22 @@ iframe#PaymentFrame {
     text-indent: -9999px;
     width: 9px;
 }
-.bx-wrapper .bx-controls-auto .bx-stop:hover, .bx-wrapper .bx-controls-auto .bx-stop.active {
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
     background-position: -86px -33px;
 }
+
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
     text-align: left;
     width: 80%;
 }
+
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
     right: 0;
     width: 35px;
 }
+
 .bx-wrapper .bx-caption {
     background: none repeat scroll 0 0 rgba(80, 80, 80, 0.75);
     bottom: 0;
@@ -829,91 +1035,136 @@ iframe#PaymentFrame {
     position: absolute;
     width: 100%;
 }
+
 .bx-wrapper .bx-caption span {
     color: #fff;
     display: block;
-    font-family: Arial;
     font-size: 0.85em;
     padding: 10px;
 }
 
- /*--**************** REORDER MODALS **************** --*/
+//**************** REORDER MODALS ****************
+.numPages {
+    color: #666666;
+    font-size: 12px;
+}
 
-.numPages {color: #666666; font-size: 12px;}
-.numPages span{float:left;}
-.numPages span.numPagesTT{border-right: 1px #D9D9D9 solid; display:block; line-height:19px; padding-right:10px; }
-.numPages div{float:left; margin:0 5px 0 0 ;}
-.numPages a.viewAllPro{ display:block; float:left;    line-height: 19px;    padding: 0 0 0 10px; border-left: 1px #D9D9D9 solid; }
-.numPages a{ border:1px #666666 solid;  padding:2px 5px; color:$brand-primary; text-decoration:none; margin-left: 2px; }
-.numPages a.selectedNum{ background-color:#666666; color:#FFF;}
-#ProductLine_productgroupings #pagediv { margin-top: 100px;}
+.numPages span {
+    float: left;
+}
 
+.numPages span.numPagesTT {
+    border-right: 1px #D9D9D9 solid;
+    display: block;
+    line-height: 19px;
+    padding-right: 10px;
+}
 
+.numPages div {
+    float: left;
+    margin: 0 5px 0 0;
+}
+
+.numPages a.viewAllPro {
+    display: block;
+    float: left;
+    line-height: 19px;
+    padding: 0 0 0 10px;
+    border-left: 1px #D9D9D9 solid;
+}
+
+.numPages a {
+    border: 1px #666666 solid;
+    padding: 2px 5px;
+    color: $brand-primary;
+    text-decoration: none;
+    margin-left: 2px;
+}
+
+.numPages a.selectedNum {
+    background-color: #666666;
+    color: #FFF;
+}
+
+#ProductLine_productgroupings #pagediv {
+    margin-top: 100px;
+}
 
 // Pagination
 // -------------------------------------------------
-.pagination-container {margin-top: 20px}
-.pagenumber_clicked, .pagenumber_link, a.pagenumbering_text {
-    display: inline-block;
-  margin-left: 2px;
-  font-size: 16px;
-  vertical-align: middle;
-  border-radius: 4px;
+.pagination-container {
+    margin-top: 20px;
 }
-.pagenumber_clicked, .pagenumber_link {
-  padding: 2px 7px 4px;
-  border: 1px solid transparent;
-  background: 0 0;
-  color: $brand-primary;
-  line-height: 1;
-  text-align: center;
+
+.pagenumber_clicked,
+.pagenumber_link,
+a.pagenumbering_text {
+    display: inline-block;
+    margin-left: 2px;
+    font-size: 16px;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+
+.pagenumber_clicked,
+.pagenumber_link {
+    padding: 2px 7px 4px;
+    border: 1px solid transparent;
+    background: 0 0;
+    color: $brand-primary;
+    line-height: 1;
+    text-align: center;
 }
 
 a.pagenumbering_text {
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  border: 1px solid #d9d9d9;
-  border-radius: 50%;
-  background: #fff;
-  color: $brand-primary;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    background: #fff;
+    color: $brand-primary;
     text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  padding-top: 5px;
-  font-size: 1.4em;
-  font-weight: 700
+    vertical-align: middle;
+    user-select: none;
+    padding-top: 5px;
+    font-size: 1.4em;
+    font-weight: 700;
 }
+
 .pagenumber_clicked {
-  border-color: $brand-primary;
-  background: $brand-primary;
-  color: #fff;
+    border-color: $brand-primary;
+    background: $brand-primary;
+    color: #fff;
 }
-.pagenumber_link:hover, a.pagenumbering_text:hover,
-.pagenumber_link:focus, a.pagenumbering_text:focus {
-  border-color: #d9d9d9;
-  color: $brand-primary;
-  outline: 0;
-  text-decoration: none;
+
+.pagenumber_link:hover,
+a.pagenumbering_text:hover,
+.pagenumber_link:focus,
+a.pagenumbering_text:focus {
+    border-color: #d9d9d9;
+    color: $brand-primary;
+    outline: 0;
+    text-decoration: none;
 }
+
 .pagenumber_clicked:hover,
 .pagenumber_clicked:focus {
-  text-decoration: none; color:white;
-}
-a.pagenumbering_text:hover, a.pagenumbering_text:focus {
-  border-color: $brand-primary;
-  background: $brand-primary;
-  color: #fff;
-  outline: 0;
+    text-decoration: none;
+    color: white;
 }
 
+a.pagenumbering_text:hover,
+a.pagenumbering_text:focus {
+    border-color: $brand-primary;
+    background: $brand-primary;
+    color: #fff;
+    outline: 0;
+}
 
-/*--**************** Learn More FraudArmor Modal (/cataloglevel.aspx?cataloglevelid=1417) **************** --*/
+//**************** Learn More FraudArmor Modal (/cataloglevel.aspx?cataloglevelid=1417) ****************
 .fa-checkPoint ul li {
-  list-style: none;
-  padding: 0px 0 5px 25px;
-  background: url(../../images/lockIcon.jpg) no-repeat 5px top;
+    list-style: none;
+    padding: 0 0 5px 25px;
+    background: url(../../images/lockIcon.jpg) no-repeat 5px top;
 }
