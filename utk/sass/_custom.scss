@@ -12,7 +12,7 @@
   &.container-expand-sm-down {
     @media (max-width: $screen-sm-max) {
       width: 100%;
-    }   
+    }
   }
 }
 
@@ -38,10 +38,10 @@
 // Background colors
 .bg-zodiac {
   background-color: $color-zodiac;
-  
+
   .jumbotron-link {
     color: tint($link-color, 15%);
-    
+
     &:hover,
     &:focus {
       text-decoration: none;
@@ -239,17 +239,17 @@
   padding-bottom: 5px;
 }
 
-// Borders 
+// Borders
 .border-none {
   border: none;
 }
 
-// Border Radii 
+// Border Radii
 .border-radius-large {
   border-radius: $border-radius-large;
 }
 
-// Border Colors 
+// Border Colors
 .border-color-clouds {
   border-color: $color-clouds;
 }
@@ -384,7 +384,7 @@ a.thumbnail:focus {
   .container-fluid & {
       border-radius: 0;
   }
-  
+
   p {
     font-weight: 300;
   }
@@ -415,10 +415,10 @@ a.thumbnail:focus {
 // Base class
 .well {
   border-radius: 0;
-  
+
   // as marketing bucket with link
   &.well-marketing {
-    @extend .clearfix;
+    @include clearfix();
     @include transition(border .2s ease-in-out);
     background-color: $color-clouds-lightest;
     padding: 0;
@@ -427,7 +427,7 @@ a.thumbnail:focus {
     border-color: $panel-default-border;
     position: relative;
     display: block;
-    
+
     .well-marketing-title {
       position: absolute;
       top: ($line-height-computed / 2);
@@ -435,21 +435,21 @@ a.thumbnail:focus {
       margin-top: 0;
       color: $gray;
       font-weight: 500;
-      
+
       @media (min-width: 540px) and (max-width: $grid-float-breakpoint-max) {
         top: 48%;
         left: $line-height-computed;
-        transform: translateY(-48%);     
+        transform: translateY(-48%);
         font-size: $font-size-h3;
-        font-weight: normal;  
+        font-weight: normal;
       }
     }
-    
+
     img {
-      @extend .pull-right;
+      float: right !important;
       border-radius: $border-radius-base;
     }
-    
+
     &:hover,
     &:focus {
       text-decoration: none;
@@ -483,18 +483,18 @@ a.thumbnail:focus {
 
 .panel {
   &.panel-marketing {
-    @extend .clearfix;
+    @include clearfix();
     .panel-body {
       padding: 0;
       position: relative;
-      
+
       .panel-marketing-image {
-        @extend .pull-right;
+        float: right !important;
         @media (max-width: 490px) {
           opacity: 0;
         }
       }
-      
+
       .label-fraud-armor {
         background-color: $color-clouds-lightest;
         // padding: 0.62em 0.8em;
@@ -523,24 +523,26 @@ a.thumbnail:focus {
           padding-right: 0;
         }
       }
-      
+
       .panel-marketing-copy {
         position: absolute;
         top: $panel-body-padding;
         left: $panel-body-padding;
-        
+
         .panel-marketing-title {
-          @extend .h3;
+          font-size: $font-size-h3;
+          line-height: $headings-line-height;
           color: $color-tin;
           margin-top: 0;
+          margin-bottom: ($line-height-computed / 2);
           font-weight: 500;
-          
+
           @media (max-width: 375px) {
             font-size: $font-size-h4;
             font-weight: bold;
           }
         }
-        
+
         p {
           width: 66%;
           @media (max-width: $grid-float-breakpoint-max) {
@@ -572,7 +574,7 @@ a.thumbnail:focus {
 }
 
 .panel-intermezzo {
-  @extend .panel-footer;
+  padding: $panel-footer-padding;
   border: none;
 }
 
@@ -583,7 +585,7 @@ a.thumbnail:focus {
     margin-left: -0.25em;
   }
   // TODO (end)
-  
+
   .panel-body,
   .panel-intermezzo {
     padding-top: 5px;
@@ -630,7 +632,7 @@ a.thumbnail:focus {
 }
 
 .btn-default-emph {
-  @include button-variant($btn-default-color, tint($brand-primary, 93%), $btn-default-border)
+  @include button-variant($btn-default-color, tint($brand-primary, 93%), $btn-default-border);
 }
 
 // Alternate button groups
@@ -682,7 +684,7 @@ a.thumbnail:focus {
   @include form-control-validation($brand-danger, $brand-danger, $state-danger-bg);
 }
 
-// Demo focus state for UI Toolkit 
+// Demo focus state for UI Toolkit
 #focusedInput {
   @include form-control-focus-demo;
 }
@@ -694,9 +696,9 @@ a.thumbnail:focus {
     @include clearfix();
     position: relative;
   }
-      
+
   .option_description {
-    @extend .pull-left;
+    float: left !important;
     color: $gray;
     position: relative;
     margin-left: 24px;
@@ -801,7 +803,7 @@ a.thumbnail:focus {
     display: block;
     color: $gray-light;
   }
-  
+
   &:not(.btn-group-vertical) {
     @media (max-width: $grid-float-breakpoint) {
       > .btn {
@@ -828,58 +830,58 @@ a.thumbnail:focus {
       }
     }
   }
-  
-  
+
+
   // Adjust the font sizes and padding at every breakpoint to account for extra long label text on some CITM products
   &.btn-group .btn-default {
     font-size: 12px;
     padding: 10px 12px;
-    
+
     .option_description {
       margin-left: 20px;
     }
-    
+
     .option_description:before {
       left: -20px;
     }
-    
+
     .option_price {
       right: 12px;
-      
+
       .price--md {
         font-size: $font-size-h4;
       }
     }
-    
+
     .option_quantity {
       font-size: 12px;
     }
-    
+
     // extra small screens
     @media (min-width: 375px) {
       font-size: 14px;
       padding: 10px 16px;
-      
+
       .option_description {
         margin-left: 24px;
       }
-      
+
       .option_description:before {
         left: -24px;
       }
-      
+
       .option_price {
         right: $padding-large-horizontal;
         .price--md {
           font-size: $font-size-h4;
         }
       }
-      
+
       .option_quantity {
         font-size: 13px;
       }
     }
-    
+
     // somewhat small screens
     @media (min-width: 425px) {
       .option_price {
@@ -888,20 +890,20 @@ a.thumbnail:focus {
         }
       }
     }
-    
+
     @media (min-width: 450px) {
       font-size: $font-size-large;
     }
-    
+
     @media (min-width: 475px) {
       .option_price {
         .price--md {
           font-size: $font-size-h2;
         }
-      }      
+      }
     }
-    
-    
+
+
   }
 } // end .custom-select
 
@@ -976,7 +978,7 @@ a.thumbnail:focus {
   // width: 225px;
   // height: 30px;
   line-height: 0;
-  display: block; 
+  display: block;
 }
 
 
@@ -988,12 +990,12 @@ a.thumbnail:focus {
   display: block;
   height: auto;
   opacity: 0.85;
-    
+
   &:hover,
   &:focus {
     opacity: 1;
   }
-  
+
   &.footer-brand-mobile {
     opacity: 1;
   }
@@ -1133,7 +1135,7 @@ a.thumbnail:focus {
   border: none;
 
   .cart {
-    @extend .clearfix;
+    @include clearfix();
   }
   .cart-indicators {
     float: left;
@@ -1165,17 +1167,17 @@ a.thumbnail:focus {
   @media (min-width: $grid-float-breakpoint) {
     margin-top: 32px;
     margin-bottom: 34px;
-    
+
     .input-group-sm {
       margin-top: 2px;
     }
-    
+
     .cart {
       padding-right: 0;
       border-left: 1px solid rgb(231, 231, 231);
       margin-left: 2px;
     }
-    
+
     .cart-count-container {
       float: right;
     }
@@ -1197,7 +1199,7 @@ a.thumbnail:focus {
       color: $navbar-default-brand-hover-color;
       background-color: $navbar-default-brand-hover-bg;
     }
-    
+
     @media (min-width: $grid-float-breakpoint) {
       padding-top: 0;
       padding-bottom: 0;
@@ -1205,7 +1207,7 @@ a.thumbnail:focus {
       top: -17px;
       left: 0;
     }
-    
+
     &.navbar-brand-mobile {
       padding-top: 14px;
       padding-bottom: 13px;
@@ -1217,13 +1219,13 @@ a.thumbnail:focus {
   }
 
   .navbar-nav {
-    // Give margin left same width as logo so links don't overlap logo    
+    // Give margin left same width as logo so links don't overlap logo
     &.main-citm-nav {
       @media (min-width: $grid-float-breakpoint) {
         margin-left: 122px;
       }
     }
-    
+
     > li > a {
       color: $navbar-default-link-color;
 
@@ -1250,17 +1252,17 @@ a.thumbnail:focus {
       }
     }
   }
-  
+
   .citm-service-links {
     > li > a {
       &.quick-reorder {
         color: $link-color;
         font-weight: 500;
-        
+
         > .quick-reorder-arrow {
           color: tint($link-color, 15%);
         }
-        
+
         &:hover,
         &:focus {
           color: darken($link-color, 10%);
@@ -1270,24 +1272,24 @@ a.thumbnail:focus {
         }
       }
     }
-    
+
     @media (min-width: $grid-float-breakpoint) {
       position: absolute;
       right: 0;
       top: -26px;
-      
+
       > li > a {
         font-size: $font-size-small;
         color: #999;
         padding-left: 0;
         padding-top: 0;
         padding-bottom: 0;
-        
+
         &:hover,
         &:focus {
           color: #777;
         }
-        
+
         &.quick-reorder {
           font-weight: 400;
         }
@@ -1295,7 +1297,7 @@ a.thumbnail:focus {
       }
     }
   }
-  
+
   .nav-links-pers-flow {
     @media (max-width: $grid-float-breakpoint-max) {
       position: absolute;
@@ -1303,7 +1305,7 @@ a.thumbnail:focus {
       top: 50%;
       transform: translateY(-50%);
       margin: 0;
-      
+
       > li > a {
         padding-right: 0;
       }
@@ -1324,7 +1326,7 @@ a.thumbnail:focus {
   .navbar-collapse,
   .navbar-form {
     border-color: $navbar-default-border;
-    
+
     .nav-search-text-input {
       @media (min-width: $screen-xs-max) and (max-width: 920px) {
         width: 120px;
@@ -1405,7 +1407,7 @@ a.thumbnail:focus {
             }
           }
         }
-        
+
       }
     }
   }
@@ -1436,7 +1438,7 @@ a.thumbnail:focus {
       }
     }
   }
-  
+
 }
 
 
@@ -1444,26 +1446,22 @@ a.thumbnail:focus {
 // Badges
 // --------------------------------------------------
 
-.badge-normal {
-  font-weight: 400;
-}
-
 // Alternative Badges
-.badge-active {
-  @extend .badge;
-  background-color: $brand-primary;
-}
-
-.badge-info {
-  @extend .badge;
-  background-color: $brand-info;
-}
-
-.badge-ghost {
-  @extend .badge;
-  background-color: transparent;
-  border: 1px solid #bbb;
-  color: $badge-bg;
+.badge {
+  &.badge-normal {
+    font-weight: 400;
+  }
+  &.badge-active {
+    background-color: $brand-primary;
+  }
+  &.badge-info {
+    background-color: $brand-info;
+  }
+  &.badge-ghost {
+    background-color: transparent;
+    border: 1px solid #bbb;
+    color: $badge-bg;
+  }
 }
 
 .btn-default .badge-info-ghost {
@@ -1484,13 +1482,13 @@ a.thumbnail:focus {
     }
     .panel-title > a {
       color: $navbar-default-link-color;
-      
+
       &:hover,
       &:focus {
         text-decoration: none;
         color: $navbar-default-link-hover-color;
       }
-    }  
+    }
 }
 
 
@@ -1501,7 +1499,7 @@ a.thumbnail:focus {
 .footer-nav-inner {
   padding-top: 32px;
   padding-bottom: 32px;
-  
+
   h5 {
     font-weight: 500;
     a {
@@ -1515,18 +1513,18 @@ a.thumbnail:focus {
       }
     }
   }
-  
+
   ul {
     list-style: none;
     padding-left: 0;
-    
+
     // > li {
     //   margin-bottom: ($line-height-computed / 5);
     // }
-    
+
     > li > a {
       color: $navbar-default-link-color;
-      
+
       &:hover,
       &:focus {
         text-decoration: none;
@@ -1534,22 +1532,22 @@ a.thumbnail:focus {
       }
     }
   }
-  
+
   @media (max-width: $grid-float-breakpoint-max) {
     margin: 0 auto;
     width: 164px;
   }
-  
+
 }
 
 .footer-badges-copyright-inner {
   padding-top: 20px;
   padding-bottom: 20px;
-  
+
   @media (max-width: $grid-float-breakpoint-max) {
     text-align: center;
   }
-  
+
   .copyright-address {
     padding-top: 10px;
   }
@@ -1557,23 +1555,23 @@ a.thumbnail:focus {
 
 .security-badge-list {
   padding-top: 14px;
-  
+
   @media (min-width: $grid-float-breakpoint) {
     padding-top: 0;
     margin-bottom: 2px;
-  } 
+  }
 }
 
 .security-badge {
   padding-top: 10px;
-  
+
   .badge-container {
     width: 120px;
     height: 120px;
     background-color: $color-clouds-light-35;
     border-radius: $border-radius-small;
     position: relative;
-    
+
     img {
       margin: 0 auto;
       position: absolute;
@@ -1605,11 +1603,11 @@ a.thumbnail:focus {
 // Bottom carousel dots
 .carousel-indicators {
   bottom: 0;
-  
+
   li {
     opacity: 0.6;
   }
-  
+
   li:hover {
     opacity: 1;
   }
@@ -1639,7 +1637,7 @@ a.thumbnail:focus {
   top: 0;
   left: 10%;
   right: 10%;
-  
+
   .hero-text {
     margin-top: 0;
     font-size: ceil(($font-size-base * 1.25));
@@ -1648,107 +1646,107 @@ a.thumbnail:focus {
       color: inherit;
     }
   }
-  
+
   p {
     font-weight: 300;
     font-size: $font-size-h6;
   }
-  
+
   .btn {
     @media (max-width: 318px) {
       font-size: $font-size-h6;
     }
   }
-  
+
   // mobile 319px and up
   @media (min-width: 319px) {
     .hero-text {
       font-size: ceil(($font-size-base * 1.5));
     }
-    
+
     p {
       margin-bottom: ($jumbotron-padding / 2);
       font-size: $font-size-base;
-    }  
+    }
   }
-  
+
   // mobile 359px and up
   @media (min-width: 359px) {
     .hero-text {
       font-size: ceil(($font-size-base * 2));
     }
-    
+
     p {
       margin-bottom: ($jumbotron-padding / 2);
       font-size: ceil(($font-size-base * 1.25));
-    }    
+    }
   }
-  
+
   // mobile 399px and up
   @media (min-width: 399px) {
     .hero-text {
       font-size: ceil(($font-size-base * 2.75));
     }
-    
+
     p {
       margin-bottom: ($jumbotron-padding / 2);
       font-size: $jumbotron-font-size;
     }
   }
-  
+
   // mobile 550px and up
   @media (min-width: 549px) {
     .hero-text {
       font-size: ceil(($font-size-base * 3.25));
     }
-    
+
     p {
       margin-bottom: ($jumbotron-padding / 2);
       font-size: ceil(($font-size-base * 2));
-    }    
+    }
   }
-  
+
   // small screens and up
   @media (min-width: $grid-float-breakpoint) {
     left: 12%;
     top: 38%;
     transform: translateY(-38%);
     text-align: left;
-    
+
     .hero-text {
       font-size: ceil(($font-size-base * 1.75));
       margin-bottom: ceil(($jumbotron-padding / 5));
     }
-    
+
     p {
       margin-bottom: ceil(($jumbotron-padding / 3.25));
       font-size: $font-size-base;
     }
   }
-  
+
   // medium screens and up
   @media (min-width: $screen-md-min) {
     top: 43%;
     transform: translateY(-43%);
-    
+
     .hero-text {
       font-size: ceil(($font-size-base * 2.25));
     }
-    
+
     p {
       font-size: ceil(($font-size-base * 1.25));
     }
   }
-  
+
   // large screens and up
   @media (min-width: $screen-lg-min) {
     top: 46%;
     transform: translateY(-46%);
-    
+
     .hero-text {
       font-size: ceil(($font-size-base * 2.75));
     }
-    
+
     p {
       margin-bottom: ($jumbotron-padding / 2);
       font-size: $jumbotron-font-size;
@@ -1766,7 +1764,7 @@ a.thumbnail:focus {
 .breadcrumb {
   background-color: transparent;
   border-radius: 0;
-  
+
   border-bottom: 5px solid $breadcrumb-bg;
   padding-bottom: 1px;
 }
@@ -1787,7 +1785,7 @@ a.thumbnail:focus {
 
 .reorder-bucket {
   position: relative;
-  
+
   .reorder-bucket-graphic {
     opacity: 0.12;
     font-size: 80px;
@@ -1797,7 +1795,7 @@ a.thumbnail:focus {
     top: 50%;
     transform: translateY(-50%);
   }
-  
+
   .reorder-bucket-body {
     width: 70%;
     @media (min-width: $grid-float-breakpoint) {
@@ -1809,7 +1807,7 @@ a.thumbnail:focus {
 .order-status-bucket {
   position: relative;
   max-height: 51px;
-  
+
   .order-status-bucket-graphic {
     opacity: 0.25;
     font-size: 34px;
@@ -1817,9 +1815,9 @@ a.thumbnail:focus {
     position: absolute;
     right: $panel-body-padding;
     top: 50%;
-    transform: translateY(-50%);  
+    transform: translateY(-50%);
   }
-  
+
   a {
     color: $color-zodiac-light;
     &:hover,
@@ -1842,24 +1840,24 @@ a.thumbnail:focus {
   border-radius: $border-radius-base;
   padding: 10px;
   display: block;
-  
+
   img {
     margin: 0 auto;
   }
-  
+
   &.gallery-item-198-min-h {
     min-height: 198px;
   }
 
   // specific styles to gallery cards on product gallery pages
   &.gallery-page-item {
-    
+
     // TODO: Remove this class after price whitespace problem is fixed post-launch
     #divPrice .price-group .price__dollar {
       margin-right: -0.26em;
     }
     // TODO (end)
-    
+
     @media (min-width: $grid-float-breakpoint) {
       min-height: 450px;
     }
@@ -1870,7 +1868,7 @@ a.thumbnail:focus {
       min-height: 368px;
     }
   }
-  
+
   // TO DO: remove .gallery-item__title (deprecated class) after initial launch
   .gallery-item-title,
   .gallery-item__title {
@@ -1878,7 +1876,7 @@ a.thumbnail:focus {
     margin-bottom: 0;
     color: $gray-dark;
   }
-  
+
   .gallery-item-meta {
     color: $gray;
     margin-bottom: 0;
@@ -1891,13 +1889,13 @@ a.thumbnail:focus {
     font-weight: 500;
     margin-bottom: 0;
   }
-  
+
   &:hover,
   &:focus {
     text-decoration: none;
     border-color: tint($color-zodiac, 69%);
     // TO DO: remove .gallery-item__price (deprecated class) after initial launch
-    .price-group, 
+    .price-group,
     .gallery-item__price {
       color: tint($color-zodiac, 35%);
     }
