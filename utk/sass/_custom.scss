@@ -1944,7 +1944,12 @@ a.thumbnail:focus {
 }
 
 
+// Hide Google Conversion iframe
+// -----------------------------------------------
 
+iframe[name=google_conversion_frame] {
+  display: none !important;
+}
 
 // ********************************************************************************************
 // KILL CLASSES - stuff hidden from clone site for initial due to difficulties - refactor later
