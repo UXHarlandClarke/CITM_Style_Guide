@@ -1168,3 +1168,22 @@ a.pagenumbering_text:focus {
     padding: 0 0 5px 25px;
     background: url(../../images/lockIcon.jpg) no-repeat 5px top;
 }
+
+
+// Preview Page
+// .PreviewAgreeMsg a {font-variant:normal; font-size:12px; padding-bottom:3px}
+// .divPreviewTitle { padding-bottom:5px; float:left; position:relative; font-weight: bold;  width:100%; }
+// .divPreviewItem {margin-left:50px; margin-top:15px; padding-bottom:5px; float:left;  width:740px;}
+.divEnterPersonalization {border: 1px solid #C1C1C1; visibility: visible; padding:10px; background-color: #f6f6f6; }
+// .divActivepreviewbutton {text-align: right; margin-bottom:20px; width:240px}
+.divPreviewButton {border: 1px solid #C1C1C1;padding:10px; background-color: #f6f6f6; float: right}
+.divPreviewButton .divpreviewAgreement { padding:10px; text-align:left;}
+.divAgreeBox {
+    background-color: #fff8e9;
+    border: 1px solid #ffd16c;
+    padding: 9px;
+    margin-bottom: $line-height-computed;
+}
+// .divAddtoCartBtn {margin-left:105px; margin-top:10px; margin-bottom:10px}
+// .personalizePageBody body { background:url(../images/persBodyBg.png) repeat-x;}
+// Preview Page ends here
