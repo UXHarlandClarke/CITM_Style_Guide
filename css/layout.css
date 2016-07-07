@@ -13,11 +13,11 @@ body.modal-open .navbar-fixed-top {
     top: -50px;
 }
 
-.component {
+.citm-component {
     position: relative;
 }
 
-.component .modal {
+.citm-component .modal {
     position: relative;
     top: auto;
     right: auto;
@@ -27,7 +27,7 @@ body.modal-open .navbar-fixed-top {
     display: block;
 }
 
-.component .popover {
+.citm-component .popover {
     position: relative;
     display: inline-block;
     width: 220px;
@@ -117,21 +117,21 @@ body.modal-open .navbar-fixed-top {
 /** UTK Top Navigation
 ************************************/
 
-.utk-topnav {
+.citm-utk-topnav {
     margin-bottom: 0;
 }
 
 /** Scrollspy Navigation
 ************************************/
 
-.utk-sidebar {
+.citm-utk-sidebar {
     z-index: 1031;
     padding-top: 15px;
     padding-bottom: 15px;
     border: 1px solid transparent;
 }
 
-.utk-sidebar.affix {
+.citm-utk-sidebar.affix {
     position: static;
     background: rgba(255,255,255,0.95);
     border-radius: 3px;
@@ -141,16 +141,16 @@ body.modal-open .navbar-fixed-top {
 }
 
 @media (min-width:768px) {
-    .utk-sidebar {
+    .citm-utk-sidebar {
         padding-left: 20px;
     }
 }
 
-.utk-sidenav {
+.citm-utk-sidenav {
     margin-top: 20px;
 }
 
-.utk-sidebar .nav>li>a {
+.citm-utk-sidebar .nav>li>a {
     display: block;
     padding: 4px 20px;
     font-size: 13px;
@@ -158,8 +158,8 @@ body.modal-open .navbar-fixed-top {
     color: #767676;
 }
 
-.utk-sidebar .nav>li>a:focus,
-.utk-sidebar .nav>li>a:hover {
+.citm-utk-sidebar .nav>li>a:focus,
+.citm-utk-sidebar .nav>li>a:hover {
     padding-left: 19px;
     color: #009CBD;
     text-decoration: none;
@@ -167,9 +167,9 @@ body.modal-open .navbar-fixed-top {
     border-left: 1px solid #009CBD;
 }
 
-.utk-sidebar .nav>.active:focus>a,
-.utk-sidebar .nav>.active:hover>a,
-.utk-sidebar .nav>.active>a {
+.citm-utk-sidebar .nav>.active:focus>a,
+.citm-utk-sidebar .nav>.active:hover>a,
+.citm-utk-sidebar .nav>.active>a {
     padding-left: 18px;
     font-weight: 700;
     color: #009CBD;
@@ -177,12 +177,12 @@ body.modal-open .navbar-fixed-top {
     border-left: 2px solid #009CBD;
 }
 
-.utk-sidebar .nav .nav {
+.citm-utk-sidebar .nav .nav {
     display: none;
     padding-bottom: 10px;
 }
 
-.utk-sidebar .nav .nav>li>a {
+.citm-utk-sidebar .nav .nav>li>a {
     padding-top: 1px;
     padding-bottom: 1px;
     padding-left: 30px;
@@ -190,52 +190,52 @@ body.modal-open .navbar-fixed-top {
     font-weight: 400;
 }
 
-.utk-sidebar .nav .nav>li>a:focus,
-.utk-sidebar .nav .nav>li>a:hover {
+.citm-utk-sidebar .nav .nav>li>a:focus,
+.citm-utk-sidebar .nav .nav>li>a:hover {
     padding-left: 29px;
 }
 
-.utk-sidebar .nav .nav>.active:focus>a,
-.utk-sidebar .nav .nav>.active:hover>a,
-.utk-sidebar .nav .nav>.active>a {
+.citm-utk-sidebar .nav .nav>.active:focus>a,
+.citm-utk-sidebar .nav .nav>.active:hover>a,
+.citm-utk-sidebar .nav .nav>.active>a {
     padding-left: 28px;
     font-weight: 500;
 }
 
 @media (min-width:992px) {
-    .utk-sidebar .nav>.active>ul {
+    .citm-utk-sidebar .nav>.active>ul {
         display: block;
     }
-    .utk-sidebar.affix,
-    .utk-sidebar.affix-bottom {
+    .citm-utk-sidebar.affix,
+    .citm-utk-sidebar.affix-bottom {
         width: 213px;
     }
-    .utk-sidebar.affix {
+    .citm-utk-sidebar.affix {
         position: fixed;
         top: 20px;
     }
-    .utk-sidebar.affix-bottom {
+    .citm-utk-sidebar.affix-bottom {
         position: absolute;
     }
-    .utk-sidebar.affix .utk-sidenav,
-    .utk-sidebar.affix-bottom .utk-sidenav {
+    .citm-utk-sidebar.affix .citm-utk-sidenav,
+    .citm-utk-sidebar.affix-bottom .citm-utk-sidenav {
         margin-top: 0;
         margin-bottom: 0;
     }
 }
 
 @media (min-width:1200px) {
-    .utk-sidebar.affix,
-    .utk-sidebar.affix-bottom {
+    .citm-utk-sidebar.affix,
+    .citm-utk-sidebar.affix-bottom {
         width: 263px;
     }
 }
 
-.utk-section {
+.citm-utk-section {
     margin-bottom: 60px;
 }
 
-/*.utk-section:last-child {
+/*.citm-utk-section:last-child {
     margin-bottom: 0;
 }*/
 
@@ -254,7 +254,7 @@ body.modal-open .navbar-fixed-top {
     z-index: 100;
 }
 
-.utk-sidebar.affix .toggle-sidenav{
+.citm-utk-sidebar.affix .toggle-sidenav{
     display: block;
     position: absolute;
     right: 10px;
@@ -290,7 +290,7 @@ body.modal-open .navbar-fixed-top {
 /** Example Wells
 ************************************/
 
-.example {
+.citm-example {
     box-shadow: none;
     background-color: #fff;
     border-radius: 3px;
@@ -300,11 +300,11 @@ body.modal-open .navbar-fixed-top {
     margin-bottom: 20px;
 }
 
-.example .component {
+.citm-example .citm-component {
     margin: 19px;
 }
 
-.example .example-name {
+.citm-example .citm-example-name {
     background-color: #f5f5f5;
     padding: 9px 19px;
     border-bottom: 1px solid #e3e3e3;
@@ -316,34 +316,34 @@ body.modal-open .navbar-fixed-top {
     color: #959595;
 }
 
-.example .example-name.testing {
+.citm-example .citm-example-name.testing {
     color: rgb(179,39,45);
 }
 
-.example .example-name .btn {
+.citm-example .citm-example-name .btn {
     letter-spacing: 0;
 }
 
-.example.well-light-gray {
+.citm-example.well-light-gray {
     background-color: #f7f7f7;
 }
 
-.example.well-lighter-gray {
+.citm-example.well-lighter-gray {
     background-color: #FEFEFE;
 }
 
-.example.example-full {
+.citm-example.example-full {
     border-radius: 0;
     border-left: none;
     border-right: none;
 }
 
-.example.example-full .component {
+.citm-example.example-full .citm-component {
     margin: 0;
     padding: 22px 0;
 }
 
-.example.example-full .example-name {
+.citm-example.example-full .citm-example-name {
     margin: 0;
 }
 

@@ -10,10 +10,10 @@
         $("#source-modal").modal();
     });
 
-    $('.component [data-toggle="popover"]').popover();
-    $('.component [data-toggle="tooltip"]').tooltip();
+    $('.citm-component [data-toggle="popover"]').popover();
+    $('.citm-component [data-toggle="tooltip"]').tooltip();
 
-    $(".component").hover(function() {
+    $(".citm-component").hover(function() {
         $(this).append($button);
         $button.show();
     }, function() {
@@ -49,22 +49,22 @@
     }
 
     // Scrollspy.js
-    // $('body').scrollspy({ target: '#app-nav' })
+    $('body').scrollspy({ target: '#citm-utk-nav' })
     
     // Affix.js
-    // $('#utk-nav').affix({
-    //     offset: {
-    //         top: 350,
-    //         bottom: function () {
-    //             return (this.bottom = $('#footer').outerHeight(true))
-    //         }
-    //     }
-    // })
+    $('#citm-utk-nav').affix({
+        offset: {
+            top: 350,
+            bottom: function () {
+                return (this.bottom = $('#footer').outerHeight(true))
+            }
+        }
+    })
   
     // Toggle Sidenav Text
-    // $("#toggle-sidenav").click(function() {
-    //     var txt = $("#sidenav").is(':visible') ? 'Show Menu' : 'Hide';
-    //     $("#toggle-sidenav").text(txt);
-    // });
+    $("#toggle-sidenav").click(function() {
+        var txt = $("#sidenav").is(':visible') ? 'Show Menu' : 'Hide';
+        $("#toggle-sidenav").text(txt);
+    });
     
 })();
