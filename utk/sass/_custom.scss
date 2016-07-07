@@ -1540,23 +1540,19 @@ a.thumbnail:focus {
 
 }
 
-// Personalization flow inner footer container
-.pers-footer-inner {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 .footer-badges-copyright-inner {
   padding-top: 20px;
   padding-bottom: 20px;
-
-  @media (max-width: $grid-float-breakpoint-max) {
-    text-align: center;
-  }
-
+  
   .copyright-address {
     padding-top: 10px;
   }
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    text-align: center;
+    padding-bottom: 32px;
+  }
+
 }
 
 .security-badge-list {
