@@ -32,6 +32,8 @@
     "gulp-html-ssi": "^0.0.92",
     "gulp-gh-pages": "^0.5.4",
     "browser-sync": "^2.11.2",
+    "gulp-connect": "^4.1.0",
+    "connect-ssi": "^1.1.0",
     "browsersync-ssi": "^0.2.4 ",
     "run-sequence": "^1.1.2"
   },
