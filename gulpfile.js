@@ -11,6 +11,8 @@ var gp_rename = require("gulp-rename");
 var gp_html_replace = require("gulp-html-replace");
 var gp_stripdebug = require("gulp-strip-debug");
 var gp_github_pages = require("gulp-gh-pages");
+var gp_connect = require("gulp-connect");
+var gp_connect_ssi = require("connect-ssi");
 var gp_browserSync = require('browser-sync').create();
 var gp_runsequence = require('run-sequence');
 var gp_util = require("gulp-util");
@@ -156,6 +158,18 @@ gulp.task('app', function(done) {
 
     console.log(gp_util.colors.cyan("Starting LIVE APP web service"));
     
+    gp_connect.server({
+      root: ['app', 'dist/'],
+      livereload: true,
+      middleware: function() {
+          return [gp_connect_ssi({
+              baseDir: __dirname + '/app',
+              ext: '.html'
+          })];
+      }
+    });
+
+    /*
     gp_browserSync.init({
 		server: {
 		    baseDir: "./app/",
@@ -170,6 +184,7 @@ gulp.task('app', function(done) {
 		    }
 		}
     });
+    */
 
     /* utk updated */
     gulp.watch(['./utk/sass/*.scss','./utk/js/*.js','./utk/img/**/*'], function(event) {
@@ -181,7 +196,7 @@ gulp.task('app', function(done) {
     /* app updated */
     gulp.watch('app/*.*').on('change', function(event) {
       console.log(gp_util.colors.cyan("App change detected"));
-      gp_browserSync.reload()
+      gp_connect.reload()
     });
 
 });
@@ -207,7 +222,8 @@ gulp.task('dist-css', function(){
      }))
     .pipe(gp_cleancss({compatibility: 'ie8'}))
     .pipe(gulp.dest('./dist/utk/css/'))
-    .pipe(gp_browserSync.stream());
+    //.pipe(gp_browserSync.stream());
+    .pipe(gp_connect.reload());
 });
 
 
@@ -233,7 +249,8 @@ gulp.task('dist-js', function(){
     .pipe(gp_uglifyjs())
     .pipe(gp_stripdebug())
     .pipe(gulp.dest('./dist/utk/js/'))
-    .pipe(gp_browserSync.stream());
+    //.pipe(gp_browserSync.stream());
+    .pipe(gp_connect.reload());
 }); 
 
 
@@ -266,7 +283,8 @@ gulp.task('dist-fonts', function(){
 /* phase out */
 
 gulp.task('updatebrowsers', function() {
-	gp_browserSync.reload()
+	//gp_browserSync.reload()
+  gp_connect.reload();
 });
 
 gulp.task('sass:watch', function () {
