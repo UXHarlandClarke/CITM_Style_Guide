@@ -1543,14 +1543,16 @@ a.thumbnail:focus {
 .footer-badges-copyright-inner {
   padding-top: 20px;
   padding-bottom: 20px;
-
-  @media (max-width: $grid-float-breakpoint-max) {
-    text-align: center;
-  }
-
+  
   .copyright-address {
     padding-top: 10px;
   }
+
+  @media (max-width: $grid-float-breakpoint-max) {
+    text-align: center;
+    padding-bottom: 32px;
+  }
+
 }
 
 .security-badge-list {
@@ -1944,7 +1946,12 @@ a.thumbnail:focus {
 }
 
 
+// Hide Google Conversion iframe
+// -----------------------------------------------
 
+iframe[name=google_conversion_frame] {
+  display: none !important;
+}
 
 // ********************************************************************************************
 // KILL CLASSES - stuff hidden from clone site for initial due to difficulties - refactor later
