@@ -1540,6 +1540,12 @@ a.thumbnail:focus {
 
 }
 
+// Personalization flow inner footer container
+.pers-footer-inner {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .footer-badges-copyright-inner {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -1944,7 +1950,12 @@ a.thumbnail:focus {
 }
 
 
+// Hide Google Conversion iframe
+// -----------------------------------------------
 
+iframe[name=google_conversion_frame] {
+  display: none !important;
+}
 
 // ********************************************************************************************
 // KILL CLASSES - stuff hidden from clone site for initial due to difficulties - refactor later
