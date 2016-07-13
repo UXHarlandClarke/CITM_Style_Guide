@@ -1847,8 +1847,28 @@ a.thumbnail:focus {
     margin: 0 auto;
   }
 
-  &.gallery-item-198-min-h {
-    min-height: 198px;
+  &.gallery-item-home {
+    min-height: 200px;
+    
+    @media (min-width: 330px) {
+      min-height: 208px;
+    }
+    
+    @media (min-width: 348px) {
+      min-height: 222px;
+    }
+    
+    @media (min-width: 375px) {
+      min-height: 230px;
+    }
+    
+    @media (min-width: $grid-float-breakpoint) {
+      min-height: 200px;
+    }
+    
+    @media (min-width: $screen-lg-min) {
+      min-height: 230px;
+    }
   }
 
   // specific styles to gallery cards on product gallery pages
