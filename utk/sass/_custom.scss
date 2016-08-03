@@ -618,6 +618,10 @@ a.thumbnail:focus {
   border-radius: 1px;
 }
 
+.modal-open .modal {
+  overflow-y: scroll;
+}
+
 
 //
 // Buttons
