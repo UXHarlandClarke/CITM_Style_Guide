@@ -1042,6 +1042,11 @@ iframe#PaymentFrame {
     padding: 10px;
 }
 
+// hide the controls until code is refactored to show correct scenes
+.bx-controls {
+    display: none;
+}
+
 //**************** REORDER MODALS ****************
 .numPages {
     color: #666666;
