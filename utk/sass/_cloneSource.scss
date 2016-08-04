@@ -768,11 +768,10 @@ input[type='image'].edit-info {
 span.checkout-heading {
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
-    line-height: $headings-line-height;
     color: $headings-color;
-    margin-top: ($line-height-computed / 2);
-    margin-bottom: ($line-height-computed / 2);
-    font-size: $font-size-h4;
+    margin-top: 7px;
+    font-size: $font-size-base;
+    display: inline-block;
 }
 
 iframe#PaymentFrame {
