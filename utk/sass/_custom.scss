@@ -1850,6 +1850,37 @@ a.thumbnail:focus {
   img {
     margin: 0 auto;
   }
+  
+  &.gallery-reorder {
+    
+    min-height: 212px;
+
+    @media (min-width: 320px) {
+      min-height: 230px;
+    }
+    @media (min-width: 360px) {
+      min-height: 260px;
+    }
+    @media (min-width: 400px) {
+      min-height: 290px;
+    }
+    @media (min-width: 440px) {
+      min-height: 324px;
+    }
+    @media (min-width: 530px) {
+      min-height: 344px;
+    }
+    @media (min-width: 570px) {
+      min-height: 346px;
+    }
+    
+    .gallery-item__title {
+      font-size: 12px;
+      @media (min-width: 400px) {
+        font-size: $font-size-base;
+      }
+    }
+  }
 
   &.gallery-item-home {
     min-height: 200px;
