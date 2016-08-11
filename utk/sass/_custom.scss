@@ -614,14 +614,23 @@ a.thumbnail:focus {
 // Modals
 // --------------------------------------------------
 
-.modal-content {
-  border-radius: 1px;
+.modal-open {
+  position: fixed; 
+  width: 100%; 
+  overflow: hidden;
 }
 
 .modal-open .modal {
   overflow-y: scroll;
 }
 
+.modal-dialog {
+  height: 101%;
+}
+
+.modal-content {
+  border-radius: 1px;
+}
 
 //
 // Buttons
