@@ -624,6 +624,13 @@ a.thumbnail:focus {
   overflow-y: scroll;
 }
 
+/* Safari 9+ (non-iOS) */
+_:-webkit-full-screen:not(:root:root), .modal-open .modal { 
+  overflow-y: inherit;
+}
+
+
+
 .modal-dialog {
   height: 101%;
 }
@@ -631,6 +638,9 @@ a.thumbnail:focus {
 .modal-content {
   border-radius: 1px;
 }
+
+
+
 
 //
 // Buttons
