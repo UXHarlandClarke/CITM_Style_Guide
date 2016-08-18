@@ -1875,22 +1875,31 @@ _:-webkit-full-screen:not(:root:root), .modal-open .modal {
     min-height: 212px;
 
     @media (min-width: 320px) {
-      min-height: 230px;
+      min-height: 220px;
     }
     @media (min-width: 360px) {
-      min-height: 260px;
+      min-height: 232px;
     }
     @media (min-width: 400px) {
-      min-height: 290px;
+      min-height: 264px;
     }
     @media (min-width: 440px) {
-      min-height: 324px;
+      min-height: 280px;
+    }
+    @media (min-width: 480px) {
+      min-height: 308px;
     }
     @media (min-width: 530px) {
-      min-height: 344px;
+      min-height: 326px;
     }
     @media (min-width: 570px) {
-      min-height: 346px;
+      min-height: 344px;
+    }
+    @media (min-width: $grid-float-breakpoint) {
+      min-height: 255px;
+    }
+    @media (min-width: $screen-md) {
+      min-height: 275px;
     }
     
     .gallery-item__title {
