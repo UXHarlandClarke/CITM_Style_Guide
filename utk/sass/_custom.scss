@@ -168,6 +168,10 @@
   color: $color-tin-muted;
 }
 
+.text-red-muted {
+  color: $color-red-muted;
+}
+
 // Margins
 .margin-top-computed {
   margin-top: $line-height-computed;
@@ -458,7 +462,74 @@ a.thumbnail:focus {
       .well-marketing-title {
         color: tint($color-zodiac, 10%);
       }
+      
+      .well-marketing-subheader {
+        color: $gray;
+      }
     }
+    
+    // Special Offers Buckets
+    &.well-special-offers {
+      border-color: tint($color-red, 75%);
+      background-color: tint($color-red, 97%);
+      position: relative;
+      
+      .well-marketing-subheader {
+        color: $gray-light;
+        position: absolute;
+        top: ($line-height-computed * 1.5);
+        left: ($line-height-computed / 2);
+        font-weight: 300;
+        font-size: 16px;
+        
+        @media (min-width: 540px) and (max-width: $grid-float-breakpoint-max) {
+          top: 55%;
+          left: $line-height-computed;
+          transform: translateY(-55%);
+        }
+      }
+      
+      .special-offers-graphic {
+        @include transition(opacity .1s ease-in-out);
+        color: $color-red;
+        opacity: 0.10;
+        font-size: 80px;
+        line-height: 0;
+        position: absolute;
+        right: $panel-body-padding * 2;
+        top: 83%;
+        transform: translateY(-83%);
+        
+        @media (min-width: 540px) and (max-width: $grid-float-breakpoint-max) {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      
+      .well-marketing-title {
+        color: $color-red-muted;
+        
+        @media (min-width: 540px) and (max-width: $grid-float-breakpoint-max) {
+          top: 35%;
+          left: $line-height-computed;
+          transform: translateY(-35%);
+        }
+      }
+      
+      &:hover,
+      &:focus {
+        border-color: tint($color-red, 60%);
+        
+        .well-marketing-title {
+          color: darken($color-red-muted, 10%);
+        }
+        
+        // .special-offers-graphic {
+        //   opacity: 0.16;
+        // }
+      }
+    }
+    
   }
 }
 
@@ -1292,6 +1363,15 @@ _:-webkit-full-screen:not(:root:root), .modal-open .modal {
           > .quick-reorder-arrow {
             color: darken($link-color, 10%);
           }
+        }
+      }
+      
+      &.special-offers {
+        color: $color-red-muted;
+        
+        &:hover,
+        &:focus {
+          color: darken($color-red-muted, 10%);
         }
       }
     }
