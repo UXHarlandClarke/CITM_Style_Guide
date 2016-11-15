@@ -4,6 +4,9 @@
 //=include ../../bower_components/jquery-touch-events/src/jquery.mobile-events.js
 //=include ../../bower_components/bootstrap-sass/assets/javascripts/bootstrap.js
 
+// ./optinmonster_prod.js
+//=include ./optinmonster_clone.js
+
 //=include ./debug.js
 
 $(document).ready(function() {
@@ -19,6 +22,7 @@ $(document).ready(function() {
     // Toggle the navigation dropdowns on hover and click, still allowing for tap open on mobile
     $('.dropdown').on('mouseenter mouseleave click', function() {
         $(this).toggleClass("open");
+        console.log("hover");
     });
     
     // Tooltip
