@@ -4,8 +4,7 @@
 //=include ../../bower_components/jquery-touch-events/src/jquery.mobile-events.js
 //=include ../../bower_components/bootstrap-sass/assets/javascripts/bootstrap.js
 
-// ./optinmonster_prod.js
-//=include ./optinmonster_clone.js
+//=include ./optinmonster.js
 
 //=include ./debug.js
 
