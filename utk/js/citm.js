@@ -5,6 +5,7 @@
 //=include ../../bower_components/bootstrap-sass/assets/javascripts/bootstrap.js
 
 //=include ./optinmonster.js
+//=include ./luckyorange.js
 
 //=include ./debug.js
 
