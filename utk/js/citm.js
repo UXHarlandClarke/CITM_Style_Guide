@@ -6,6 +6,7 @@
 
 //=include ./optinmonster.js
 //=include ./luckyorange.js
+//=include ./bounce-exchange.js
 
 //=include ./debug.js
 
