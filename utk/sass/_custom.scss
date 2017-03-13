@@ -483,7 +483,7 @@ a.thumbnail:focus {
         font-size: 16px;
         
         @media (min-width: 540px) and (max-width: $grid-float-breakpoint-max) {
-          top: 55%;
+          top: 62%;
           left: $line-height-computed;
           transform: translateY(-55%);
         }
@@ -497,7 +497,7 @@ a.thumbnail:focus {
         line-height: 0;
         position: absolute;
         right: $panel-body-padding * 2;
-        top: 83%;
+        top: 78%;
         transform: translateY(-83%);
         
         @media (min-width: 540px) and (max-width: $grid-float-breakpoint-max) {
@@ -510,7 +510,7 @@ a.thumbnail:focus {
         color: $color-red-muted;
         
         @media (min-width: 540px) and (max-width: $grid-float-breakpoint-max) {
-          top: 35%;
+          top: 32%;
           left: $line-height-computed;
           transform: translateY(-35%);
         }
@@ -522,6 +522,68 @@ a.thumbnail:focus {
         
         .well-marketing-title {
           color: darken($color-red-muted, 10%);
+        }
+        
+        // .special-offers-graphic {
+        //   opacity: 0.16;
+        // }
+      }
+    }
+    
+    // Blog Bucket
+    &.well-blog {
+      border-color: tint($brand-info, 75%);
+      background-color: tint($brand-info, 97%);
+      position: relative;
+      
+      .well-marketing-subheader {
+        color: $gray-light;
+        position: absolute;
+        top: ($line-height-computed * 1.5);
+        left: ($line-height-computed / 2);
+        font-weight: 300;
+        font-size: 16px;
+        
+        @media (min-width: 540px) and (max-width: $grid-float-breakpoint-max) {
+          top: 62%;
+          left: $line-height-computed;
+          transform: translateY(-55%);
+        }
+      }
+      
+      .blog-graphic {
+        @include transition(opacity .1s ease-in-out);
+        color: $brand-info;
+        opacity: 0.1;
+        font-size: 80px;
+        line-height: 0;
+        position: absolute;
+        right: $panel-body-padding * 2;
+        top: 78%;
+        transform: translateY(-83%);
+        
+        @media (min-width: 540px) and (max-width: $grid-float-breakpoint-max) {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      
+      .well-marketing-title {
+        color: $brand-info;
+        
+        @media (min-width: 540px) and (max-width: $grid-float-breakpoint-max) {
+          top: 32%;
+          left: $line-height-computed;
+          transform: translateY(-35%);
+        }
+      }
+      
+      &:hover,
+      &:focus {
+        border-color: tint($brand-info, 60%);
+        
+        .well-marketing-title {
+          color: darken($brand-info, 10%);
         }
         
         // .special-offers-graphic {
