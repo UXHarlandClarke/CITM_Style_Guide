@@ -1655,10 +1655,6 @@ _:-webkit-full-screen:not(:root:root), .modal-open .modal {
     white-space: nowrap;
     vertical-align: baseline;
 
-    &.flag-daisy{
-      color:$color-dove;
-      background: $color-daisy; 
-    }
     &.flag-sale{
       color:$color-clouds-lightest;
       background: $color-red; 
@@ -1670,6 +1666,11 @@ _:-webkit-full-screen:not(:root:root), .modal-open .modal {
     &.flag-mint{
       color:$color-clouds-lightest;
       background: $color-mint; 
+    }
+
+    &.flag-daisy{
+      color:$color-dove;
+      background: $color-daisy; 
     }
 
 
