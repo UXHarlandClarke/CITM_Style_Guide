@@ -8,6 +8,9 @@
 //=include ./luckyorange.js
 //=include ./bounce-exchange.js
 
+//=include ./js.cookie.js
+//=include ./sale.js
+
 //=include ./debug.js
 
 $(document).ready(function() {
@@ -29,5 +32,6 @@ $(document).ready(function() {
     // Tooltip
     $('[data-toggle="tooltip"]').tooltip();
 
+    
 
 }); /* END document ready */
