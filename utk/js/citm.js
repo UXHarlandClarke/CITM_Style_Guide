@@ -14,20 +14,29 @@
 //=include ./debug.js
 
 $(document).ready(function() {
-  
-        var path = window.location.pathname;
-    var page = path.split("/").pop();
 
-    var landingPage ="index.html";
-    var checkoutPage ="templates.html";
+    // s is an analytics object that our .net developers make available that we can use on the sites for page conditions
+    if ((typeof s !== "undefined") || (window.location.hostname == "localhost")) {
 
-    console.log(page);
+        console.log("testing cookie debug")
+        if ((typeof s !== "undefined")) {
+            console.log(s.pageType); // will ony be defined in server env
+        }
+        
 
-    if(page==landingPage && Cookies.get('FTO') == 0){
-        Cookies.set('FTO', '5.49', 'Promo','NEW549', 'Seen', 'False', {expires: 30, path:'/'});
-        console.log(Cookies.get());
+        if (typeof Cookies.get("FTO") === "undefined") {
+            console.log("set FTO cookie")
+            Cookies.set('FTO', '5.49', 'Promo','NEW549', 'Seen', 'False', {expires: 30, path:'/'});
+            console.log(Cookies.get('FTO'));
+        } else {
+            console.log("FTO cookie already set")
+            console.log(Cookies.get('FTO'));
+        }
+
     }
-      
+
+     
+
     // Add swipe functionality to Bootstrap carousels
     $(".carousel").swiperight(function() {
         $(this).carousel('prev');
