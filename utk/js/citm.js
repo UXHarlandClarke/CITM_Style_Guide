@@ -15,16 +15,16 @@
 
 $(document).ready(function() {
 
-    // s is an analytics object that our .net developers make available that we can use on the sites for page conditions
-    if ((typeof s !== "undefined") || (window.location.hostname == "localhost")) {
+    if (window.location.hostname == "localhost") {
+        var s = {}
+        s.pageType = "index";
+    }
+    
+    if ((typeof s !== "undefined")) {
 
-        console.log("testing cookie debug")
-        if ((typeof s !== "undefined")) {
-            console.log(s.pageType); // will ony be defined in server env
-        }
+        console.log(s.pageType);
         
-
-        if (typeof Cookies.get("FTO") === "undefined") {
+        if ((s.pageType == "index") && (typeof Cookies.get("FTO") === "undefined")) {
             console.log("set FTO cookie")
             Cookies.set('FTO', '5.49', 'Promo','NEW549', 'Seen', 'False', {expires: 30, path:'/'});
             console.log(Cookies.get('FTO'));
