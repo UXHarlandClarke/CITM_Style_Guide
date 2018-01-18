@@ -8,7 +8,7 @@
 
 	console.log(page);
 
-	if(page==landingPage) && Cookies.get('FTO') == 0){
+	if(page==landingPage && Cookies.get('FTO') == 0){
 		Cookies.set('FTO', '5.49', 'Promo','NEW549', 'Seen', 'False', {expires: 30, path:'/'});
 		console.log(Cookies.get());
 	}
@@ -32,4 +32,4 @@
 	if(window.location.href.index0f(checkoutPage) && Cookies.get('FTO') == 1){
 		$.cookie('Seen', 'True');
 	}
-});
+})();
