@@ -1643,8 +1643,8 @@ _:-webkit-full-screen:not(:root:root), .modal-open .modal {
    -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     position: absolute;
-    top: 8px;
-    left: 0;
+    top: 1.5em;
+    left: 1.5em;
     float: left;
     clear: both;
     font-size:75%;     
