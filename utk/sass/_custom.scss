@@ -351,6 +351,13 @@ h1, .h1 {
   letter-spacing: 0.04em;
 }
 
+.sale{
+    color:$brand-success !important;
+  &:hover{
+    color:$brand-success;
+  }
+}
+
 
 //
 // Thumbnails
@@ -2191,6 +2198,8 @@ _:-webkit-full-screen:not(:root:root), .modal-open .modal {
     color: $gray-light;
     font-weight: 500;
     margin-bottom: 0;
+
+
   }
 
   &:hover,
