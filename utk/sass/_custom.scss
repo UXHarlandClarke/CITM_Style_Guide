@@ -350,13 +350,9 @@ h1, .h1 {
   font-size: 0.57em;
   letter-spacing: 0.04em;
 }
-
-.sale{
-    color:$brand-success !important;
-  &:hover{
-    color:$brand-success;
-  }
-}
+ .price--sale{
+  font-size:$font-size-h1;
+ }
 
 
 //
@@ -1662,6 +1658,7 @@ _:-webkit-full-screen:not(:root:root), .modal-open .modal {
     white-space: nowrap;
     vertical-align: baseline;
 
+
     &.flag-sale{
       color:$color-clouds-lightest;
       background: $color-red; 
@@ -2151,7 +2148,7 @@ _:-webkit-full-screen:not(:root:root), .modal-open .modal {
     }
     
     @media (min-width: $grid-float-breakpoint) {
-      min-height: 200px;
+      min-height: 215px;
     }
     
     @media (min-width: $screen-lg-min) {
