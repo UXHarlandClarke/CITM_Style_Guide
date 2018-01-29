@@ -623,6 +623,29 @@ a.thumbnail:focus {
     .panel-body {
       padding: 0;
       position: relative;
+        
+      &.block-stack {
+        overflow: hidden;
+        width: 100%;
+      }
+        
+      .img-block-stack {
+        &.block-small {
+          display: block;
+            
+          @media (min-width: 514px) {
+            display: none;
+          }
+        }
+          
+        &.block-large {
+          display: none;
+            
+          @media (min-width: 514px) { 
+            display: block;
+          }
+        }
+      }
 
       .panel-marketing-image {
         float: right !important;
@@ -630,7 +653,7 @@ a.thumbnail:focus {
           opacity: 0;
         }
       }
-
+        
       .label-fraud-armor {
         background-color: $color-clouds-lightest;
         // padding: 0.62em 0.8em;
