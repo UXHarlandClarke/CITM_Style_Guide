@@ -9,7 +9,7 @@ $( window ).on( "load", function(){
         
         if ((s.pageType == "index") && (typeof Cookies.get("FTO") === "undefined")) {
             console.log("set FTO cookie")
-            Cookies.set('FTO', 5.49, 'Promo','NEW549', 'Seen', 'False', {expires: 30, path:'/'});
+            Cookies.set('FTO', 5.49, 'Promo','NEW549', 'redeemed', 'False', {expires: 30, path:'/'});
             console.log(Cookies.get('FTO'));
         } else {
             console.log("FTO cookie already set")
@@ -52,20 +52,6 @@ $( window ).on( "load", function(){
 	         //    "<span class='price__dollar'>"+price.toString().split('.')[0]+"</span><span class='price__mark'>.</span>"+
 	         //    "<sup class='price__sup'>"+price.toString().split('.')[1]+"</sup></span></span>"
 	         //    );
-
-	         //    price = Cookies.get('FTO')*2;
-	         //    $('[id*=ctl01_spnPrice]').before(
-	         //    "<span class='price-group sale' style='position: absolute; right: 5em;'><span class='price'><sup class='price__currency'>$</sup>"+
-	         //    "<span class='price__dollar'>"+price.toString().split('.')[0]+"</span><span class='price__mark'>.</span>"+
-	         //    "<sup class='price__sup'>"+price.toString().split('.')[1]+"</sup></span></span>"
-	         //    );
-
-	         //    price = Cookies.get('FTO')*4;
-	         //    $('[id*=ctl02_spnPrice]').before(
-	         //    "<span class='price-group sale' style='position: absolute; right: 5em;'><span class='price '><sup class='price__currency'>$</sup>"+
-	         //    "<span class='price__dollar'>"+price.toString().split('.')[0]+"</span><span class='price__mark'>.</span>"+
-	         //    "<sup class='price__sup'>"+price.toString().split('.')[1]+"</sup></span></span>"
-	         //    );
                 
         	}
 
@@ -76,7 +62,7 @@ $( window ).on( "load", function(){
         }
         
         if ((s.pageType == "checkout") && (typeof Cookies.get("FTO") === "undefined")){
-			Cookies.set('Seen', 'True');
+			Cookies.set('redeemed', 'True');
 		}
     }
 	
