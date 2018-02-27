@@ -8,7 +8,6 @@
 //=include ./optinmonster.js
 //=include ./luckyorange.js
 //=include ./bounce-exchange.js
-//=include ./sale.js
 
 
 //=include ./debug.js

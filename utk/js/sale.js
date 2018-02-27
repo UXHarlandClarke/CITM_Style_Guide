@@ -41,7 +41,7 @@ $( window ).on( "load", function(){
                     var price = Cookies.get('FTO')*(i+p);
                     p = i+1;
                     $('[id*=ctl0'+i+'_spnPrice]').before(
-                    "<span class='price-group sale' style='position: absolute; right: 5em;'><span class='price '><sup class='price__currency'>$</sup>"+
+                    "<span class='price-group sale' style='position: absolute; left: -3em;'><span class='price '><sup class='price__currency'>$</sup>"+
                     "<span class='price__dollar'>"+price.toString().split('.')[0]+"</span><span class='price__mark'>.</span>"+
                     "<sup class='price__sup'>"+price.toString().split('.')[1]+"</sup></span></span>"
                     );
