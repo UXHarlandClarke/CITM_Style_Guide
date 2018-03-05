@@ -832,6 +832,7 @@ a.thumbnail:focus {
   }
   .price:not(.sale){
     text-decoration:line-through;
+    opacity:0.5;
   }
   .product-opts-price .price{
     text-decoration:none;
