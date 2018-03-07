@@ -82,10 +82,20 @@ gulp.task('build', function(done) {
 gulp.task('local', function(done) {
     gp_runsequence(
         'build-dev',
+        'smooth-dev-css',
+        'smooth-dev-js',
         'app',
         done);
 });
 
+
+gulp.task('reloadapp', function(done) {
+    gp_runsequence(
+        'build-dev',
+        'smooth-dev-css',
+        'smooth-dev-js',
+        done);
+});
 
 
 
@@ -113,12 +123,28 @@ gulp.task('build-dev', function(done) {
 
 
 
+
+
 /* build static app */
 gulp.task('build-static-utk', function(done) {
     console.log(gp_util.colors.cyan("Moving DIST UTK resources (js,css,images,fonts)"));
     return gulp.src(['./app/**/*', './dist/**/*', '!./app/**/_*.html', '!./dist/app', '!./dist/app/**/*']) 
         .pipe(gulp.dest('./dist/app/'));   
 });
+
+
+gulp.task('smooth-dev-css', function(done) {
+    console.log(gp_util.colors.cyan("Moving DEV UTK CSS"));
+    return gulp.src(['./dev/css/*']) 
+        .pipe(gp_print())
+        .pipe(gulp.dest('./dist/utk/css/'));   
+})
+gulp.task('smooth-dev-js', function(done) {
+    console.log(gp_util.colors.cyan("Moving DEV UTK JS"));
+    return gulp.src(['./dev/js/*'])
+        .pipe(gp_print()) 
+        .pipe(gulp.dest('./dist/utk/js/'));   
+})
 
 gulp.task('build-static-index', function(done) {
     console.log(gp_util.colors.cyan("Building Static App Pages"));
@@ -189,7 +215,7 @@ gulp.task('app', function(done) {
     /* utk updated */
     gulp.watch(['./utk/sass/*.scss','./utk/js/*.js','./utk/img/**/*'], function(event) {
         console.log(gp_util.colors.cyan("UTK scss/js/img change detected"));
-        gulp.start('build-dev');
+        gulp.start('reloadapp');
     });
 
 

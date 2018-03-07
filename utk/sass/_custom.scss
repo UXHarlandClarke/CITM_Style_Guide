@@ -352,6 +352,7 @@ h1, .h1 {
 }
 
 
+
 //
 // Thumbnails
 // --------------------------------------------------
@@ -820,6 +821,21 @@ a.thumbnail:focus {
 .panel-primary {
   .panel-footer {
     border-top-color: $brand-primary;
+  }
+}
+
+.panel-sale{
+  .price.sale{
+    position: absolute;
+    left: -3em;
+    display:block;
+  }
+  .price:not(.sale){
+    text-decoration:line-through;
+    opacity:0.5;
+  }
+  .product-opts-price .price{
+    text-decoration:none;
   }
 }
 
@@ -1717,6 +1733,83 @@ _:-webkit-full-screen:not(:root:root), .modal-open .modal {
   // box-shadow: inset 0 0 0 1px $brand-info;
 }
 
+//
+//Flags
+//---------------------------------------------------
+.flag{
+   -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    top: 1.5em;
+    left: 1.5em;
+    float: left;
+    clear: both;
+    font-size:75%;     
+    padding: .2em 1.5em .3em;
+    border-radius: 0 50px 50px 0;
+    font-weight:500;
+    line-height: 1.25;
+    white-space: nowrap;
+    vertical-align: baseline;
+
+
+    &.flag-sale{
+      color:$color-clouds-lightest;
+      background: $color-red; 
+    }
+    &.flag-zodiac{
+      color:$color-clouds-lightest;
+      background: $color-zodiac; 
+    }
+    &.flag-mint{
+      color:$color-clouds-lightest;
+      background: $color-mint; 
+    }
+
+    &.flag-daisy{
+      color:$color-dove;
+      background: $color-daisy; 
+    }
+
+
+    // &.flag-circle{
+    //   top:-1em;
+    //   left:-1em;
+    //   font-size:150%;
+    //   color: #fff;
+    //   text-align: center;
+    //   text-shadow:
+    //     -1px -1px 0 #000,  
+    //     1px -1px 0 #000,
+    //     -1px 1px 0 #000,
+    //     1px 1px 0 #000;
+    //   transform: rotate(-35deg);
+    //   background-color:$color-daisy;
+    //   border:2px solid $color-red;
+    //   border-radius: 100%;
+      
+    // }
+
+    // &.flag-winter{
+    //    top:-1em;
+    //   left:-2em;
+    //    color: #fff;
+    //   font-size:150%;
+    //   text-align: center;
+    //   text-shadow:
+    //     -1px -1px 0 #000,  
+    //     1px -1px 0 #000,
+    //     -1px 1px 0 #000,
+    //     1px 1px 0 #000;
+    //   transform: rotate(-35deg);
+    //   padding: 1em;
+    //   background-image:url('../../images/snowflakes.svg');
+    //   background-position:center;
+    //   background-size:contain;
+    //   background-repeat:no-repeat;
+
+    // }
+}
 
 //
 // Accordion
@@ -2149,7 +2242,7 @@ _:-webkit-full-screen:not(:root:root), .modal-open .modal {
     }
     
     @media (min-width: $grid-float-breakpoint) {
-      min-height: 200px;
+      min-height: 215px;
     }
     
     @media (min-width: $screen-lg-min) {
@@ -2196,6 +2289,8 @@ _:-webkit-full-screen:not(:root:root), .modal-open .modal {
     color: $gray-light;
     font-weight: 500;
     margin-bottom: 0;
+
+
   }
 
   &:hover,
@@ -2214,6 +2309,39 @@ _:-webkit-full-screen:not(:root:root), .modal-open .modal {
     }
     .gallery-item-meta {
       color: tint($color-zodiac, 18%);
+    }
+  }
+
+  &.sale{
+    .flag{
+      left:0;
+    }
+    #divPrice{
+      display:table;
+      .price-group{
+        display:table-cell;
+      }
+    }
+    .price--sale{
+      padding-right:1em;
+      .price{
+        font-size:$font-size-h2;
+
+      }
+      ~ .price-group{
+          line-height:0.75em;
+          padding-bottom:0.75em;
+          opacity:0.5;
+          font-size:$font-size-h6 !important;
+        .price{
+          text-decoration:line-through;
+          font-size:2em;
+          letter-spacing: 0.3em;
+        }
+      }
+      .gallery-item-title{
+        clear:both;
+      }
     }
   }
 }
