@@ -14,8 +14,7 @@
     "type": "git",
     "url": "https://github.com/UXHarlandClarke/CITM_Style_Guide"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-sass": "^2.0.4",
